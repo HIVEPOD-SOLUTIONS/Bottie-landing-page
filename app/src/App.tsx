@@ -2941,11 +2941,11 @@ export default function App({ thirdwebClient }: AppProps) {
                 <button onClick={checkBackendStatus} className="refresh-btn">🔄</button>
               </div>
               <NotificationButton />
-              <ConnectButton
+              {/* <ConnectButton
                 client={thirdwebClient}
                 wallets={wallets}
                 chain={defineChain(bnbChain.id)}
-              />
+              /> */}
             </div>
           </div>
         </header>
@@ -2971,7 +2971,7 @@ export default function App({ thirdwebClient }: AppProps) {
                 .
               </p>
               <div className="hero-actions">
-                <ConnectButton
+                {/* <ConnectButton
                   client={thirdwebClient}
                   wallets={wallets}
                   chain={defineChain(bnbChain.id)}
@@ -2979,7 +2979,7 @@ export default function App({ thirdwebClient }: AppProps) {
                     label: "Connect Wallet",
                     className: "connect-wallet-btn"
                   }}
-                />
+                /> */}
               </div>
             </div>
             <div className="hero-visual">
@@ -3140,7 +3140,7 @@ export default function App({ thirdwebClient }: AppProps) {
             <div className="testimonials-grid">
               <div className="testimonial-card">
                 <div className="quote-mark">“</div>
-                <p>Lobos makes IP truly sovereign for creators—with stored licenses and creative control.</p>
+                <p>Bottie makes IP truly sovereign for creators—with stored licenses and creative control.</p>
                 <div className="author">
                   <span className="author-name">Alex Metaon</span>
                   <span className="author-role">Autonomous Creators</span>
