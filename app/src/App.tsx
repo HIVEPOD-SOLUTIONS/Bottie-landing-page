@@ -3140,7 +3140,7 @@ export default function App({ thirdwebClient }: AppProps) {
             <div className="testimonials-grid">
               <div className="testimonial-card">
                 <div className="quote-mark">“</div>
-                <p>Bottie makes IP truly sovereign for creators—with stored licenses and creative control.</p>
+                <p>Bottie makes agentic payments truly sovereign for creators with stored licenses and creative control.</p>
                 <div className="author">
                   <span className="author-name">Alex Metaon</span>
                   <span className="author-role">Autonomous Creators</span>
@@ -3149,7 +3149,7 @@ export default function App({ thirdwebClient }: AppProps) {
 
               <div className="testimonial-card">
                 <div className="quote-mark">“</div>
-                <p>The IP contents within the protocol are secured on the blockchain for the whole community.</p>
+                <p>The agentic payments within the protocol are secured on the blockchain for the whole community.</p>
                 <div className="author">
                   <span className="author-name">Mark Breark</span>
                   <span className="author-role">Automated Creator</span>
