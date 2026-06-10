@@ -29,16 +29,25 @@
   color: #102018;
 }
 
+.bottie-logo,
 .bottie-mark {
   width: 34px;
   height: 34px;
+  border-radius: 10px;
+  box-shadow: 0 14px 30px rgba(36, 216, 149, 0.22);
+}
+
+.bottie-logo {
+  display: block;
+  object-fit: cover;
+}
+
+.bottie-mark {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 10px;
   background: linear-gradient(135deg, #24d895 0%, #3d8cff 100%);
   color: #06100c;
-  box-shadow: 0 14px 30px rgba(36, 216, 149, 0.22);
 }
 
 .bottie-links {
@@ -482,6 +491,40 @@
   margin-right: auto;
 }
 
+.waitlist-form {
+  width: min(760px, 100%);
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1fr) auto;
+  gap: 10px;
+  margin: 32px auto 0;
+  padding: 8px;
+  border: 1px solid rgba(16, 32, 24, 0.12);
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 18px 42px rgba(16, 31, 24, 0.08);
+}
+
+.waitlist-form input {
+  min-height: 48px;
+  border: 0;
+  background: transparent;
+  color: #102018;
+  padding: 0 18px;
+  box-shadow: none;
+}
+
+.waitlist-form input:focus {
+  box-shadow: none;
+}
+
+.waitlist-form button {
+  min-height: 48px;
+}
+
+.waitlist-section .centered-actions {
+  margin-top: 18px;
+}
+
 .bottie-footer {
   display: flex;
   align-items: center;
@@ -569,6 +612,16 @@
   .bottie-section {
     padding: 28px;
     border-radius: 26px;
+  }
+
+  .waitlist-form {
+    grid-template-columns: 1fr;
+    border-radius: 24px;
+  }
+
+  .waitlist-form input,
+  .waitlist-form button {
+    width: 100%;
   }
 
   .payment-card {

@@ -2930,7 +2930,7 @@ export default function App({ thirdwebClient }: AppProps) {
 
         <header className="bottie-nav">
           <div className="bottie-brand">
-            <span className="bottie-mark">B</span>
+            <img src="/Bottie.jpg" alt="Bottie logo" className="bottie-logo" />
             <span>Bottie</span>
           </div>
           <nav className="bottie-links" aria-label="Primary">
@@ -2938,7 +2938,7 @@ export default function App({ thirdwebClient }: AppProps) {
             <a href="#execution">Execution</a>
             <a href="#security">Security</a>
           </nav>
-          <a className="bottie-nav-cta" href="https://www.loom.com/share/7fd84fb4a7384ab6b9f34435ea4df296" target="_blank" rel="noopener noreferrer">Watch demo</a>
+          <a className="bottie-nav-cta" href="#waitlist">Join waitlist</a>
         </header>
 
         <main className="landing-redesign">
@@ -3080,23 +3080,24 @@ export default function App({ thirdwebClient }: AppProps) {
             ))}
           </section>
 
-          <section id="demo" className="bottie-section waitlist-section">
-            <p className="bottie-kicker">Built for Solana and x402</p>
-            <h2>Turn APIs and workflows into agent-readable economic primitives.</h2>
+          <section id="waitlist" className="bottie-section waitlist-section">
+            <p className="bottie-kicker">Run agents like scoped infrastructure</p>
+            <h2>Join our waitlist to let AI agents execute safely on Solana.</h2>
             <p>
-              Bottie lets an AI agent discover tools, pay for data, and execute
-              bounded on-chain actions without ever accessing the owner's
-              primary private key.
+              Bottie is not just another automation layer. It is a permissioned
+              execution fabric between AI agents, paid APIs, and on-chain
+              workflows, built for autonomy without custody.
             </p>
-            <div className="bottie-actions centered-actions">
-              <a className="bottie-primary-btn" href="https://www.loom.com/share/7fd84fb4a7384ab6b9f34435ea4df296" target="_blank" rel="noopener noreferrer">Watch demo</a>
-              <a className="bottie-secondary-btn" href="https://arena.colosseum.org/projects/explore/bottie" target="_blank" rel="noopener noreferrer">View Colosseum</a>
-            </div>
+            <form className="waitlist-form" onSubmit={(event) => event.preventDefault()}>
+              <input type="text" placeholder="Your name" aria-label="Your name" />
+              <input type="email" placeholder="Enter your email" aria-label="Email address" />
+              <button type="submit">Join waitlist</button>
+            </form>
           </section>
 
           <footer className="bottie-footer">
             <div className="bottie-brand">
-              <span className="bottie-mark">B</span>
+              <img src="/Bottie.jpg" alt="Bottie logo" className="bottie-logo" />
               <span>Bottie</span>
             </div>
             <div className="footer-links">
@@ -3120,8 +3121,8 @@ export default function App({ thirdwebClient }: AppProps) {
       <header className="header">
         <div className="header-container">
           <div className="header-logo">
-            <img src="/Lobos.png" alt="Lobos" className="logo-image" />
-            <h1>Lobos</h1>
+            <img src="/Bottie.jpg" alt="Bottie logo" className="logo-image" />
+            <h1>Bottie</h1>
           </div>
           <div className="header-actions">
             <div className={`status-indicator ${backendStatus ? 'connected' : 'disconnected'}`}>
