@@ -2925,247 +2925,187 @@ export default function App({ thirdwebClient }: AppProps) {
   // Show landing page until wallet is connected
   if (!account?.address) {
     return (
-      <div className="app">
+      <div className="app bottie-app-shell">
         <NotificationToasts />
 
-        <header className="header">
-          <div className="header-container">
-            <div className="header-logo">
-              <img src="/Lobos.png" alt="Lobos" className="logo-image" />
-              <h1>Bottie</h1>
-            </div>
-            <div className="header-actions">
-              <div className={`status-indicator ${backendStatus ? 'connected' : 'disconnected'}`}>
-                <span className="status-dot"></span>
-                <span>Backend {backendStatus ? 'Connected' : 'Disconnected'}</span>
-                <button onClick={checkBackendStatus} className="refresh-btn">🔄</button>
-              </div>
-              <NotificationButton />
-              {/* <ConnectButton
-                client={thirdwebClient}
-                wallets={wallets}
-                chain={defineChain(bnbChain.id)}
-              /> */}
-            </div>
+        <header className="bottie-nav">
+          <div className="bottie-brand">
+            <span className="bottie-mark">B</span>
+            <span>Bottie</span>
           </div>
+          <nav className="bottie-links" aria-label="Primary">
+            <a href="#sessions">Sessions</a>
+            <a href="#execution">Execution</a>
+            <a href="#security">Security</a>
+          </nav>
+          <a className="bottie-nav-cta" href="https://www.loom.com/share/7fd84fb4a7384ab6b9f34435ea4df296" target="_blank" rel="noopener noreferrer">Watch demo</a>
         </header>
 
         <main className="landing-redesign">
-          {/* Glowing Background Elements */}
-          <div className="glow-blob top-left"></div>
-          <div className="glow-blob bottom-right"></div>
-
-          {/* Hero Section */}
-          <section className="hero-section">
-            <div className="hero-content">
-              <h1 className="hero-title">
-                <span className="title-teal">The Protocol </span>
-                <span className="title-purple">for</span><br />
-                <span className="title-gradient">
-                  Sovereign<br />
-                  Autonomy
-                </span>
-              </h1>
-              <p className="hero-subtitle mono-text">
-                Enable AI agents to act on-chain—safely. Automate workflows, settle payments, and scale agent-driven finance with institutional-grade permissioned execution.
-                .
+          <section className="bottie-hero">
+            <div className="bottie-hero-copy">
+              <p className="bottie-kicker">Agents with limits</p>
+              <h1 className="bottie-title">Let AI agents execute without handing over your keys.</h1>
+              <p className="bottie-subtitle">
+                Bottie is an agent-native x402 execution fabric on Solana.
+                Agents call paid APIs and run permissioned workflows through
+                scoped delegated sessions, MCP tools, and facilitator-verified payments.
               </p>
-              <div className="hero-actions">
-                {/* <ConnectButton
-                  client={thirdwebClient}
-                  wallets={wallets}
-                  chain={defineChain(bnbChain.id)}
-                  connectButton={{
-                    label: "Connect Wallet",
-                    className: "connect-wallet-btn"
-                  }}
-                /> */}
+              <div className="bottie-actions">
+                <a className="bottie-primary-btn" href="https://github.com/Afoxcute/bottie" target="_blank" rel="noopener noreferrer">View GitHub</a>
+                <a className="bottie-secondary-btn" href="#sessions">See how it works</a>
+              </div>
+              <div className="bottie-trust-row" aria-label="Product highlights">
+                <span>Solana devnet program</span>
+                <span>x402 payments</span>
+                <span>MCP discovery</span>
               </div>
             </div>
-            <div className="hero-visual">
-              <div className="glass-ring-container">
-                <img src="/hero_image.png" alt="3D Torus Knot" className="hero-3d-image" />
-              </div>
-            </div>
-          </section>
 
-          {/* Ecosystem Stats Bar */}
-          {/* <section className="stats-bar-container">
-            <div className="stats-bar">
-              <div className="stat-pill">
-                <span className="stat-label">Live Ecosystem Stats</span>
-              </div>
-              <span className="stat-dot">•</span>
-              <div className="stat-item">
-                <span className="stat-title">Total Assets Secured</span>
-                <span className="stat-value highlight-green">($240M+)</span>
-              </div>
-              <span className="stat-dot">•</span>
-              <div className="stat-item">
-                <span className="stat-title">Active Licenses</span>
-                <span className="stat-value highlight-green">(12k)</span>
-              </div>
-              <span className="stat-dot">•</span>
-              <div className="stat-item">
-                <span className="stat-title">Global Creators</span>
-                <span className="stat-value highlight-green">(45k)</span>
-              </div>
-            </div>
-          </section> */}
-
-          {/* Features Section */}
-          <section className="features-section">
-            <h2 className="section-heading">What you can do</h2>
-            {/* SVG Global Def for Icons */}
-            <svg width="0" height="0" className="hidden-svg-defs" style={{ position: 'absolute' }}>
-              <defs>
-                <linearGradient id="feature-grad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-                  <stop stopColor="#10b981" />
-                  <stop offset="1" stopColor="#a855f7" />
-                </linearGradient>
-              </defs>
-            </svg>
-            <div className="features-grid">
-              <div className="feature-card">
-                <div className="icon-wrapper">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#feature-grad)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                    <polyline points="14 2 14 8 20 8"></polyline>
-                    <line x1="16" y1="13" x2="8" y2="13"></line>
-                    <line x1="16" y1="17" x2="8" y2="17"></line>
-                    <polyline points="10 9 9 9 8 9"></polyline>
-                  </svg>
+            <div className="bottie-console-stage" aria-label="Bottie workflow preview">
+              <div className="bottie-console">
+                <div className="phone-topbar">
+                  <span>Agent session</span>
+                  <span>DEVNET</span>
                 </div>
-                <h3>Delegate & Control
-                </h3>
-                <p>Grant agents scoped session keys with explicit limits—allowed contracts, assets, value caps, expiry. Your primary key never leaves your wallet.</p>
-              </div>
-
-              <div className="feature-card">
-                <div className="icon-wrapper">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#feature-grad)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="2" y="5" width="20" height="14" rx="2" ry="2"></rect>
-                    <line x1="2" y1="10" x2="22" y2="10"></line>
-                    <line x1="6" y1="15" x2="10" y2="15"></line>
-                  </svg>
+                <div className="balance-card">
+                  <span>Scoped allowance</span>
+                  <strong>25 USDC</strong>
+                  <small>Targets, routes, value caps, expiry enforced on-chain</small>
                 </div>
-                <h3>Execute & Settle
-                </h3>
-                <p>Run permissioned on-chain actions with paid API calls via x402. Agents pay for data, execute swaps, and settle payments all within enforced boundaries.</p>
-              </div>
-
-              <div className="feature-card">
-                <div className="icon-wrapper">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#feature-grad)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M14 13L10.5 9.5 8 12l3.5 3.5"></path>
-                    <path d="M17 18l3-3-4-4-3 3"></path>
-                    <path d="M21 9l-6-6-3 3 6 6"></path>
-                    <path d="M3 21h6.5"></path>
-                    <path d="M5.5 19v2"></path>
-                  </svg>
+                <div className="quick-actions">
+                  <span>Grant</span>
+                  <span>Execute</span>
+                  <span>Revoke</span>
                 </div>
-                <h3>Discover & Compose</h3>
-                <p>Expose workflows via MCP servers. AI systems (ChatGPT, Claude, custom agents) discover, reason, and invoke tools safely.</p>
-              </div>
-
-              <div className="feature-card">
-                <div className="icon-wrapper">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="url(#feature-grad)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
-                    <path d="M3 3v5h5"></path>
-                  </svg>
-                </div>
-                <h3>Audit & Verify
-                </h3>
-                <p>Every action is on-chain, verifiable, and scoped. Review agent activity, revoke sessions instantly, and maintain full custody.
-                </p>
-              </div>
-            </div>
-          </section>
-
-          {/* Industry Solutions Section */}
-          <section className="solutions-section">
-            <h2 className="section-heading">Industry Solutions</h2>
-            <div className="solutions-grid">
-              <div className="solution-card solution-music">
-                <div className="solution-visual">
-                  {/* Dynamic waveform made of varying height lines */}
-                  <div className="waveform-container">
-                    {[3, 5, 8, 4, 12, 18, 14, 25, 10, 20, 30, 22, 15, 28, 18, 10, 5, 8, 3, 2].map((h, i) => (
-                      <div key={i} className="waveform-bar" style={{ height: `${h}px` }}></div>
-                    ))}
+                <div className="activity-card deposit">
+                  <div>
+                    <span>x402 API call</span>
+                    <p>Paid market data request</p>
                   </div>
+                  <strong>Verified</strong>
                 </div>
-                <h3>DeFi & Trading
-                </h3>
-              </div>
-
-              <div className="solution-card solution-software">
-                <div className="solution-visual">
-                  <div className="code-window-3d">
-                    <div className="window-header">
-                      <span className="dot"></span><span className="dot"></span><span className="dot"></span>
-                    </div>
-                    <div className="window-body">
-                      {[1, 2, 3, 4].map(i => (
-                        <div key={i} className={`code-line w-${i}`}></div>
-                      ))}
-                    </div>
+                <div className="activity-card">
+                  <div>
+                    <span>Session CPI</span>
+                    <p>Whitelisted swap route only</p>
                   </div>
+                  <strong>Allowed</strong>
                 </div>
-                <h3>Data & APIs
-                </h3>
               </div>
-
-              <div className="solution-card solution-physical">
-                <div className="solution-visual">
-                  <div className="cube-3d">
-                    <div className="cube-face front"></div>
-                    <div className="cube-face right"></div>
-                    <div className="cube-face top"></div>
-                  </div>
-                </div>
-                <h3>Institutional Automation
-                </h3>
+              <div className="floating-receipt">
+                <span>No primary key exposed</span>
+                <strong>Session expires in 18m</strong>
               </div>
             </div>
           </section>
 
-          {/* Integrations Section */}
-        
-
-          {/* Testimonials Section */}
-          <section className="testimonials-section">
-            <h2 className="section-heading">Community/Social Proof</h2>
-            <div className="testimonials-grid">
-              <div className="testimonial-card">
-                <div className="quote-mark">“</div>
-                <p>Bottie makes agentic payments truly sovereign for creators with stored licenses and creative control.</p>
-                <div className="author">
-                  <span className="author-name">Alex Metaon</span>
-                  <span className="author-role">Autonomous Creators</span>
+          <section id="sessions" className="bottie-section bottie-split">
+            <div>
+              <p className="bottie-kicker">Bounded autonomy, in one place</p>
+              <h2>Stop choosing between no automation and full key risk.</h2>
+              <p>
+                Owners connect with Solana wallet auth, grant a scoped session,
+                and let agents act only inside explicit limits. What programs,
+                assets, routes, values, and time windows are allowed is enforced
+                by Bottie's delegated session model.
+              </p>
+            </div>
+            <div className="chain-panel">
+              {[
+                ["Delegated sessions", "Owner-bound"],
+                ["Scoped session keys", "Least privilege"],
+                ["x402 API proxies", "Paid usage"],
+                ["MCP tool surfaces", "Discoverable"],
+              ].map(([label, status]) => (
+                <div className="chain-row" key={label}>
+                  <span>{label}</span>
+                  <strong>{status}</strong>
                 </div>
-              </div>
-
-              <div className="testimonial-card">
-                <div className="quote-mark">“</div>
-                <p>The agentic payments within the protocol are secured on the blockchain for the whole community.</p>
-                <div className="author">
-                  <span className="author-name">Mark Breark</span>
-                  <span className="author-role">Automated Creator</span>
-                </div>
-              </div>
-
-              <div className="testimonial-card">
-                <div className="quote-mark">“</div>
-                <p>They are fully committed to creative empowerment, removing limitations entirely.</p>
-                <div className="author">
-                  <span className="author-name">Liam Seaxien</span>
-                  <span className="author-role">Development Telecom</span>
-                </div>
-              </div>
+              ))}
             </div>
           </section>
+
+          <section id="execution" className="bottie-section">
+            <div className="section-intro">
+              <p className="bottie-kicker">Agent-native x402 execution</p>
+              <h2>The simpler, safer way to let agents transact.</h2>
+            </div>
+            <div className="payment-grid">
+              <article className="payment-card">
+                <span className="payment-icon">01</span>
+                <h3>Grant a session</h3>
+                <p>Register a time-boxed session key with allowed programs, instruction scopes, assets, and value caps.</p>
+                <div className="mini-ledger">
+                  <span>grant_session</span>
+                  <strong>On-chain</strong>
+                </div>
+              </article>
+
+              <article className="payment-card scan-card">
+                <span className="payment-icon">02</span>
+                <h3>Call paid APIs</h3>
+                <p>Wrap APIs as x402-compatible endpoints so agents can pay for data and tools as they work.</p>
+                <div className="qr-box" aria-label="QR payment scan preview">
+                  {Array.from({ length: 25 }).map((_, index) => (
+                    <span key={index} className={index % 3 === 0 || index % 7 === 0 ? "active" : ""}></span>
+                  ))}
+                </div>
+                <small>Facilitator verifying payment...</small>
+              </article>
+
+              <article className="payment-card conversion-card">
+                <span className="payment-icon">03</span>
+                <h3>Execute workflows</h3>
+                <p>Compose x402 calls, Solana instructions, and conditional routing into reusable agent-readable workflows.</p>
+                <div className="rate-ticket">
+                  <span>execute_with_session</span>
+                  <strong>Scoped CPI</strong>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <section id="security" className="bottie-section benefit-band">
+            {[
+              "Autonomy without custody",
+              "Composable workflows without danger",
+              "x402 settlement with facilitator verification",
+              "Full asset control with instant session revocation",
+            ].map((benefit) => (
+              <div className="benefit-item" key={benefit}>
+                <span></span>
+                <p>{benefit}</p>
+              </div>
+            ))}
+          </section>
+
+          <section id="demo" className="bottie-section waitlist-section">
+            <p className="bottie-kicker">Built for Solana and x402</p>
+            <h2>Turn APIs and workflows into agent-readable economic primitives.</h2>
+            <p>
+              Bottie lets an AI agent discover tools, pay for data, and execute
+              bounded on-chain actions without ever accessing the owner's
+              primary private key.
+            </p>
+            <div className="bottie-actions centered-actions">
+              <a className="bottie-primary-btn" href="https://www.loom.com/share/7fd84fb4a7384ab6b9f34435ea4df296" target="_blank" rel="noopener noreferrer">Watch demo</a>
+              <a className="bottie-secondary-btn" href="https://arena.colosseum.org/projects/explore/bottie" target="_blank" rel="noopener noreferrer">View Colosseum</a>
+            </div>
+          </section>
+
+          <footer className="bottie-footer">
+            <div className="bottie-brand">
+              <span className="bottie-mark">B</span>
+              <span>Bottie</span>
+            </div>
+            <div className="footer-links">
+              <a href="https://github.com/Afoxcute/bottie" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="https://payai.network" target="_blank" rel="noopener noreferrer">PayAI</a>
+              <a href="https://reown.com" target="_blank" rel="noopener noreferrer">Reown</a>
+            </div>
+            <p>MIT licensed. Built for agentic finance on Solana.</p>
+          </footer>
         </main>
       </div>
     );
