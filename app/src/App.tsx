@@ -3304,7 +3304,8 @@ export default function App({ thirdwebClient }: AppProps) {
                   <span>Scoped allowance</span>
                   <strong>25 USDC</strong>
                   <small>
-                    Targets, routes, value caps, expiry enforced on-chain
+                    Set targets, routes, value caps and time limits all enforced
+                    on-chain
                   </small>
                 </div>
                 <div className="quick-actions">
@@ -3336,21 +3337,26 @@ export default function App({ thirdwebClient }: AppProps) {
 
           <section id="sessions" className="bottie-section bottie-split">
             <div>
-              <p className="bottie-kicker">Bounded autonomy, in one place</p>
-              <h2>Stop choosing between no automation and full key risk.</h2>
+              <p className="bottie-kicker">
+                Bounded Autonomy, Without the Risk
+              </p>
+              <h2>
+                Give AI agents the freedom to act without giving away full
+                control.
+              </h2>
               <p>
-                Owners connect with Solana wallet auth, grant a scoped session,
-                and let agents act only inside explicit limits. What programs,
-                assets, routes, values, and time windows are allowed is enforced
-                by Bottie's delegated session model.
+                Connect your Solana wallet, define exactly what an agent can do,
+                and let it execute tasks within those limits. Set permissions
+                for assets, programs, spending limits, and time windows, while
+                Bottie ensures every action stays within approved boundaries.
               </p>
             </div>
             <div className="chain-panel">
               {[
-                ['Delegated sessions', 'Owner-bound'],
-                ['Scoped session keys', 'Least privilege'],
-                ['x402 API proxies', 'Paid usage'],
-                ['MCP tool surfaces', 'Discoverable'],
+                ['Connect Your Wallet', 'Owner-bound'],
+                ['Set Agent Permission', 'Least privilege'],
+                ['Automate Tasks', 'Paid usage'],
+                ['Verify Every Action', 'Discoverable'],
               ].map(([label, status]) => (
                 <div className="chain-row" key={label}>
                   <span>{label}</span>
