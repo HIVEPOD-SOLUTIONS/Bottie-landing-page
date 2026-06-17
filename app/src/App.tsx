@@ -3253,6 +3253,7 @@ export default function App({ thirdwebClient }: AppProps) {
             <a href="#sessions">Sessions</a>
             <a href="#execution">Execution</a>
             <a href="#security">Security</a>
+            <a href="#faq">FAQ</a>
           </nav>
           <a className="bottie-nav-cta" href="#waitlist">
             Join waitlist
@@ -3433,6 +3434,70 @@ export default function App({ thirdwebClient }: AppProps) {
               </div>
             ))}
           </section>
+
+
+          {/* FAQ Section */}
+       <section id="faq" className="bottie-section">
+         <div style={{ maxWidth: "720px", margin: "0 auto", width: "100%" }}>
+         <p className="bottie-kicker">Got questions?</p>
+    <h2 style={{ marginBottom: "2rem" }}>Frequently Asked Questions</h2>
+
+    <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+      {[
+        {
+          q: "How does Bottie keep agents under control?",
+          a: "Users define what an agent can access, spend, and execute.These permissions can include specific assests, spending limits, programs, and time windows, ensring agents only act within approved boundaries."
+        },
+        {
+          q: "What is x402 and why does it mattter?",
+          a: "x402 enables agents to pay for API's, tools, and services programmatically. This allows agents to access premium resources as they work without requiring manual payment for every interaction."
+        },
+        {
+          q: "How is Bottie iffferent from an AI chatbot?",
+          a: "Chatbots provide answers. Bottie enables agents to take action within approved limits."
+        },
+        {
+          q: "Is Bottie live?",
+          a: "Bottie is currently under active development.Join the waitlist to get early access and updates as new features become available."
+        },
+      ].map((item, index) => (
+        <details
+          key={index}
+          style={{
+            border: "1px solid rgba(0,0,0,0.1)",
+            borderRadius: "12px",
+            padding: "1rem 1.25rem",
+            cursor: "pointer",
+            width: "100%",
+          }}
+        >
+          <summary style={{
+            fontWeight: 1000,
+            fontSize: "0.95rem",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            listStyle: "none",
+            WebkitAppearance: "none",
+          }}>
+            {item.q}
+            <span style={{ fontSize: "1.2rem" }}>+</span>
+          </summary>
+          <p style={{
+            marginTop: "0.75rem",
+            fontSize: "15px",
+            lineHeight: "1.6",
+            color: "rgba(0,0,0,0.7)",
+            fontStyle: "bold"
+          }}>
+            {item.a}
+          </p>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>    
+
 
           <section id="waitlist" className="bottie-section waitlist-section">
             <p className="bottie-kicker">
