@@ -12,4 +12,13 @@ export default defineConfig({
       },
     }),
   ],
+  build: {
+    rolldownOptions: {
+      onwarn(warning, warn) {
+        if (warning.code === 'INVALID_ANNOTATION' || warning.code === 'EVAL') return
+        warn(warning)
+      },
+    },
+    chunkSizeWarningLimit: 1000,
+  },
 })

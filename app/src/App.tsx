@@ -824,6 +824,36 @@ const LICENSE_TEMPLATES: LicenseTemplate[] = [
   },
 ]
 
+// Tally waitlist embed — uses useEffect to call loadEmbeds() after mount,
+// which is required in SPAs where the Tally script has already executed.
+declare global {
+  interface Window {
+    Tally?: { loadEmbeds: () => void }
+  }
+}
+
+const TallyEmbed: React.FC = () => {
+  useEffect(() => {
+    if (typeof window.Tally !== 'undefined') {
+      window.Tally.loadEmbeds()
+    }
+  }, [])
+
+  return (
+    <iframe
+      data-tally-src="https://tally.so/embed/obzra5?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      loading="lazy"
+      width="100%"
+      height="387"
+      frameBorder="0"
+      marginHeight={0}
+      marginWidth={0}
+      title="Bottie Waitlist"
+      style={{ maxWidth: '520px', display: 'block' }}
+    />
+  )
+}
+
 // Enhanced Asset Preview Component
 const EnhancedAssetPreview: React.FC<{
   assetId: number
@@ -3250,45 +3280,41 @@ export default function App({ thirdwebClient }: AppProps) {
             <span>Bottie</span>
           </div>
           <nav className="bottie-links" aria-label="Primary">
-            <a href="#sessions">Sessions</a>
-            <a href="#execution">Execution</a>
-            <a href="#security">Security</a>
+            <a href="#sessions">How it works</a>
+            <a href="#execution">Steps</a>
+            <a href="#security">Safety</a>
             <a href="#faq">FAQ</a>
           </nav>
           <a className="bottie-nav-cta" href="#waitlist">
-            Join waitlist
+            Get early access
           </a>
         </header>
 
         <main className="landing-redesign">
           <section className="bottie-hero">
             <div className="bottie-hero-copy">
-              <p className="bottie-kicker">Agents with limits</p>
+              <p className="bottie-kicker">Your AI helper, on a leash 🐕</p>
               <h1 className="bottie-title">
-                Let AI agents execute without handing over your keys.
+                Let your AI helper do the work, without giving it the keys to everything.
               </h1>
               <p className="bottie-subtitle">
-                Bottie is an agent-native infrastructure on Solana that enables
-                AI agents to access tools, pay for services, and execute tasks
-                autonomously through secure permissions and verifiable payments.
+                Bottie is like a babysitter for your AI helper. You tell it exactly what it's allowed to do, how much it can spend, and for how long. It does the job. You stay in charge.
               </p>
               <div className="bottie-actions">
                 <a
                   className="bottie-primary-btn"
-                  href="https://github.com/Afoxcute/bottie"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#waitlist"
                 >
-                  View GitHub
+                  Get early access
                 </a>
                 <a className="bottie-secondary-btn" href="#sessions">
                   See how it works
                 </a>
               </div>
               <div className="bottie-trust-row" aria-label="Product highlights">
-                <span>Solana devnet program</span>
-                <span>x402 payments</span>
-                <span>MCP discovery</span>
+                <span>✅ You stay in control</span>
+                <span>⚡ AI does the work</span>
+                <span>🔒 Nothing sneaks past</span>
               </div>
             </div>
 
@@ -3298,40 +3324,39 @@ export default function App({ thirdwebClient }: AppProps) {
             >
               <div className="bottie-console">
                 <div className="phone-topbar">
-                  <span>Agent session</span>
-                  <span>DEVNET</span>
+                  <span>AI Helper session</span>
+                  <span>LIVE</span>
                 </div>
                 <div className="balance-card">
-                  <span>Scoped allowance</span>
-                  <strong>25 USDC</strong>
+                  <span>Spending limit you set</span>
+                  <strong>$25</strong>
                   <small>
-                    Set targets, routes, value caps and time limits all enforced
-                    on-chain
+                    Your helper can only spend this much. Not a penny more.
                   </small>
                 </div>
                 <div className="quick-actions">
-                  <span>Grant</span>
-                  <span>Execute</span>
-                  <span>Revoke</span>
+                  <span>Allow</span>
+                  <span>Run</span>
+                  <span>Stop</span>
                 </div>
                 <div className="activity-card deposit">
                   <div>
-                    <span>x402 API call</span>
-                    <p>Paid market data request</p>
+                    <span>Bought market data</span>
+                    <p>AI paid for info it needed</p>
                   </div>
-                  <strong>Verified</strong>
+                  <strong>✅ Done</strong>
                 </div>
                 <div className="activity-card">
                   <div>
-                    <span>Session CPI</span>
-                    <p>Whitelisted swap route only</p>
+                    <span>Made a swap</span>
+                    <p>Only the route you approved</p>
                   </div>
-                  <strong>Allowed</strong>
+                  <strong>✅ Allowed</strong>
                 </div>
               </div>
               <div className="floating-receipt">
-                <span>No primary key exposed</span>
-                <strong>Session expires in 18m</strong>
+                <span>Your main wallet never touched</span>
+                <strong>Session ends in 18 min</strong>
               </div>
             </div>
           </section>
@@ -3339,25 +3364,21 @@ export default function App({ thirdwebClient }: AppProps) {
           <section id="sessions" className="bottie-section bottie-split">
             <div>
               <p className="bottie-kicker">
-                Bounded Autonomy, Without the Risk
+                Your AI helper, your rules
               </p>
               <h2>
-                Give AI agents the freedom to act without giving away full
-                control.
+                Give your AI helper a job to do, then watch it do exactly that. Nothing else.
               </h2>
               <p>
-                Connect your Solana wallet, define exactly what an agent can do,
-                and let it execute tasks within those limits. Set permissions
-                for assets, programs, spending limits, and time windows, while
-                Bottie ensures every action stays within approved boundaries.
+                Think of Bottie like giving a kid an allowance. You say "here's $5, you can only buy snacks, and only until 5pm." They can't raid your wallet or go somewhere you didn't approve. Your AI helper works the same way. You set the rules, Bottie enforces them automatically.
               </p>
             </div>
             <div className="chain-panel">
               {[
-                ['Connect Your Wallet', 'Owner-bound'],
-                ['Set Agent Permission', 'Least privilege'],
-                ['Automate Tasks', 'Paid usage'],
-                ['Verify Every Action', 'Discoverable'],
+                ['Connect your wallet', 'You own it'],
+                ['Tell it what it can do', 'Your rules'],
+                ['Let it get to work', 'Auto-pilot'],
+                ['Every step is checked', 'Nothing sneaks by'],
               ].map(([label, status]) => (
                 <div className="chain-row" key={label}>
                   <span>{label}</span>
@@ -3369,29 +3390,27 @@ export default function App({ thirdwebClient }: AppProps) {
 
           <section id="execution" className="bottie-section">
             <div className="section-intro">
-              <p className="bottie-kicker">Agent-native x402 execution</p>
-              <h2>The simpler, safer way to let agents transact.</h2>
+              <p className="bottie-kicker">How it works in 3 steps</p>
+              <h2>Simple as 1, 2, 3.</h2>
             </div>
             <div className="payment-grid">
               <article className="payment-card">
                 <span className="payment-icon">01</span>
-                <h3>Grant a session</h3>
+                <h3>You say what's allowed</h3>
                 <p>
-                  Register a time-boxed session key with allowed programs,
-                  instruction scopes, assets, and value caps.
+                  Pick which apps your AI can use, how much it can spend, and set a time limit. Like giving someone a permission slip.
                 </p>
                 <div className="mini-ledger">
-                  <span>grant_session</span>
-                  <strong>On-chain</strong>
+                  <span>Set rules once</span>
+                  <strong>Locked in</strong>
                 </div>
               </article>
 
               <article className="payment-card scan-card">
                 <span className="payment-icon">02</span>
-                <h3>Call paid APIs</h3>
+                <h3>Your AI pays its own way</h3>
                 <p>
-                  Wrap APIs as x402-compatible endpoints so agents can pay for
-                  data and tools as they work.
+                  When your AI helper needs to buy something (like data or a tool), it pays automatically. Always within the budget you set.
                 </p>
                 <div className="qr-box" aria-label="QR payment scan preview">
                   {Array.from({ length: 25 }).map((_, index) => (
@@ -3403,19 +3422,18 @@ export default function App({ thirdwebClient }: AppProps) {
                     ></span>
                   ))}
                 </div>
-                <small>Facilitator verifying payment...</small>
+                <small>Payment confirmed ✅</small>
               </article>
 
               <article className="payment-card conversion-card">
                 <span className="payment-icon">03</span>
-                <h3>Execute workflows</h3>
+                <h3>Jobs get done, you stay safe</h3>
                 <p>
-                  Compose x402 calls, Solana instructions, and conditional
-                  routing into reusable agent-readable workflows.
+                  Your AI finishes the task. When time's up or money runs out, it stops automatically. Your main account is never touched.
                 </p>
                 <div className="rate-ticket">
-                  <span>execute_with_session</span>
-                  <strong>Scoped CPI</strong>
+                  <span>Task complete</span>
+                  <strong>All safe 🔒</strong>
                 </div>
               </article>
             </div>
@@ -3423,10 +3441,10 @@ export default function App({ thirdwebClient }: AppProps) {
 
           <section id="security" className="bottie-section benefit-band">
             {[
-              'Autonomy without custody',
-              'Composable workflows without danger',
-              'x402 settlement with facilitator verification',
-              'Full asset control with instant session revocation',
+              '🔐 Your main wallet is never exposed',
+              '🛑 AI stops automatically when time runs out',
+              '💸 Payments only go where you approved',
+              '⚡ Cancel anytime with one click',
             ].map((benefit) => (
               <div className="benefit-item" key={benefit}>
                 <span></span>
@@ -3435,98 +3453,82 @@ export default function App({ thirdwebClient }: AppProps) {
             ))}
           </section>
 
-
           {/* FAQ Section */}
-       <section id="faq" className="bottie-section">
-         <div style={{ maxWidth: "720px", margin: "0 auto", width: "100%" }}>
-         <p className="bottie-kicker">Got questions?</p>
-    <h2 style={{ marginBottom: "2rem" }}>Frequently Asked Questions</h2>
+          <section id="faq" className="bottie-section">
+            <div style={{ maxWidth: "720px", margin: "0 auto", width: "100%" }}>
+              <p className="bottie-kicker">Got questions?</p>
+              <h2 style={{ marginBottom: "2rem" }}>Simple answers to simple questions</h2>
 
-    <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
-      {[
-        {
-          q: "How does Bottie keep agents under control?",
-          a: "Users define what an agent can access, spend, and execute.These permissions can include specific assests, spending limits, programs, and time windows, ensring agents only act within approved boundaries."
-        },
-        {
-          q: "What is x402 and why does it mattter?",
-          a: "x402 enables agents to pay for API's, tools, and services programmatically. This allows agents to access premium resources as they work without requiring manual payment for every interaction."
-        },
-        {
-          q: "How is Bottie iffferent from an AI chatbot?",
-          a: "Chatbots provide answers. Bottie enables agents to take action within approved limits."
-        },
-        {
-          q: "Is Bottie live?",
-          a: "Bottie is currently under active development.Join the waitlist to get early access and updates as new features become available."
-        },
-      ].map((item, index) => (
-        <details
-          key={index}
-          style={{
-            border: "1px solid rgba(0,0,0,0.1)",
-            borderRadius: "12px",
-            padding: "1rem 1.25rem",
-            cursor: "pointer",
-            width: "100%",
-          }}
-        >
-          <summary style={{
-            fontWeight: 1000,
-            fontSize: "0.95rem",
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            listStyle: "none",
-            WebkitAppearance: "none",
-          }}>
-            {item.q}
-            <span style={{ fontSize: "1.2rem" }}>+</span>
-          </summary>
-          <p style={{
-            marginTop: "0.75rem",
-            fontSize: "15px",
-            lineHeight: "1.6",
-            color: "rgba(0,0,0,0.7)",
-            fontStyle: "bold"
-          }}>
-            {item.a}
-          </p>
-        </details>
-      ))}
-    </div>
-  </div>
-</section>    
-
+              <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
+                {[
+                  {
+                    q: "What is Bottie, in plain English?",
+                    a: "Bottie is a way to let an AI helper do tasks for you (like buying data, making swaps, or running jobs) without giving it access to everything in your wallet. You stay in charge the whole time."
+                  },
+                  {
+                    q: "Is my money safe?",
+                    a: "Yes. You set a spending limit before anything starts. The AI can only spend up to that amount, in the places you approve, before the time you set runs out. Your main wallet is never touched."
+                  },
+                  {
+                    q: "How is this different from just using an AI chatbot?",
+                    a: "A chatbot talks to you. Bottie lets your AI actually do things (like make payments or run tasks), but only within the rules you set first. It's the difference between asking for directions and actually driving the car for you, safely."
+                  },
+                  {
+                    q: "Can I stop the AI anytime?",
+                    a: "Yes! You can cancel at any moment. Sessions also stop automatically when time runs out or the spending limit is hit. You're always in control."
+                  },
+                  {
+                    q: "Is Bottie ready to use right now?",
+                    a: "Bottie is being built right now. Join the waitlist below to be first in line when we open up access, and to get updates as we ship new features."
+                  },
+                ].map((item, index) => (
+                  <details
+                    key={index}
+                    style={{
+                      border: "1px solid rgba(0,0,0,0.1)",
+                      borderRadius: "12px",
+                      padding: "1rem 1.25rem",
+                      cursor: "pointer",
+                      width: "100%",
+                    }}
+                  >
+                    <summary style={{
+                      fontWeight: 700,
+                      fontSize: "0.95rem",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
+                      listStyle: "none",
+                      WebkitAppearance: "none",
+                    }}>
+                      {item.q}
+                      <span style={{ fontSize: "1.2rem" }}>+</span>
+                    </summary>
+                    <p style={{
+                      marginTop: "0.75rem",
+                      fontSize: "15px",
+                      lineHeight: "1.6",
+                      color: "rgba(0,0,0,0.7)",
+                    }}>
+                      {item.a}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </div>
+          </section>
 
           <section id="waitlist" className="bottie-section waitlist-section">
             <p className="bottie-kicker">
-              Run agents like scoped infrastructure
+              Be first in line 🚀
             </p>
             <h2>
-              Join our waitlist to let AI agents execute safely on Solana.
+              Want your AI helper to get things done while you sleep?
             </h2>
             <p>
-              Bottie is not just another automation layer. It is a permissioned
-              execution fabric between AI agents, paid APIs, and on-chain
-              workflows, built for autonomy without custody.
+              Join the waitlist and we'll let you know the moment Bottie is ready. No spam. Just one email when it's your turn.
             </p>
-            <form
-              className="waitlist-form"
-              onSubmit={(event) => event.preventDefault()}
-            >
-              <input
-                type="text"
-                placeholder="Your name"
-                aria-label="Your name"
-              />
-              <input
-                type="email"
-                placeholder="Enter your email"
-                aria-label="Email address"
-              />
-              <button type="submit">Join waitlist</button>
-            </form>
+            <TallyEmbed />
           </section>
 
           <footer className="bottie-footer">
@@ -3561,7 +3563,7 @@ export default function App({ thirdwebClient }: AppProps) {
                 Reown
               </a>
             </div>
-            <p>MIT licensed. Built for agentic finance on Solana.</p>
+            <p>Open source. Built so AI can work for you, safely.</p>
           </footer>
         </main>
       </div>
