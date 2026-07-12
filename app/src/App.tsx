@@ -3293,12 +3293,12 @@ export default function App({ thirdwebClient }: AppProps) {
         <main className="landing-redesign">
           <section className="bottie-hero">
             <div className="bottie-hero-copy">
-              <p className="bottie-kicker">Your AI helper, on a leash 🐕</p>
+              <p className="bottie-kicker">Your AI assistant, on a leash 🐕</p>
               <h1 className="bottie-title">
-                Let your AI helper do the work, without giving it the keys to everything.
+                Let your AI assistant do the work, without giving it the keys to everything.
               </h1>
               <p className="bottie-subtitle">
-                Bottie is like a babysitter for your AI helper. You tell it exactly what it's allowed to do, how much it can spend, and for how long. It does the job. You stay in charge.
+                Bottie is like a babysitter for your AI assistant. You tell it exactly what it's allowed to do, how much it can spend, and for how long. It does the job. You stay in charge.
               </p>
               <div className="bottie-actions">
                 <a
@@ -3324,7 +3324,7 @@ export default function App({ thirdwebClient }: AppProps) {
             >
               <div className="bottie-console">
                 <div className="phone-topbar">
-                  <span>AI Helper session</span>
+                  <span>AI assistant session</span>
                   <span>LIVE</span>
                 </div>
                 <div className="balance-card">
@@ -3364,13 +3364,13 @@ export default function App({ thirdwebClient }: AppProps) {
           <section id="sessions" className="bottie-section bottie-split">
             <div>
               <p className="bottie-kicker">
-                Your AI helper, your rules
+                Your AI assistant, your rules
               </p>
               <h2>
-                Give your AI helper a job to do, then watch it do exactly that. Nothing else.
+                Give your AI assistant a job to do, then watch it do exactly that. Nothing else.
               </h2>
               <p>
-                Think of Bottie like giving a kid an allowance. You say "here's $5, you can only buy snacks, and only until 5pm." They can't raid your wallet or go somewhere you didn't approve. Your AI helper works the same way. You set the rules, Bottie enforces them automatically.
+                Think of Bottie like giving a kid an allowance. You say "here's $5, you can only buy snacks, and only until 5pm." They can't raid your wallet or go somewhere you didn't approve. Your AI assistant works the same way. You set the rules, Bottie enforces them automatically.
               </p>
             </div>
             <div className="chain-panel">
@@ -3410,7 +3410,7 @@ export default function App({ thirdwebClient }: AppProps) {
                 <span className="payment-icon">02</span>
                 <h3>Your AI pays its own way</h3>
                 <p>
-                  When your AI helper needs to buy something (like data or a tool), it pays automatically. Always within the budget you set.
+                  When your AI assistant needs to buy something (like data or a tool), it pays automatically. Always within the budget you set.
                 </p>
                 <div className="qr-box" aria-label="QR payment scan preview">
                   {Array.from({ length: 25 }).map((_, index) => (
@@ -3463,7 +3463,7 @@ export default function App({ thirdwebClient }: AppProps) {
                 {[
                   {
                     q: "What is Bottie, in plain English?",
-                    a: "Bottie is a way to let an AI helper do tasks for you (like buying data, making swaps, or running jobs) without giving it access to everything in your wallet. You stay in charge the whole time."
+                    a: "Bottie is a way to let an AI assistant do tasks for you (like buying data, making swaps, or running jobs) without giving it access to everything in your wallet. You stay in charge the whole time."
                   },
                   {
                     q: "Is my money safe?",
@@ -3523,7 +3523,7 @@ export default function App({ thirdwebClient }: AppProps) {
               Be first in line 🚀
             </p>
             <h2>
-              Want your AI helper to get things done while you sleep?
+              Want your AI assistant to get things done while you sleep?
             </h2>
             <p>
               Join the waitlist and we'll let you know the moment Bottie is ready. No spam. Just one email when it's your turn.
