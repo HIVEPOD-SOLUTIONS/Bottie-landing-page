@@ -854,6 +854,326 @@ const TallyEmbed: React.FC = () => {
   )
 }
 
+const BottieLandingPage: React.FC = () => {
+  const workflowSteps = [
+    ['Sign up with email or social', 'Privy creates an embedded EOA wallet with no seed phrase or browser extension required.'],
+    ['Browse bills and investments', '16 bills and 10 assets are already loaded so the demo feels like a real mobile finance app.'],
+    ['Pay by tap or chat', 'Subscribe, Buy, or say "Pay my Netflix" and approve the same inline confirmation flow.'],
+    ['Settle and track history', 'Every payment runs through Arc AppKit send and Circle Gateway x402 nanopayments.'],
+  ]
+
+  const features = [
+    ['AI agent', 'GPT 4o mini can list bills, queue payments, buy investments, check Gateway balance, deposit, withdraw, and pay x402 URLs.'],
+    ['Voice input', 'OpenAI Whisper transcribes spoken requests into the same payment ready chat commands.'],
+    ['Gasless payments', 'arcKit.send() sponsors gas through Circle infrastructure. Users only need USDC on Base Sepolia.'],
+    ['Embedded wallet', 'Privy useWallets() gives Arc AppKit the user wallet directly, without browser wallet discovery for payments.'],
+    ['Add Funds', 'Send from a browser wallet or bridge USDC from eight source testnets into the agent wallet.'],
+    ['Unified state', 'Dashboard screens and chat confirm cards share DemoStateProvider, localStorage, and Postgres history.'],
+  ]
+
+  const integrations = [
+    ['Bill and asset payments', 'Payment modal', 'Transfers USDC gaslessly from the Privy wallet via arcKit.send().'],
+    ['Chat bill confirm', 'Bill confirmation card', 'Runs the same send path from an inline AI confirmation card.'],
+    ['Chat investment confirm', 'Asset confirmation card', 'Executes purchases from chat and updates the portfolio.'],
+    ['Funding sheet', 'Fund wallet sheet', 'Supports Arc AppKit Send and Bridge tabs for USDC top ups.'],
+    ['x402 seller endpoint', '/api/nanopay/sell', 'Returns payment requirements, then settles signed Gateway payments.'],
+    ['Checkout endpoint', '/api/nanopay/checkout', 'Runs the x402 checkout flow after every confirmed payment.'],
+  ]
+
+  const setupItems = [
+    ['Framework', 'Next.js 15, React 19, TypeScript, Tailwind CSS v4, PWA ready, deployed on Vercel.'],
+    ['AI', 'Vercel AI SDK v6 with OpenAI GPT 4o mini for chat and OpenAI Whisper for voice transcription.'],
+    ['Wallets and chain', 'Privy embedded EOA wallets, wagmi v2, viem, Arc AppKit, and Base Sepolia chain ID 84532.'],
+    ['Data', 'React context plus localStorage for UI state, Neon Postgres and Drizzle ORM for payment history.'],
+    ['Environment', 'Privy, Alchemy, Neon, OpenAI, Circle buyer private key, seller address, and app URL variables.'],
+  ]
+
+  return (
+    <div className="app bottie-app-shell">
+      <NotificationToasts />
+
+      <header className="bottie-nav">
+        <div className="bottie-brand">
+          <img src="/Bottie.jpg" alt="Bottie logo" className="bottie-logo" />
+          <span>Bottie</span>
+        </div>
+        <nav className="bottie-links" aria-label="Primary">
+          <a href="#how-it-works">How it works</a>
+          <a href="#features">Features</a>
+          <a href="#circle">Circle</a>
+          <a href="#faq">FAQ</a>
+          <a href="#setup">Setup</a>
+        </nav>
+        <a className="bottie-nav-cta" href="#waitlist">
+          Join waitlist
+        </a>
+      </header>
+
+      <main className="landing-redesign">
+        <section className="bottie-hero">
+          <div className="bottie-hero-copy">
+            <p className="bottie-kicker">Bottie AI Financial Assistant</p>
+            <h1 className="bottie-title">
+              Pay bills, subscribe to services, and invest by chat or tap.
+            </h1>
+            <p className="bottie-subtitle">
+              Bottie is a mobile first AI financial assistant for subscriptions,
+              utilities, internet and cable bills, stocks, ETFs, and pre IPO
+              investments. It feels web2 simple while every payment follows the
+              same gasless on chain path.
+            </p>
+            <div className="bottie-actions">
+              <a className="bottie-primary-btn" href="#waitlist">
+                Join waitlist
+              </a>
+              <a className="bottie-secondary-btn" href="#how-it-works">
+                See how it works
+              </a>
+            </div>
+            <div className="bottie-trust-row" aria-label="Product highlights">
+              <span>Privy embedded wallet</span>
+              <span>Gasless USDC payments</span>
+              <span>Circle Gateway x402 settlement</span>
+            </div>
+          </div>
+
+          <div className="bottie-console-stage" aria-label="Bottie app preview">
+            <div className="bottie-console">
+              <div className="phone-topbar">
+                <span>Good afternoon, Maya</span>
+                <span>LIVE</span>
+              </div>
+              <div className="balance-card">
+                <span>USDC balance</span>
+                <strong>$84.37</strong>
+                <small>Low gas friction. Users only need USDC, no ETH required.</small>
+              </div>
+              <div className="quick-actions">
+                <span>Bills</span>
+                <span>Invest</span>
+                <span>Chat</span>
+              </div>
+              <div className="activity-card deposit">
+                <div>
+                  <span>Netflix</span>
+                  <p>Confirmed from chat</p>
+                </div>
+                <strong>Active</strong>
+              </div>
+              <div className="activity-card">
+                <div>
+                  <span>QQQ purchase</span>
+                  <p>Portfolio updated</p>
+                </div>
+                <strong>Settled</strong>
+              </div>
+            </div>
+            <div className="floating-receipt">
+              <span>History</span>
+              <strong>Nanopay settlement succeeded</strong>
+            </div>
+          </div>
+        </section>
+
+        <section id="how-it-works" className="bottie-section bottie-split">
+          <div>
+            <p className="bottie-kicker">How it works</p>
+            <h2>One payment path for every button and every chat command.</h2>
+            <p>
+              UI payments and AI triggered confirmations both call arcKit.send()
+              from the user's Privy wallet, then run the same Circle Gateway x402
+              checkout and update the same shared payment state.
+            </p>
+          </div>
+          <div className="chain-panel">
+            {workflowSteps.map(([label, copy]) => (
+              <div className="chain-row" key={label}>
+                <span>{label}</span>
+                <strong>{copy}</strong>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="features" className="bottie-section">
+          <div className="section-intro">
+            <p className="bottie-kicker">Features</p>
+            <h2>Built like a familiar finance app, powered by AI and USDC.</h2>
+          </div>
+          <div className="feature-card-grid">
+            {features.map(([title, copy]) => (
+              <article className="payment-card" key={title}>
+                <span className="payment-icon">{title.slice(0, 2).toUpperCase()}</span>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="bottie-section benefit-band">
+          {[
+            '16 bills across streaming, internet, cable, and utilities',
+            '10 assets across stocks, ETFs, and pre IPO opportunities',
+            'Low balance alert with a one tap Add Funds sheet',
+            'History tab marks successful entries with Nanopay settlement',
+          ].map((benefit) => (
+            <div className="benefit-item" key={benefit}>
+              <span></span>
+              <p>{benefit}</p>
+            </div>
+          ))}
+        </section>
+
+        <section id="circle" className="bottie-section">
+          <div className="section-intro">
+            <p className="bottie-kicker">Circle integrations</p>
+            <h2>Arc AppKit moves USDC. Circle Gateway settles nanopayments.</h2>
+            <p>
+              Payments use Privy's embedded wallet provider with
+              createViemAdapterFromProvider, then arcKit.send() on Base Sepolia.
+              Funding supports browser wallet sends and bridges from eight
+              source testnets.
+            </p>
+          </div>
+          <div className="integration-grid">
+            {integrations.map(([title, file, copy]) => (
+              <article className="integration-card" key={title}>
+                <span>{file}</span>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="bottie-section catalog-section">
+          <div className="section-intro">
+            <p className="bottie-kicker">Demo catalog</p>
+            <h2>Loaded with real feeling demo data from the first screen.</h2>
+          </div>
+          <div className="catalog-grid">
+            <div>
+              <h3>Bills</h3>
+              <p>
+                Netflix, Spotify, Max, Disney+, Apple TV+, Hulu, YouTube
+                Premium, Amazon Prime, Xfinity Internet, AT&T Fiber, Verizon Home
+                Internet, Xfinity TV, DirecTV, Electric, Water & Sewer, and
+                Natural Gas.
+              </p>
+            </div>
+            <div>
+              <h3>Assets</h3>
+              <p>
+                Stocks: AAPL, TSLA, GOOGL, MSFT, NVDA, AMZN. Pre IPO: SPACEX
+                and OPENAI. ETFs: SPY and QQQ.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="setup" className="bottie-section">
+          <div className="setup-content">
+            <p className="bottie-kicker">Tech stack and setup</p>
+            <h2>Everything needed for the demo build.</h2>
+            <div className="setup-list">
+              {setupItems.map(([title, copy]) => (
+                <details key={title}>
+                  <summary>
+                    {title}
+                    <span>+</span>
+                  </summary>
+                  <p>{copy}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" className="bottie-section">
+          <div className="setup-content">
+            <p className="bottie-kicker">Got questions?</p>
+            <h2>Simple answers to simple questions</h2>
+            <div className="setup-list">
+              {[
+                {
+                  q: 'What is Bottie, in plain English?',
+                  a: 'Bottie is a mobile first AI financial assistant that helps you pay bills, manage subscriptions, and buy investments by chat or tap. You stay in control because every action still asks for confirmation before payment.',
+                },
+                {
+                  q: 'Is my money safe?',
+                  a: 'Yes. Payments come from your embedded wallet only after you confirm them. Bottie keeps crypto details out of the way, records history, and uses the same checked payment path for chat and button actions.',
+                },
+                {
+                  q: 'How is this different from just using an AI chatbot?',
+                  a: 'A chatbot only talks. Bottie can prepare real bill payments and investment purchases, then show a confirmation card so you can approve the action in the same app.',
+                },
+                {
+                  q: 'Can I stop the AI anytime?',
+                  a: 'Yes. The AI queues actions for confirmation. Nothing is paid just because the AI suggests it, and cancelled payments are treated as normal user cancellations.',
+                },
+                {
+                  q: 'Is Bottie ready to use right now?',
+                  a: 'Bottie is being built now. Join the waitlist below to get access when the demo opens.',
+                },
+              ].map((item) => (
+                <details key={item.q}>
+                  <summary>
+                    {item.q}
+                    <span>+</span>
+                  </summary>
+                  <p>{item.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section id="waitlist" className="bottie-section waitlist-section">
+          <p className="bottie-kicker">Be first in line</p>
+          <h2>Ready for financial errands by chat or tap?</h2>
+          <p>
+            Join the waitlist and we will let you know when Bottie is ready to
+            try.
+          </p>
+          <TallyEmbed />
+        </section>
+
+        <footer className="bottie-footer">
+          <div className="bottie-brand">
+            <img src="/Bottie.jpg" alt="Bottie logo" className="bottie-logo" />
+            <span>Bottie</span>
+          </div>
+          <div className="footer-links">
+            <a
+              href="https://github.com/Afoxcute/bottie"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.circle.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Circle
+            </a>
+            <a
+              href="https://www.privy.io"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Privy
+            </a>
+          </div>
+          <p>Built with Bottie. Web2-friendly UX, on-chain settlement.</p>
+        </footer>
+      </main>
+    </div>
+  )
+}
+
 // Enhanced Asset Preview Component
 const EnhancedAssetPreview: React.FC<{
   assetId: number
@@ -3270,6 +3590,8 @@ export default function App({ thirdwebClient }: AppProps) {
 
   // Show landing page until wallet is connected
   if (!account?.address) {
+    return <BottieLandingPage />
+
     return (
       <div className="app bottie-app-shell">
         <NotificationToasts />
@@ -3280,13 +3602,13 @@ export default function App({ thirdwebClient }: AppProps) {
             <span>Bottie</span>
           </div>
           <nav className="bottie-links" aria-label="Primary">
-            <a href="#sessions">How it works</a>
-            <a href="#execution">Steps</a>
-            <a href="#security">Safety</a>
-            <a href="#faq">FAQ</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="#features">Features</a>
+            <a href="#circle">Circle</a>
+            <a href="#setup">Setup</a>
           </nav>
           <a className="bottie-nav-cta" href="#waitlist">
-            Get early access
+            Join waitlist
           </a>
         </header>
 
