@@ -7,6 +7,8 @@ Decentralized intellectual property management on **BNB Smart Chain (BSC Testnet
 [![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react&logoColor=61DAFB)](https://reactjs.org/)
 [![BNB Chain](https://img.shields.io/badge/BNB%20Chain-F0B90B?style=flat&logo=binance&logoColor=white)](https://www.bnbchain.org/)
 
+
+
 ---
 
 ## Table of Contents
