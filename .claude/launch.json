@@ -2,7 +2,7 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "Bottie dev",
+      "name": "bluvfi dev",
       "runtimeExecutable": "yarn",
       "runtimeArgs": ["--cwd", "app", "dev"],
       "port": 5173
