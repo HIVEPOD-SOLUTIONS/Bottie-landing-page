@@ -848,7 +848,7 @@ const TallyEmbed: React.FC = () => {
       frameBorder="0"
       marginHeight={0}
       marginWidth={0}
-      title="bluvfi Waitlist"
+      title="Bluvfi Waitlist"
       style={{ maxWidth: '520px', display: 'block' }}
     />
   )
@@ -889,56 +889,56 @@ const BluvfiLandingPage: React.FC = () => {
   ]
 
   return (
-    <div className="app bluvfi-app-shell">
+    <div className="app Bluvfi-app-shell">
       <NotificationToasts />
 
-      <header className="bluvfi-nav">
-        <div className="bluvfi-brand">
-          <img src="/bluvfi.jpg" alt="bluvfi logo" className="bluvfi-logo" />
-          <span>bluvfi</span>
+      <header className="Bluvfi-nav">
+        <div className="Bluvfi-brand">
+          <img src="/Bluvfi.jpg" alt="Bluvfi logo" className="Bluvfi-logo" />
+          <span>Bluvfi</span>
         </div>
-        <nav className="bluvfi-links" aria-label="Primary">
+        <nav className="Bluvfi-links" aria-label="Primary">
           <a href="#how-it-works">How it works</a>
           <a href="#features">Features</a>
           <a href="#circle">Circle</a>
           <a href="#faq">FAQ</a>
           <a href="#setup">Setup</a>
         </nav>
-        <a className="bluvfi-nav-cta" href="#waitlist">
+        <a className="Bluvfi-nav-cta" href="#waitlist">
           Join waitlist
         </a>
       </header>
 
       <main className="landing-redesign">
-        <section className="bluvfi-hero">
-          <div className="bluvfi-hero-copy">
-            <p className="bluvfi-kicker">bluvfi AI Financial Assistant</p>
-            <h1 className="bluvfi-title">
+        <section className="Bluvfi-hero">
+          <div className="Bluvfi-hero-copy">
+            <p className="Bluvfi-kicker">Bluvfi AI Financial Assistant</p>
+            <h1 className="Bluvfi-title">
               Pay bills, subscribe to services, and invest by chat or tap.
             </h1>
-            <p className="bluvfi-subtitle">
-              bluvfi is a mobile first AI financial assistant for subscriptions,
+            <p className="Bluvfi-subtitle">
+              Bluvfi is a mobile first AI financial assistant for subscriptions,
               utilities, internet and cable bills, stocks, ETFs, and pre IPO
               investments. It feels web2 simple while every payment follows the
               same gasless on chain path.
             </p>
-            <div className="bluvfi-actions">
-              <a className="bluvfi-primary-btn" href="#waitlist">
+            <div className="Bluvfi-actions">
+              <a className="Bluvfi-primary-btn" href="#waitlist">
                 Join waitlist
               </a>
-              <a className="bluvfi-secondary-btn" href="#how-it-works">
+              <a className="Bluvfi-secondary-btn" href="#how-it-works">
                 See how it works
               </a>
             </div>
-            <div className="bluvfi-trust-row" aria-label="Product highlights">
+            <div className="Bluvfi-trust-row" aria-label="Product highlights">
               <span>Privy embedded wallet</span>
               <span>Gasless USDC payments</span>
               <span>Circle Gateway x402 settlement</span>
             </div>
           </div>
 
-          <div className="bluvfi-console-stage" aria-label="bluvfi app preview">
-            <div className="bluvfi-console">
+          <div className="Bluvfi-console-stage" aria-label="Bluvfi app preview">
+            <div className="Bluvfi-console">
               <div className="phone-topbar">
                 <span>Good afternoon, Maya</span>
                 <span>LIVE</span>
@@ -975,9 +975,9 @@ const BluvfiLandingPage: React.FC = () => {
           </div>
         </section>
 
-        <section id="how-it-works" className="bluvfi-section bluvfi-split">
+        <section id="how-it-works" className="Bluvfi-section Bluvfi-split">
           <div>
-            <p className="bluvfi-kicker">How it works</p>
+            <p className="Bluvfi-kicker">How it works</p>
             <h2>One payment path for every button and every chat command.</h2>
             <p>
               UI payments and AI triggered confirmations both call arcKit.send()
@@ -995,9 +995,9 @@ const BluvfiLandingPage: React.FC = () => {
           </div>
         </section>
 
-        <section id="features" className="bluvfi-section">
+        <section id="features" className="Bluvfi-section">
           <div className="section-intro">
-            <p className="bluvfi-kicker">Features</p>
+            <p className="Bluvfi-kicker">Features</p>
             <h2>Built like a familiar finance app, powered by AI and USDC.</h2>
           </div>
           <div className="feature-card-grid">
@@ -1011,7 +1011,7 @@ const BluvfiLandingPage: React.FC = () => {
           </div>
         </section>
 
-        <section className="bluvfi-section benefit-band">
+        <section className="Bluvfi-section benefit-band">
           {[
             '16 bills across streaming, internet, cable, and utilities',
             '10 assets across stocks, ETFs, and pre IPO opportunities',
@@ -1025,9 +1025,9 @@ const BluvfiLandingPage: React.FC = () => {
           ))}
         </section>
 
-        <section id="circle" className="bluvfi-section">
+        <section id="circle" className="Bluvfi-section">
           <div className="section-intro">
-            <p className="bluvfi-kicker">Circle integrations</p>
+            <p className="Bluvfi-kicker">Circle integrations</p>
             <h2>Arc AppKit moves USDC. Circle Gateway settles nanopayments.</h2>
             <p>
               Payments use Privy's embedded wallet provider with
@@ -1047,9 +1047,9 @@ const BluvfiLandingPage: React.FC = () => {
           </div>
         </section>
 
-        <section className="bluvfi-section catalog-section">
+        <section className="Bluvfi-section catalog-section">
           <div className="section-intro">
-            <p className="bluvfi-kicker">Demo catalog</p>
+            <p className="Bluvfi-kicker">Demo catalog</p>
             <h2>Loaded with real feeling demo data from the first screen.</h2>
           </div>
           <div className="catalog-grid">
@@ -1072,9 +1072,9 @@ const BluvfiLandingPage: React.FC = () => {
           </div>
         </section>
 
-        <section id="setup" className="bluvfi-section">
+        <section id="setup" className="Bluvfi-section">
           <div className="setup-content">
-            <p className="bluvfi-kicker">Tech stack and setup</p>
+            <p className="Bluvfi-kicker">Tech stack and setup</p>
             <h2>Everything needed for the demo build.</h2>
             <div className="setup-list">
               {setupItems.map(([title, copy]) => (
@@ -1090,31 +1090,31 @@ const BluvfiLandingPage: React.FC = () => {
           </div>
         </section>
 
-        <section id="faq" className="bluvfi-section">
+        <section id="faq" className="Bluvfi-section">
           <div className="setup-content">
-            <p className="bluvfi-kicker">Got questions?</p>
+            <p className="Bluvfi-kicker">Got questions?</p>
             <h2>Simple answers to simple questions</h2>
             <div className="setup-list">
               {[
                 {
-                  q: 'What is bluvfi, in plain English?',
-                  a: 'bluvfi is a mobile first AI financial assistant that helps you pay bills, manage subscriptions, and buy investments by chat or tap. You stay in control because every action still asks for confirmation before payment.',
+                  q: 'What is Bluvfi, in plain English?',
+                  a: 'Bluvfi is a mobile first AI financial assistant that helps you pay bills, manage subscriptions, and buy investments by chat or tap. You stay in control because every action still asks for confirmation before payment.',
                 },
                 {
                   q: 'Is my money safe?',
-                  a: 'Yes. Payments come from your embedded wallet only after you confirm them. bluvfi keeps crypto details out of the way, records history, and uses the same checked payment path for chat and button actions.',
+                  a: 'Yes. Payments come from your embedded wallet only after you confirm them. Bluvfi keeps crypto details out of the way, records history, and uses the same checked payment path for chat and button actions.',
                 },
                 {
                   q: 'How is this different from just using an AI chatbot?',
-                  a: 'A chatbot only talks. bluvfi can prepare real bill payments and investment purchases, then show a confirmation card so you can approve the action in the same app.',
+                  a: 'A chatbot only talks. Bluvfi can prepare real bill payments and investment purchases, then show a confirmation card so you can approve the action in the same app.',
                 },
                 {
                   q: 'Can I stop the AI anytime?',
                   a: 'Yes. The AI queues actions for confirmation. Nothing is paid just because the AI suggests it, and cancelled payments are treated as normal user cancellations.',
                 },
                 {
-                  q: 'Is bluvfi ready to use right now?',
-                  a: 'bluvfi is being built now. Join the waitlist below to get access when the demo opens.',
+                  q: 'Is Bluvfi ready to use right now?',
+                  a: 'Bluvfi is being built now. Join the waitlist below to get access when the demo opens.',
                 },
               ].map((item) => (
                 <details key={item.q}>
@@ -1129,24 +1129,24 @@ const BluvfiLandingPage: React.FC = () => {
           </div>
         </section>
 
-        <section id="waitlist" className="bluvfi-section waitlist-section">
-          <p className="bluvfi-kicker">Be first in line</p>
+        <section id="waitlist" className="Bluvfi-section waitlist-section">
+          <p className="Bluvfi-kicker">Be first in line</p>
           <h2>Ready for financial errands by chat or tap?</h2>
           <p>
-            Join the waitlist and we will let you know when bluvfi is ready to
+            Join the waitlist and we will let you know when Bluvfi is ready to
             try.
           </p>
           <TallyEmbed />
         </section>
 
-        <footer className="bluvfi-footer">
-          <div className="bluvfi-brand">
-            <img src="/bluvfi.jpg" alt="bluvfi logo" className="bluvfi-logo" />
-            <span>bluvfi</span>
+        <footer className="Bluvfi-footer">
+          <div className="Bluvfi-brand">
+            <img src="/Bluvfi.jpg" alt="Bluvfi logo" className="Bluvfi-logo" />
+            <span>Bluvfi</span>
           </div>
           <div className="footer-links">
             <a
-              href="https://github.com/Afoxcute/bluvfi"
+              href="https://github.com/Afoxcute/Bluvfi"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -1167,7 +1167,7 @@ const BluvfiLandingPage: React.FC = () => {
               Privy
             </a>
           </div>
-          <p>Built with bluvfi. Web2-friendly UX, on-chain settlement.</p>
+          <p>Built with Bluvfi. Web2-friendly UX, on-chain settlement.</p>
         </footer>
       </main>
     </div>
@@ -3593,47 +3593,47 @@ export default function App({ thirdwebClient }: AppProps) {
     return <BluvfiLandingPage />
 
     return (
-      <div className="app bluvfi-app-shell">
+      <div className="app Bluvfi-app-shell">
         <NotificationToasts />
 
-        <header className="bluvfi-nav">
-          <div className="bluvfi-brand">
-            <img src="/bluvfi.jpg" alt="bluvfi logo" className="bluvfi-logo" />
-            <span>bluvfi</span>
+        <header className="Bluvfi-nav">
+          <div className="Bluvfi-brand">
+            <img src="/Bluvfi.jpg" alt="Bluvfi logo" className="Bluvfi-logo" />
+            <span>Bluvfi</span>
           </div>
-          <nav className="bluvfi-links" aria-label="Primary">
+          <nav className="Bluvfi-links" aria-label="Primary">
             <a href="#how-it-works">How it works</a>
             <a href="#features">Features</a>
             <a href="#circle">Circle</a>
             <a href="#setup">Setup</a>
           </nav>
-          <a className="bluvfi-nav-cta" href="#waitlist">
+          <a className="Bluvfi-nav-cta" href="#waitlist">
             Join waitlist
           </a>
         </header>
 
         <main className="landing-redesign">
-          <section className="bluvfi-hero">
-            <div className="bluvfi-hero-copy">
-              <p className="bluvfi-kicker">Your AI assistant, on a leash 🐕</p>
-              <h1 className="bluvfi-title">
+          <section className="Bluvfi-hero">
+            <div className="Bluvfi-hero-copy">
+              <p className="Bluvfi-kicker">Your AI assistant, on a leash 🐕</p>
+              <h1 className="Bluvfi-title">
                 Let your AI assistant do the work, without giving it the keys to everything.
               </h1>
-              <p className="bluvfi-subtitle">
-                bluvfi is like a babysitter for your AI assistant. You tell it exactly what it's allowed to do, how much it can spend, and for how long. It does the job. You stay in charge.
+              <p className="Bluvfi-subtitle">
+                Bluvfi is like a babysitter for your AI assistant. You tell it exactly what it's allowed to do, how much it can spend, and for how long. It does the job. You stay in charge.
               </p>
-              <div className="bluvfi-actions">
+              <div className="Bluvfi-actions">
                 <a
-                  className="bluvfi-primary-btn"
+                  className="Bluvfi-primary-btn"
                   href="#waitlist"
                 >
                   Get early access
                 </a>
-                <a className="bluvfi-secondary-btn" href="#sessions">
+                <a className="Bluvfi-secondary-btn" href="#sessions">
                   See how it works
                 </a>
               </div>
-              <div className="bluvfi-trust-row" aria-label="Product highlights">
+              <div className="Bluvfi-trust-row" aria-label="Product highlights">
                 <span>✅ You stay in control</span>
                 <span>⚡ AI does the work</span>
                 <span>🔒 Nothing sneaks past</span>
@@ -3641,10 +3641,10 @@ export default function App({ thirdwebClient }: AppProps) {
             </div>
 
             <div
-              className="bluvfi-console-stage"
-              aria-label="bluvfi workflow preview"
+              className="Bluvfi-console-stage"
+              aria-label="Bluvfi workflow preview"
             >
-              <div className="bluvfi-console">
+              <div className="Bluvfi-console">
                 <div className="phone-topbar">
                   <span>AI assistant session</span>
                   <span>LIVE</span>
@@ -3683,16 +3683,16 @@ export default function App({ thirdwebClient }: AppProps) {
             </div>
           </section>
 
-          <section id="sessions" className="bluvfi-section bluvfi-split">
+          <section id="sessions" className="Bluvfi-section Bluvfi-split">
             <div>
-              <p className="bluvfi-kicker">
+              <p className="Bluvfi-kicker">
                 Your AI assistant, your rules
               </p>
               <h2>
                 Give your AI assistant a job to do, then watch it do exactly that. Nothing else.
               </h2>
               <p>
-                Think of bluvfi like giving a kid an allowance. You say "here's $5, you can only buy snacks, and only until 5pm." They can't raid your wallet or go somewhere you didn't approve. Your AI assistant works the same way. You set the rules, bluvfi enforces them automatically.
+                Think of Bluvfi like giving a kid an allowance. You say "here's $5, you can only buy snacks, and only until 5pm." They can't raid your wallet or go somewhere you didn't approve. Your AI assistant works the same way. You set the rules, Bluvfi enforces them automatically.
               </p>
             </div>
             <div className="chain-panel">
@@ -3710,9 +3710,9 @@ export default function App({ thirdwebClient }: AppProps) {
             </div>
           </section>
 
-          <section id="execution" className="bluvfi-section">
+          <section id="execution" className="Bluvfi-section">
             <div className="section-intro">
-              <p className="bluvfi-kicker">How it works in 3 steps</p>
+              <p className="Bluvfi-kicker">How it works in 3 steps</p>
               <h2>Simple as 1, 2, 3.</h2>
             </div>
             <div className="payment-grid">
@@ -3761,7 +3761,7 @@ export default function App({ thirdwebClient }: AppProps) {
             </div>
           </section>
 
-          <section id="security" className="bluvfi-section benefit-band">
+          <section id="security" className="Bluvfi-section benefit-band">
             {[
               '🔐 Your main wallet is never exposed',
               '🛑 AI stops automatically when time runs out',
@@ -3776,16 +3776,16 @@ export default function App({ thirdwebClient }: AppProps) {
           </section>
 
           {/* FAQ Section */}
-          <section id="faq" className="bluvfi-section">
+          <section id="faq" className="Bluvfi-section">
             <div style={{ maxWidth: "720px", margin: "0 auto", width: "100%" }}>
-              <p className="bluvfi-kicker">Got questions?</p>
+              <p className="Bluvfi-kicker">Got questions?</p>
               <h2 style={{ marginBottom: "2rem" }}>Simple answers to simple questions</h2>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                 {[
                   {
-                    q: "What is bluvfi, in plain English?",
-                    a: "bluvfi is a way to let an AI assistant do tasks for you (like buying data, making swaps, or running jobs) without giving it access to everything in your wallet. You stay in charge the whole time."
+                    q: "What is Bluvfi, in plain English?",
+                    a: "Bluvfi is a way to let an AI assistant do tasks for you (like buying data, making swaps, or running jobs) without giving it access to everything in your wallet. You stay in charge the whole time."
                   },
                   {
                     q: "Is my money safe?",
@@ -3793,15 +3793,15 @@ export default function App({ thirdwebClient }: AppProps) {
                   },
                   {
                     q: "How is this different from just using an AI chatbot?",
-                    a: "A chatbot talks to you. bluvfi lets your AI actually do things (like make payments or run tasks), but only within the rules you set first. It's the difference between asking for directions and actually driving the car for you, safely."
+                    a: "A chatbot talks to you. Bluvfi lets your AI actually do things (like make payments or run tasks), but only within the rules you set first. It's the difference between asking for directions and actually driving the car for you, safely."
                   },
                   {
                     q: "Can I stop the AI anytime?",
                     a: "Yes! You can cancel at any moment. Sessions also stop automatically when time runs out or the spending limit is hit. You're always in control."
                   },
                   {
-                    q: "Is bluvfi ready to use right now?",
-                    a: "bluvfi is being built right now. Join the waitlist below to be first in line when we open up access, and to get updates as we ship new features."
+                    q: "Is Bluvfi ready to use right now?",
+                    a: "Bluvfi is being built right now. Join the waitlist below to be first in line when we open up access, and to get updates as we ship new features."
                   },
                 ].map((item, index) => (
                   <details
@@ -3840,31 +3840,31 @@ export default function App({ thirdwebClient }: AppProps) {
             </div>
           </section>
 
-          <section id="waitlist" className="bluvfi-section waitlist-section">
-            <p className="bluvfi-kicker">
+          <section id="waitlist" className="Bluvfi-section waitlist-section">
+            <p className="Bluvfi-kicker">
               Be first in line 🚀
             </p>
             <h2>
               Want your AI assistant to get things done while you sleep?
             </h2>
             <p>
-              Join the waitlist and we'll let you know the moment bluvfi is ready. No spam. Just one email when it's your turn.
+              Join the waitlist and we'll let you know the moment Bluvfi is ready. No spam. Just one email when it's your turn.
             </p>
             <TallyEmbed />
           </section>
 
-          <footer className="bluvfi-footer">
-            <div className="bluvfi-brand">
+          <footer className="Bluvfi-footer">
+            <div className="Bluvfi-brand">
               <img
-                src="/bluvfi.jpg"
-                alt="bluvfi logo"
-                className="bluvfi-logo"
+                src="/Bluvfi.jpg"
+                alt="Bluvfi logo"
+                className="Bluvfi-logo"
               />
-              <span>bluvfi</span>
+              <span>Bluvfi</span>
             </div>
             <div className="footer-links">
               <a
-                href="https://github.com/Afoxcute/bluvfi"
+                href="https://github.com/Afoxcute/Bluvfi"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -3901,8 +3901,8 @@ export default function App({ thirdwebClient }: AppProps) {
       <header className="header">
         <div className="header-container">
           <div className="header-logo">
-            <img src="/bluvfi.jpg" alt="bluvfi logo" className="logo-image" />
-            <h1>bluvfi</h1>
+            <img src="/Bluvfi.jpg" alt="Bluvfi logo" className="logo-image" />
+            <h1>Bluvfi</h1>
           </div>
           <div className="header-actions">
             <div
