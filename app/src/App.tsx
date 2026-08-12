@@ -1146,25 +1146,18 @@ const BluvfiLandingPage: React.FC = () => {
           </div>
           <div className="footer-links">
             <a
-              href="https://github.com/Afoxcute/Bluvfi"
+              href="https://x.com/bluvfi"
               target="_blank"
               rel="noopener noreferrer"
             >
-              GitHub
+              X / Twitter
             </a>
             <a
-              href="https://www.circle.com"
+              href="https://t.me/+KXpDSUAnfg44MTg0"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Circle
-            </a>
-            <a
-              href="https://www.privy.io"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Privy
+              Telegram
             </a>
           </div>
           <p>Built with Bluvfi. Web2-friendly UX, on-chain settlement.</p>
