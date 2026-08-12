@@ -894,7 +894,7 @@ const BluvfiLandingPage: React.FC = () => {
 
       <header className="Bluvfi-nav">
         <div className="Bluvfi-brand">
-          <img src="/bluvfi.jpg" alt="Bluvfi logo" className="Bluvfi-logo" />
+          <img src="/Bluvfiv2.jpg" alt="Bluvfi logo" className="Bluvfi-logo" />
           <span>Bluvfi</span>
         </div>
         <nav className="Bluvfi-links" aria-label="Primary">
@@ -1141,7 +1141,7 @@ const BluvfiLandingPage: React.FC = () => {
 
         <footer className="Bluvfi-footer">
           <div className="Bluvfi-brand">
-            <img src="/bluvfi.jpg" alt="Bluvfi logo" className="Bluvfi-logo" />
+            <img src="/Bluvfiv2.jpg" alt="Bluvfi logo" className="Bluvfi-logo" />
             <span>Bluvfi</span>
           </div>
           <div className="footer-links">
@@ -3598,7 +3598,7 @@ export default function App({ thirdwebClient }: AppProps) {
 
         <header className="Bluvfi-nav">
           <div className="Bluvfi-brand">
-            <img src="/bluvfi.jpg" alt="Bluvfi logo" className="Bluvfi-logo" />
+            <img src="/Bluvfiv2.jpg" alt="Bluvfi logo" className="Bluvfi-logo" />
             <span>Bluvfi</span>
           </div>
           <nav className="Bluvfi-links" aria-label="Primary">
@@ -3856,7 +3856,7 @@ export default function App({ thirdwebClient }: AppProps) {
           <footer className="Bluvfi-footer">
             <div className="Bluvfi-brand">
               <img
-                src="/bluvfi.jpg"
+                src="/Bluvfiv2.jpg"
                 alt="Bluvfi logo"
                 className="Bluvfi-logo"
               />
@@ -3901,7 +3901,7 @@ export default function App({ thirdwebClient }: AppProps) {
       <header className="header">
         <div className="header-container">
           <div className="header-logo">
-            <img src="/bluvfi.jpg" alt="Bluvfi logo" className="logo-image" />
+            <img src="/Bluvfiv2.jpg" alt="Bluvfi logo" className="logo-image" />
             <h1>Bluvfi</h1>
           </div>
           <div className="header-actions">
