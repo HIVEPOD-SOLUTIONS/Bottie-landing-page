@@ -1160,7 +1160,7 @@ const BluvfiLandingPage: React.FC = () => {
               Telegram
             </a>
           </div>
-          <p>Bluvfi is an AI financial assistant product built under Hivepod Digital SOlutions(the Company).</p>
+          <p>Bluvfi is an AI financial assistant product built under Hivepod Digital Solutions(the Company).</p>
         </footer>
       </main>
     </div>
