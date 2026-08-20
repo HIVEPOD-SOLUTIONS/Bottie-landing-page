@@ -1075,7 +1075,7 @@ const BluvfiLandingPage: React.FC = () => {
         <section id="setup" className="Bluvfi-section">
           <div className="setup-content">
             <p className="Bluvfi-kicker">Tech stack and setup</p>
-            <h2>Everything needed for the demo build.</h2>
+            <h2>Everything needed for the build.</h2>
             <div className="setup-list">
               {setupItems.map(([title, copy]) => (
                 <details key={title}>
