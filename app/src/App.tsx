@@ -857,7 +857,7 @@ const TallyEmbed: React.FC = () => {
 const BluvfiLandingPage: React.FC = () => {
   const workflowSteps = [
     ['Sign up with email or social', 'Privy creates an embedded EOA wallet with no seed phrase or browser extension required.'],
-    ['Browse bills and investments', '16 bills and 10 assets are already loaded so the demo feels like a real mobile finance app.'],
+    ['Browse bills and investments', '16 bills and 10 assets are already loaded.'],
     ['Pay by tap or chat', 'Subscribe, Buy, or say "Pay my Netflix" and approve the same inline confirmation flow.'],
     ['Settle and track history', 'Every payment runs through Arc AppKit send and Circle Gateway x402 nanopayments.'],
   ]
@@ -868,7 +868,7 @@ const BluvfiLandingPage: React.FC = () => {
     ['Gasless payments', 'arcKit.send() sponsors gas through Circle infrastructure. Users only need USDC on Base Sepolia.'],
     ['Embedded wallet', 'Privy useWallets() gives Arc AppKit the user wallet directly, without browser wallet discovery for payments.'],
     ['Add Funds', 'Send from a browser wallet or bridge USDC from eight source testnets into the agent wallet.'],
-    ['Unified state', 'Dashboard screens and chat confirm cards share DemoStateProvider, localStorage, and Postgres history.'],
+    ['Unified state', 'Dashboard screens and chat confirm cards share localStorage, and Postgres history.'],
   ]
 
   const integrations = [
@@ -1049,8 +1049,8 @@ const BluvfiLandingPage: React.FC = () => {
 
         <section className="Bluvfi-section catalog-section">
           <div className="section-intro">
-            <p className="Bluvfi-kicker">Demo catalog</p>
-            <h2>Loaded with real feeling demo data from the first screen.</h2>
+            <p className="Bluvfi-kicker">Catalog</p>
+            <h2>Loaded with real feeling data from the first screen.</h2>
           </div>
           <div className="catalog-grid">
             <div>
@@ -1114,7 +1114,7 @@ const BluvfiLandingPage: React.FC = () => {
                 },
                 {
                   q: 'Is Bluvfi ready to use right now?',
-                  a: 'Bluvfi is being built now. Join the waitlist below to get access when the demo opens.',
+                  a: 'Bluvfi is being built now. Join the waitlist below to get access when it opens.',
                 },
               ].map((item) => (
                 <details key={item.q}>
