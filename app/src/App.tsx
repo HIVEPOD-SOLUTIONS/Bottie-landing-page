@@ -876,8 +876,8 @@ const BluvfiLandingPage: React.FC = () => {
     ['Chat bill confirm', 'Bill confirmation card', 'Runs the same send path from an inline AI confirmation card.'],
     ['Chat investment confirm', 'Asset confirmation card', 'Executes purchases from chat and updates the portfolio.'],
     ['Funding sheet', 'Fund wallet sheet', 'Supports Arc AppKit Send and Bridge tabs for USDC top ups.'],
-    ['x402 seller endpoint', '/api/nanopay/sell', 'Returns payment requirements, then settles signed Gateway payments.'],
-    ['Checkout endpoint', '/api/nanopay/checkout', 'Runs the x402 checkout flow after every confirmed payment.'],
+    ['Payment request', 'Asks what needs to be paid', 'Bluvfi checks the payment details before money moves.'],
+    ['Payment confirmation', 'Marks the payment as done', 'After you approve, Bluvfi confirms the payment and adds it to your history.'],
   ]
 
   const setupItems = [
@@ -886,6 +886,19 @@ const BluvfiLandingPage: React.FC = () => {
     ['Wallets and chain', 'Privy embedded EOA wallets, wagmi v2, viem, Arc AppKit, and Base Sepolia chain ID 84532.'],
     ['Data', 'React context plus localStorage for UI state, Neon Postgres and Drizzle ORM for payment history.'],
     ['Environment', 'Privy, Alchemy, Neon, OpenAI, Circle buyer private key, seller address, and app URL variables.'],
+  ]
+
+  const securityLayers = [
+    ['Encryption at rest', 'Data Encryption', 'Sensitive account, payment, and activity records are protected with modern encryption practices designed for resilient data storage.'],
+    ['Sensitive channels', 'End to End Encryption', 'Private communications and wallet related flows are designed to reduce exposure while requests move through the Bluvfi experience.'],
+    ['API and webhooks', 'API Security', 'Server endpoints use authorization checks, signed payload patterns, and request validation to reduce tampering risk during transmission.'],
+  ]
+
+  const securityOperations = [
+    ['Non Custodial Design', 'Bluvfi is designed around embedded wallets and user confirmation, so users keep control of funds where payment execution applies.'],
+    ['Cloud Infrastructure', 'The platform is built for highly available cloud environments with industry standard operational security practices.'],
+    ['Continuous Monitoring', 'Payment, API, and application activity can be monitored for anomalies, abuse patterns, and unexpected settlement behavior.'],
+    ['Access Controls', 'Administrative systems should use role based access controls, least privilege permissions, and multi factor authentication.'],
   ]
 
   return (
@@ -900,6 +913,7 @@ const BluvfiLandingPage: React.FC = () => {
         <nav className="Bluvfi-links" aria-label="Primary">
           <a href="#how-it-works">How it works</a>
           <a href="#features">Features</a>
+          <a href="#security">Security</a>
           <a href="#circle">Circle</a>
           <a href="#faq">FAQ</a>
           <a href="#setup">Setup</a>
@@ -1023,6 +1037,68 @@ const BluvfiLandingPage: React.FC = () => {
               <p>{benefit}</p>
             </div>
           ))}
+        </section>
+
+        <section id="security" className="Bluvfi-section security-section">
+          <div className="security-hero">
+            <p className="Bluvfi-kicker">Security and Compliance</p>
+            <h2>Enterprise security for AI powered financial actions.</h2>
+            <p>
+              Bluvfi is designed with protective layers for wallet initiated
+              payments, AI triggered confirmation flows, API calls, and payment
+              history. The goal is a simple user experience backed by careful
+              controls at every layer.
+            </p>
+            <div className="security-actions">
+              <a className="Bluvfi-primary-btn" href="mailto:hivepod@bluvfi.xyz">
+                Contact Security Team
+              </a>
+            </div>
+          </div>
+
+          <div className="section-intro">
+            <p className="Bluvfi-kicker">Designed for Defense</p>
+            <h2>The protective layers securing the Bluvfi platform.</h2>
+          </div>
+
+          <div className="security-card-grid">
+            {securityLayers.map(([eyebrow, title, copy]) => (
+              <article className="security-card" key={title}>
+                <span>{eyebrow}</span>
+                <h3>{title}</h3>
+                <p>{copy}</p>
+                <strong>{title}</strong>
+              </article>
+            ))}
+          </div>
+
+          <div className="security-ops">
+            <div className="section-intro">
+              <p className="Bluvfi-kicker">Standards and Operations</p>
+              <h2>Meeting modern security demands with continuous controls.</h2>
+            </div>
+            <div className="security-ops-grid">
+              {securityOperations.map(([title, copy]) => (
+                <article className="security-op" key={title}>
+                  <h3>{title}</h3>
+                  <p>{copy}</p>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="security-question">
+            <h2>Questions about our security?</h2>
+            <p>
+              Our security team can answer questions about wallet design,
+              payment flow controls, data handling, and operational practices.
+            </p>
+            <div className="security-actions centered-actions">
+              <a className="Bluvfi-primary-btn" href="mailto:hivepod@bluvfi.xyz">
+                Contact Security Team
+              </a>
+            </div>
+          </div>
         </section>
 
         <section id="circle" className="Bluvfi-section">
