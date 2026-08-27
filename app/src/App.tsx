@@ -854,6 +854,1360 @@ const TallyEmbed: React.FC = () => {
   )
 }
 
+// ── Privacy Policy Page ─────────────────────────────────────────────────────
+const PrivacyPolicyPage: React.FC = () => {
+  const sections = [
+    { num: '01', id: 's1', title: 'Introduction' },
+    { num: '02', id: 's2', title: 'Information We Collect' },
+    { num: '03', id: 's3', title: 'How We Use Your Information' },
+    { num: '04', id: 's4', title: 'Legal Basis for Processing' },
+    { num: '05', id: 's5', title: 'How We Share Your Information' },
+    { num: '06', id: 's6', title: 'Data Security' },
+    { num: '07', id: 's7', title: 'Data Retention' },
+    { num: '08', id: 's8', title: 'Your Privacy Rights' },
+    { num: '09', id: 's9', title: 'Cookies & Tracking' },
+    { num: '10', id: 's10', title: 'International Data Transfers' },
+    { num: '11', id: 's11', title: 'Children\'s Privacy' },
+    { num: '12', id: 's12', title: 'Third-Party Services' },
+    { num: '13', id: 's13', title: 'Blockchain Transparency' },
+    { num: '14', id: 's14', title: 'Changes to This Policy' },
+    { num: '15', id: 's15', title: 'Contact Us' },
+  ]
+
+  return (
+    <div className="pp-page">
+      {/* ── Sticky Nav ── */}
+      <nav className="pp-nav">
+        <div className="pp-nav-inner">
+          <a href="/" className="Bluvfi-brand pp-brand">
+            <img src="/Bluvfiv2.jpg" alt="Bluvfi logo" className="Bluvfi-logo" />
+            <span>Bluvfi</span>
+          </a>
+          <a href="/" className="pp-back">← Back to home</a>
+        </div>
+      </nav>
+
+      {/* ── Hero ── */}
+      <header className="pp-hero">
+        <span className="pp-pill">Legal</span>
+        <h1 className="pp-h1">Privacy <span className="pp-accent">Policy</span></h1>
+        <p className="pp-meta">
+          <strong>Last updated: August 27, 2026</strong>
+          &nbsp;·&nbsp;Effective for all users of Bluvfi services.
+        </p>
+      </header>
+
+      {/* ── Table of Contents ── */}
+      <div className="pp-toc-wrap">
+        <div className="pp-toc">
+          <p className="pp-toc-label">Contents</p>
+          <ol className="pp-toc-list">
+            {sections.map(s => (
+              <li key={s.id}>
+                <a href={`#${s.id}`}>{s.num}. {s.title}</a>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </div>
+
+      {/* ── Sections ── */}
+      <main className="pp-content">
+
+        {/* 01 */}
+        <section className="pp-section" id="s1">
+          <div className="pp-section-head">
+            <span className="pp-num">01</span>
+            <h2>Introduction</h2>
+          </div>
+          <p>Bluvfi ("Bluvfi," "we," "us," or "our") is an AI-powered financial assistant that enables users to pay bills, manage subscriptions, and invest — all through a single, gasless on-chain payment flow. We are committed to protecting your privacy and handling your personal information responsibly.</p>
+          <p>This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our web application, APIs, AI chat interface, and related services (collectively, the "Service").</p>
+          <div className="pp-highlight">
+            <p>By accessing or using the Service, you acknowledge that you have read and understood this Privacy Policy and agree to the collection, use, and disclosure of your information as described herein. If you do not agree, please do not use the Service.</p>
+          </div>
+          <p>This Privacy Policy is designed to comply with the General Data Protection Regulation (GDPR) and other applicable data protection laws in the jurisdictions where we operate.</p>
+        </section>
+
+        {/* 02 */}
+        <section className="pp-section" id="s2">
+          <div className="pp-section-head">
+            <span className="pp-num">02</span>
+            <h2>Information We Collect</h2>
+          </div>
+          <h3 className="pp-h3">2.1 Information You Provide Directly</h3>
+          <p>We collect information you voluntarily provide when you:</p>
+          <ul>
+            <li>Register for an account or authenticate via Privy (email, social login, passkey, or phone)</li>
+            <li>Connect or create an embedded crypto wallet</li>
+            <li>Initiate a payment, subscription, or investment action</li>
+            <li>Contact our support team or join our waitlist</li>
+            <li>Interact with the AI chat interface or use voice commands</li>
+          </ul>
+          <p>This includes: email address, phone number, cryptocurrency wallet addresses (embedded EOA wallets), payment and transaction details, AI chat messages, voice transcriptions, and app preferences.</p>
+
+          <h3 className="pp-h3">2.2 Information Automatically Collected</h3>
+          <div className="pp-card-grid">
+            {[
+              { title: 'Device & Browser', body: 'IP address, browser type, OS, device identifiers, and mobile network info.' },
+              { title: 'Usage Data', body: 'Pages viewed, features used, time on page, links clicked, and AI prompts entered.' },
+              { title: 'Location Data', body: 'General geographic location inferred from IP address.' },
+              { title: 'Transaction Data', body: 'USDC amounts, wallet addresses, timestamps, Base Sepolia network, and Circle Gateway records.' },
+              { title: 'Voice Data', body: 'Audio transcribed by OpenAI Whisper for voice-command features. Audio is not stored beyond transcription.' },
+              { title: 'Cookies & Tracking', body: 'Information collected via cookies and similar technologies (see Section 9).' },
+            ].map(c => (
+              <div className="pp-card" key={c.title}>
+                <strong>{c.title}</strong>
+                <span>{c.body}</span>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="pp-h3">2.3 Information from Third Parties</h3>
+          <p>We may receive information from trusted partners including:</p>
+          <ul>
+            <li><strong>Privy</strong> — identity and wallet management, authentication, and embedded EOA creation</li>
+            <li><strong>Circle</strong> — USDC payment processing, Arc AppKit transaction records, and Circle Gateway x402 settlements</li>
+            <li><strong>OpenAI</strong> — AI chat processing (GPT-4o mini) and voice transcription (Whisper)</li>
+            <li><strong>Vercel</strong> — hosting, analytics, and edge function logs</li>
+            <li><strong>Neon / Drizzle ORM</strong> — payment history storage via Postgres</li>
+            <li><strong>Alchemy</strong> — blockchain RPC and node infrastructure</li>
+          </ul>
+        </section>
+
+        {/* 03 */}
+        <section className="pp-section" id="s3">
+          <div className="pp-section-head">
+            <span className="pp-num">03</span>
+            <h2>How We Use Your Information</h2>
+          </div>
+          <h3 className="pp-h3">3.1 Service Provision</h3>
+          <ul>
+            <li>Create and manage your account and embedded wallet</li>
+            <li>Process gasless USDC payments, subscriptions, and investment purchases</li>
+            <li>Operate the AI financial assistant and process natural language commands</li>
+            <li>Display your bill catalog, portfolio, and payment history</li>
+            <li>Send transaction confirmations and in-app notifications</li>
+          </ul>
+          <h3 className="pp-h3">3.2 Security and Compliance</h3>
+          <ul>
+            <li>Detect, prevent, and address fraud and unauthorized transactions</li>
+            <li>Enforce our Terms of Service and usage policies</li>
+            <li>Respond to legal processes and regulatory requirements</li>
+            <li>Maintain audit logs for financial transactions</li>
+          </ul>
+          <h3 className="pp-h3">3.3 Analytics and Improvement</h3>
+          <ul>
+            <li>Analyze usage patterns and improve the AI assistant's accuracy</li>
+            <li>Conduct research, A/B testing, and feature development</li>
+            <li>Monitor service performance and reliability</li>
+          </ul>
+          <h3 className="pp-h3">3.4 Communications and Marketing</h3>
+          <ul>
+            <li>Send product updates, waitlist announcements, and newsletters (with your consent)</li>
+            <li>Respond to support inquiries and feedback</li>
+            <li>Notify you of new features, billing reminders, or low-balance alerts</li>
+          </ul>
+        </section>
+
+        {/* 04 */}
+        <section className="pp-section" id="s4">
+          <div className="pp-section-head">
+            <span className="pp-num">04</span>
+            <h2>Legal Basis for Processing (GDPR)</h2>
+          </div>
+          <p>If you are located in the European Economic Area (EEA), our legal basis for processing your personal information is:</p>
+          <ul>
+            <li><strong>Contract Performance</strong> — Processing necessary to provide the Service you signed up for.</li>
+            <li><strong>Legal Obligation</strong> — Processing required to comply with applicable financial and data protection laws.</li>
+            <li><strong>Legitimate Interests</strong> — Fraud prevention, service security, analytics, and improving AI performance where these interests are not overridden by your rights.</li>
+            <li><strong>Consent</strong> — Marketing communications and non-essential cookies, where you have provided explicit consent.</li>
+          </ul>
+        </section>
+
+        {/* 05 */}
+        <section className="pp-section" id="s5">
+          <div className="pp-section-head">
+            <span className="pp-num">05</span>
+            <h2>How We Share Your Information</h2>
+          </div>
+          <div className="pp-highlight">
+            <p><strong>We do not sell your personal information.</strong> We do not share your data with advertisers or data brokers.</p>
+          </div>
+          <h3 className="pp-h3">5.1 Service Providers</h3>
+          <p>We share data with trusted third-party providers who help operate the Service — cloud hosting (Vercel), payment infrastructure (Circle, Privy), AI processing (OpenAI), database services (Neon), and analytics tools. All providers are contractually bound to protect your data.</p>
+          <h3 className="pp-h3">5.2 Legal Requirements</h3>
+          <p>We may disclose your information when required by law or in response to valid court orders, subpoenas, law enforcement requests, or regulatory authority demands.</p>
+          <h3 className="pp-h3">5.3 Business Transfers</h3>
+          <p>In connection with a merger, acquisition, or asset sale, your information may be transferred to the acquiring entity, subject to the same privacy commitments.</p>
+          <h3 className="pp-h3">5.4 With Your Consent</h3>
+          <p>We may share your information for purposes not described here only with your explicit prior consent.</p>
+          <h3 className="pp-h3">5.5 Blockchain Transactions</h3>
+          <p>All USDC transactions processed through Circle Gateway on Base Sepolia are visible on the public blockchain. This includes wallet addresses and transaction amounts. This data is immutable and cannot be erased once confirmed on-chain.</p>
+        </section>
+
+        {/* 06 */}
+        <section className="pp-section" id="s6">
+          <div className="pp-section-head">
+            <span className="pp-num">06</span>
+            <h2>Data Security</h2>
+          </div>
+          <p>We implement industry-standard security measures to protect your personal information:</p>
+          <ul>
+            <li>Data in transit encrypted with TLS 1.3</li>
+            <li>Data at rest encrypted with AES-256</li>
+            <li>Privy-managed embedded wallets — private keys are never exposed to Bluvfi servers</li>
+            <li>Multi-factor authentication (MFA) available for all accounts</li>
+            <li>Role-based access controls limiting internal data access</li>
+            <li>Regular security reviews and dependency auditing</li>
+            <li>Incident response and breach notification procedures</li>
+          </ul>
+          <div className="pp-info">
+            <p>No method of transmission over the Internet is 100% secure. While we strive to protect your data, we cannot guarantee absolute security. You provide information at your own risk.</p>
+          </div>
+        </section>
+
+        {/* 07 */}
+        <section className="pp-section" id="s7">
+          <div className="pp-section-head">
+            <span className="pp-num">07</span>
+            <h2>Data Retention</h2>
+          </div>
+          <p>We retain your personal information for as long as necessary to fulfill the purposes in this Privacy Policy, or as required by law:</p>
+          <ul>
+            <li><strong>Account Information</strong> — Duration of your account plus 7 years after closure (regulatory compliance)</li>
+            <li><strong>Transaction Records</strong> — At least 7 years for financial and tax purposes</li>
+            <li><strong>AI Chat Logs</strong> — Up to 90 days, then anonymized or deleted</li>
+            <li><strong>Voice Transcriptions</strong> — Deleted immediately after processing; audio not retained</li>
+            <li><strong>Marketing Data</strong> — Until you withdraw consent or we no longer have a legitimate need</li>
+            <li><strong>Usage & Analytics Data</strong> — Up to 24 months</li>
+          </ul>
+          <p>After the retention period, we securely delete or anonymize your information.</p>
+        </section>
+
+        {/* 08 */}
+        <section className="pp-section" id="s8">
+          <div className="pp-section-head">
+            <span className="pp-num">08</span>
+            <h2>Your Privacy Rights</h2>
+          </div>
+          <h3 className="pp-h3">8.1 General Rights</h3>
+          <p>Depending on your jurisdiction, you may have the right to:</p>
+          <ul>
+            <li><strong>Access</strong> — Request a copy of the personal information we hold about you</li>
+            <li><strong>Correction</strong> — Request correction of inaccurate or incomplete data</li>
+            <li><strong>Deletion</strong> — Request deletion of your data (subject to legal retention requirements)</li>
+            <li><strong>Portability</strong> — Receive your data in a structured, machine-readable format</li>
+            <li><strong>Objection</strong> — Object to processing based on legitimate interests</li>
+            <li><strong>Restriction</strong> — Request restriction of processing in certain circumstances</li>
+            <li><strong>Withdraw Consent</strong> — Withdraw consent for marketing or non-essential cookies at any time</li>
+          </ul>
+          <h3 className="pp-h3">8.2 GDPR Rights (EEA Residents)</h3>
+          <p>If you are in the EEA, you also have the right to lodge a complaint with a supervisory authority in your member state.</p>
+          <h3 className="pp-h3">8.3 Exercising Your Rights</h3>
+          <p>To exercise any of your rights, contact us at <a href="mailto:hivepod39@gmail.com" className="pp-link">hivepod39@gmail.com</a>. We will respond within 30 days (or as required by applicable law).</p>
+        </section>
+
+        {/* 09 */}
+        <section className="pp-section" id="s9">
+          <div className="pp-section-head">
+            <span className="pp-num">09</span>
+            <h2>Cookies &amp; Tracking Technologies</h2>
+          </div>
+          <p>We use cookies and similar technologies to operate the Service and understand usage patterns:</p>
+          <ul>
+            <li><strong>Essential Cookies</strong> — Required for authentication, session management, and core functionality. Cannot be disabled.</li>
+            <li><strong>Analytics Cookies</strong> — Used to understand how users interact with the Service (e.g., Vercel Analytics). You may opt out.</li>
+            <li><strong>Preference Cookies</strong> — Store your UI preferences. Optional.</li>
+          </ul>
+          <p>You can control cookies through your browser settings. Disabling essential cookies may affect the functionality of the Service. We do not use advertising or third-party tracker cookies.</p>
+        </section>
+
+        {/* 10 */}
+        <section className="pp-section" id="s10">
+          <div className="pp-section-head">
+            <span className="pp-num">10</span>
+            <h2>International Data Transfers</h2>
+          </div>
+          <p>Your information may be transferred to and processed in countries other than your country of residence — including the United States, where many of our service providers (OpenAI, Vercel, Circle) are based.</p>
+          <p>When transferring personal information from the EEA to countries outside the EEA, we rely on:</p>
+          <ul>
+            <li>Standard Contractual Clauses approved by the European Commission</li>
+            <li>Adequacy decisions issued by the European Commission</li>
+            <li>Other legally approved transfer mechanisms</li>
+          </ul>
+        </section>
+
+        {/* 11 */}
+        <section className="pp-section" id="s11">
+          <div className="pp-section-head">
+            <span className="pp-num">11</span>
+            <h2>Children's Privacy</h2>
+          </div>
+          <p>The Service is not intended for individuals under the age of 18 (or the applicable age of majority in your jurisdiction). We do not knowingly collect personal information from children.</p>
+          <p>If we become aware that we have inadvertently collected data from a child without verifiable parental consent, we will promptly delete that information. Please contact <a href="mailto:hivepod39@gmail.com" className="pp-link">hivepod39@gmail.com</a> if you believe this has occurred.</p>
+        </section>
+
+        {/* 12 */}
+        <section className="pp-section" id="s12">
+          <div className="pp-section-head">
+            <span className="pp-num">12</span>
+            <h2>Third-Party Services</h2>
+          </div>
+          <p>The Service integrates with third-party platforms not owned or controlled by Bluvfi. We are not responsible for their privacy practices. Key providers and their policies:</p>
+          <ul>
+            <li><strong>Privy</strong> — <a href="https://www.privy.io/privacy-policy" target="_blank" rel="noopener noreferrer" className="pp-link">privy.io/privacy-policy</a></li>
+            <li><strong>Circle / Arc AppKit</strong> — <a href="https://www.circle.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="pp-link">circle.com/legal/privacy-policy</a></li>
+            <li><strong>OpenAI</strong> — <a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener noreferrer" className="pp-link">openai.com/policies/privacy-policy</a></li>
+            <li><strong>Vercel</strong> — <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="pp-link">vercel.com/legal/privacy-policy</a></li>
+          </ul>
+        </section>
+
+        {/* 13 */}
+        <section className="pp-section" id="s13">
+          <div className="pp-section-head">
+            <span className="pp-num">13</span>
+            <h2>Blockchain Transparency</h2>
+          </div>
+          <div className="pp-info">
+            <p>Bluvfi processes payments on <strong>Base Sepolia</strong> (and mainnet chains as applicable). All on-chain transactions — including wallet addresses and USDC transfer amounts — are permanently recorded on a public blockchain and are visible to anyone worldwide. This data cannot be modified or deleted once confirmed. By using Bluvfi's payment features, you accept this inherent transparency.</p>
+          </div>
+          <p>We do not publish any off-chain personal information (such as your name or email) alongside your wallet address. However, if you publicly associate your identity with a wallet address elsewhere, those records may be linked by third parties.</p>
+        </section>
+
+        {/* 14 */}
+        <section className="pp-section" id="s14">
+          <div className="pp-section-head">
+            <span className="pp-num">14</span>
+            <h2>Changes to This Privacy Policy</h2>
+          </div>
+          <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, or legal requirements. We will notify you of material changes by:</p>
+          <ul>
+            <li>Posting the updated Policy on this page with a new "Last Updated" date</li>
+            <li>Sending an email notification to your registered address</li>
+            <li>Displaying a prominent in-app notice</li>
+          </ul>
+          <p>Your continued use of the Service after the effective date constitutes your acceptance of the updated Privacy Policy.</p>
+        </section>
+
+        {/* 15 */}
+        <section className="pp-section" id="s15">
+          <div className="pp-section-head">
+            <span className="pp-num">15</span>
+            <h2>Contact Us</h2>
+          </div>
+          <p>If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please reach out:</p>
+          <div className="pp-contact-grid">
+            {[
+              { label: 'Privacy Requests', value: 'hivepod39@gmail.com', href: 'mailto:hivepod39@gmail.com' },
+              { label: 'General Support', value: 'hivepod39@gmail.com', href: 'mailto:hivepod39@gmail.com' },
+              { label: 'Follow Us on X', value: '@bluvfi', href: 'https://x.com/bluvfi' },
+              { label: 'Telegram Community', value: 'Join our Telegram', href: 'https://t.me/+KXpDSUAnfg44MTg0' },
+            ].map(c => (
+              <div className="pp-contact-item" key={c.label}>
+                <span className="pp-contact-label">{c.label}</span>
+                <a href={c.href} target={c.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" className="pp-link">{c.value}</a>
+              </div>
+            ))}
+          </div>
+        </section>
+
+      </main>
+
+      {/* ── Footer ── */}
+      <footer className="pp-footer">
+        <p>© 2026 Bluvfi. All rights reserved.</p>
+        <div className="pp-footer-links">
+          <a href="/">Home</a>
+          <a href="/privacy" aria-current="page">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/aml">AML Policy</a>
+          <a href="/cookies">Cookie Policy</a>
+          <a href="https://x.com/bluvfi" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+          <a href="https://t.me/+KXpDSUAnfg44MTg0" target="_blank" rel="noopener noreferrer">Telegram</a>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+// ── Terms of Service Page ───────────────────────────────────────────────────
+const TermsOfServicePage: React.FC = () => {
+  const tocSections = [
+    { num: '01', id: 't1',  title: 'Acceptance of Terms' },
+    { num: '02', id: 't2',  title: 'Description of Service' },
+    { num: '03', id: 't3',  title: 'Eligibility' },
+    { num: '04', id: 't4',  title: 'User Accounts' },
+    { num: '05', id: 't5',  title: 'Acceptable Use' },
+    { num: '06', id: 't6',  title: 'Payments & Transactions' },
+    { num: '07', id: 't7',  title: 'AI Features' },
+    { num: '08', id: 't8',  title: 'Intellectual Property' },
+    { num: '09', id: 't9',  title: 'Risk Disclosure' },
+    { num: '10', id: 't10', title: 'Disclaimers' },
+    { num: '11', id: 't11', title: 'Limitation of Liability' },
+    { num: '12', id: 't12', title: 'Indemnification' },
+    { num: '13', id: 't13', title: 'Privacy' },
+    { num: '14', id: 't14', title: 'Termination' },
+    { num: '15', id: 't15', title: 'Governing Law' },
+    { num: '16', id: 't16', title: 'Changes to Terms' },
+    { num: '17', id: 't17', title: 'Contact Us' },
+  ]
+
+  return (
+    <div className="pp-page">
+      {/* ── Sticky Nav ── */}
+      <nav className="pp-nav">
+        <div className="pp-nav-inner">
+          <a href="/" className="Bluvfi-brand pp-brand">
+            <img src="/Bluvfiv2.jpg" alt="Bluvfi logo" className="Bluvfi-logo" />
+            <span>Bluvfi</span>
+          </a>
+          <a href="/" className="pp-back">← Back to home</a>
+        </div>
+      </nav>
+
+      {/* ── Hero ── */}
+      <header className="pp-hero">
+        <span className="pp-pill">Legal</span>
+        <h1 className="pp-h1">Terms of <span className="pp-accent">Service</span></h1>
+        <p className="pp-meta">
+          <strong>Last updated: August 27, 2026</strong>
+          &nbsp;·&nbsp;Please read these terms carefully before using Bluvfi.
+        </p>
+      </header>
+
+      {/* ── TOC ── */}
+      <div className="pp-toc-wrap">
+        <div className="pp-toc">
+          <p className="pp-toc-label">Contents</p>
+          <ol className="pp-toc-list">
+            {tocSections.map(s => (
+              <li key={s.id}><a href={`#${s.id}`}>{s.num}. {s.title}</a></li>
+            ))}
+          </ol>
+        </div>
+      </div>
+
+      {/* ── Sections ── */}
+      <main className="pp-content">
+
+        {/* 01 */}
+        <section className="pp-section" id="t1">
+          <div className="pp-section-head"><span className="pp-num">01</span><h2>Acceptance of Terms</h2></div>
+          <p>By accessing or using Bluvfi's website, web application, APIs, AI chat interface, or any related services (collectively, the "Service"), you agree to be bound by these Terms of Service ("Terms") and our <a href="/privacy" className="pp-link">Privacy Policy</a>.</p>
+          <div className="pp-highlight">
+            <p><strong>If you do not agree to these Terms, you must not access or use the Service.</strong> Your continued use of the Service following any update to these Terms constitutes your acceptance of the revised Terms.</p>
+          </div>
+          <p>These Terms constitute a legally binding agreement between you ("User," "you," or "your") and Bluvfi ("Bluvfi," "we," "us," or "our"), operated under Hivepod Digital Solutions.</p>
+        </section>
+
+        {/* 02 */}
+        <section className="pp-section" id="t2">
+          <div className="pp-section-head"><span className="pp-num">02</span><h2>Description of Service</h2></div>
+          <p>Bluvfi is a mobile-first AI financial assistant that enables users to:</p>
+          <ul>
+            <li>Pay bills and manage subscriptions (streaming, utilities, internet, cable)</li>
+            <li>Buy and track investments (stocks, ETFs, pre-IPO opportunities)</li>
+            <li>Send and receive USDC via gasless on-chain payments powered by Circle Arc AppKit and Circle Gateway x402</li>
+            <li>Interact with an AI assistant (GPT-4o mini) using text or voice (OpenAI Whisper) to queue, confirm, and settle financial actions</li>
+            <li>Manage an embedded cryptocurrency wallet provided by Privy</li>
+          </ul>
+          <div className="pp-info">
+            <p>Bluvfi is currently in <strong>demo/beta</strong>. Features, limits, and supported assets may change. Payments on Base Sepolia testnet are for demonstration purposes; real-money transactions on mainnet are subject to additional terms.</p>
+          </div>
+          <p>Bluvfi does not act as a bank, broker-dealer, investment adviser, or money transmitter. We are a technology platform that facilitates actions you explicitly confirm.</p>
+        </section>
+
+        {/* 03 */}
+        <section className="pp-section" id="t3">
+          <div className="pp-section-head"><span className="pp-num">03</span><h2>Eligibility</h2></div>
+          <p>To use the Service you must:</p>
+          <ul>
+            <li>Be at least 18 years of age (or the age of legal majority in your jurisdiction)</li>
+            <li>Have the legal capacity to enter into a binding agreement</li>
+            <li>Not be located in, or a resident or national of, any country subject to applicable sanctions or trade restrictions</li>
+            <li>Not be a person barred from using financial technology services under applicable law</li>
+          </ul>
+          <p>By using the Service, you represent and warrant that you meet all eligibility requirements. We reserve the right to refuse access to anyone who does not meet these criteria.</p>
+        </section>
+
+        {/* 04 */}
+        <section className="pp-section" id="t4">
+          <div className="pp-section-head"><span className="pp-num">04</span><h2>User Accounts</h2></div>
+          <h3 className="pp-h3">4.1 Account Creation</h3>
+          <p>Accounts are created and managed via <strong>Privy</strong>, which supports authentication by email, social login (Google), passkey, or phone number. By signing up, you agree to Privy's own terms and privacy policy in addition to ours.</p>
+          <h3 className="pp-h3">4.2 Embedded Wallets</h3>
+          <p>Privy creates a non-custodial embedded EOA (Externally Owned Account) wallet on your behalf. Bluvfi never has custody of, or access to, your private keys. You are solely responsible for the security of your authentication credentials.</p>
+          <h3 className="pp-h3">4.3 Account Responsibility</h3>
+          <ul>
+            <li>You are responsible for all activity that occurs under your account</li>
+            <li>You must notify us immediately of any unauthorized access at <a href="mailto:hivepod39@gmail.com" className="pp-link">hivepod39@gmail.com</a></li>
+            <li>You may not share your account with or transfer it to any other person</li>
+            <li>You may not create multiple accounts to circumvent any limitation or restriction</li>
+          </ul>
+          <h3 className="pp-h3">4.4 Account Accuracy</h3>
+          <p>You agree to provide accurate, current, and complete information during registration and to keep this information up to date.</p>
+        </section>
+
+        {/* 05 */}
+        <section className="pp-section" id="t5">
+          <div className="pp-section-head"><span className="pp-num">05</span><h2>Acceptable Use</h2></div>
+          <h3 className="pp-h3">5.1 Permitted Use</h3>
+          <p>You may use the Service solely for lawful personal financial management purposes in accordance with these Terms.</p>
+          <h3 className="pp-h3">5.2 Prohibited Activities</h3>
+          <p>You agree not to:</p>
+          <ul>
+            <li>Use the Service for any unlawful, fraudulent, or unauthorized purpose</li>
+            <li>Attempt to launder money, fund terrorism, or engage in any activity that violates AML/CFT laws</li>
+            <li>Reverse-engineer, decompile, or attempt to extract source code from the Service</li>
+            <li>Introduce viruses, malware, or other malicious code into the Service</li>
+            <li>Use automated scripts, bots, or scraping tools against the Service without prior written consent</li>
+            <li>Impersonate any person or entity or misrepresent your affiliation with any person or entity</li>
+            <li>Attempt to gain unauthorized access to any part of the Service or its related systems</li>
+            <li>Use the AI assistant to generate content that is illegal, hateful, or harmful</li>
+            <li>Circumvent any technical measures we use to limit access to the Service</li>
+          </ul>
+          <p>Violation of these provisions may result in immediate account termination and, where appropriate, referral to law enforcement.</p>
+        </section>
+
+        {/* 06 */}
+        <section className="pp-section" id="t6">
+          <div className="pp-section-head"><span className="pp-num">06</span><h2>Payments &amp; Transactions</h2></div>
+          <h3 className="pp-h3">6.1 Payment Infrastructure</h3>
+          <p>All payments are processed using <strong>Circle Arc AppKit</strong> on Base Sepolia (testnet) or applicable mainnet chains. Transactions use USDC as the payment currency and are settled via <strong>Circle Gateway x402 nanopayments</strong>. Gas fees are sponsored — you only need USDC.</p>
+          <h3 className="pp-h3">6.2 Transaction Finality</h3>
+          <div className="pp-highlight">
+            <p><strong>Blockchain transactions are irreversible.</strong> Once a payment is confirmed on-chain, it cannot be cancelled, reversed, or refunded by Bluvfi. You are solely responsible for verifying all transaction details before confirming any action.</p>
+          </div>
+          <h3 className="pp-h3">6.3 User Confirmation</h3>
+          <p>Every payment — whether initiated via the UI or through the AI assistant — requires your explicit confirmation before execution. Bluvfi will never execute a payment without presenting you with a confirmation step first.</p>
+          <h3 className="pp-h3">6.4 Supported Assets</h3>
+          <p>Bluvfi currently supports USDC on Base Sepolia (testnet). Supported assets, chains, and networks may change as the platform evolves. We are not responsible for losses arising from unsupported asset transfers.</p>
+          <h3 className="pp-h3">6.5 Fees</h3>
+          <p>Bluvfi may charge platform fees on certain transactions. Any applicable fees will be disclosed at the time of the transaction. We reserve the right to introduce or modify fees with notice to users.</p>
+          <h3 className="pp-h3">6.6 Third-Party Payment Providers</h3>
+          <p>Payment processing is subject to Circle's and Privy's terms and conditions. Bluvfi is not liable for failures, delays, or errors attributable to these third-party services.</p>
+        </section>
+
+        {/* 07 */}
+        <section className="pp-section" id="t7">
+          <div className="pp-section-head"><span className="pp-num">07</span><h2>AI Features</h2></div>
+          <h3 className="pp-h3">7.1 AI Assistant</h3>
+          <p>The Bluvfi AI assistant is powered by <strong>OpenAI GPT-4o mini</strong> and can list bills, queue payments, suggest investments, check balances, and respond to natural language commands. All actions suggested by the AI still require your explicit confirmation before execution.</p>
+          <h3 className="pp-h3">7.2 Voice Input</h3>
+          <p>Voice commands are transcribed using <strong>OpenAI Whisper</strong>. Audio is processed in real time and is not stored beyond the duration of transcription. By using voice input, you consent to audio processing by OpenAI in accordance with their privacy policy.</p>
+          <h3 className="pp-h3">7.3 AI Limitations</h3>
+          <div className="pp-info">
+            <p>The AI assistant may produce inaccurate, incomplete, or outdated information. <strong>Nothing the AI assistant says constitutes financial, investment, tax, or legal advice.</strong> You should consult a qualified professional before making financial decisions. Bluvfi is not liable for any losses resulting from reliance on AI-generated content.</p>
+          </div>
+          <h3 className="pp-h3">7.4 AI Usage Data</h3>
+          <p>Chat messages and voice transcriptions may be used to improve the Service, subject to our <a href="/privacy" className="pp-link">Privacy Policy</a>. You must not input personal data of third parties, confidential information, or sensitive financial credentials into the AI chat.</p>
+        </section>
+
+        {/* 08 */}
+        <section className="pp-section" id="t8">
+          <div className="pp-section-head"><span className="pp-num">08</span><h2>Intellectual Property</h2></div>
+          <h3 className="pp-h3">8.1 Bluvfi's Property</h3>
+          <p>The Service, including all software, code, design, text, graphics, logos, and AI models (excluding third-party components), is owned by or licensed to Bluvfi and is protected by applicable intellectual property laws. You may not copy, modify, distribute, or create derivative works without our express written permission.</p>
+          <h3 className="pp-h3">8.2 Your Content</h3>
+          <p>You retain ownership of any content you submit to the Service (such as AI prompts or uploaded data). By submitting content, you grant Bluvfi a non-exclusive, worldwide, royalty-free licence to use, process, and store that content solely to provide and improve the Service.</p>
+          <h3 className="pp-h3">8.3 Feedback</h3>
+          <p>If you provide suggestions, feedback, or ideas about the Service, you grant Bluvfi an irrevocable, royalty-free licence to use that feedback for any purpose without obligation or compensation to you.</p>
+        </section>
+
+        {/* 09 */}
+        <section className="pp-section" id="t9">
+          <div className="pp-section-head"><span className="pp-num">09</span><h2>Risk Disclosure</h2></div>
+          <div className="pp-highlight">
+            <p><strong>Cryptocurrency and digital asset activities involve substantial risk.</strong> You should not use funds you cannot afford to lose.</p>
+          </div>
+          <p>Specific risks include but are not limited to:</p>
+          <div className="pp-card-grid">
+            {[
+              { title: 'Market Volatility', body: 'Cryptocurrency and asset prices are highly volatile and can change dramatically in a short time.' },
+              { title: 'Smart Contract Risk', body: 'Smart contracts may contain bugs or vulnerabilities that could result in loss of funds.' },
+              { title: 'Regulatory Risk', body: 'Laws governing crypto assets vary by jurisdiction and may change, affecting the availability or legality of the Service.' },
+              { title: 'Network Risk', body: 'Blockchain networks may experience congestion, forks, or downtime that affect transaction processing.' },
+              { title: 'Wallet Security', body: 'Loss of access to your authentication credentials may result in permanent loss of access to your wallet and funds.' },
+              { title: 'Third-Party Risk', body: 'Failures by Circle, Privy, OpenAI, or other service providers may impact the availability or functionality of Bluvfi.' },
+            ].map(c => (
+              <div className="pp-card" key={c.title}>
+                <strong>{c.title}</strong>
+                <span>{c.body}</span>
+              </div>
+            ))}
+          </div>
+          <p>By using the Service, you acknowledge and accept all such risks. Bluvfi is not responsible for any losses you incur as a result of these risks.</p>
+        </section>
+
+        {/* 10 */}
+        <section className="pp-section" id="t10">
+          <div className="pp-section-head"><span className="pp-num">10</span><h2>Disclaimers</h2></div>
+          <div className="pp-info">
+            <p>THE SERVICE IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.</p>
+          </div>
+          <p>Bluvfi does not warrant that:</p>
+          <ul>
+            <li>The Service will be uninterrupted, error-free, or secure at all times</li>
+            <li>Any information provided by the AI assistant is accurate, complete, or current</li>
+            <li>Defects in the Service will be corrected within any particular timeframe</li>
+            <li>The Service or its servers are free of viruses or other harmful components</li>
+          </ul>
+          <p>Nothing in the Service constitutes financial advice, investment advice, trading advice, or any other sort of advice. You should conduct your own due diligence before making any financial decisions.</p>
+        </section>
+
+        {/* 11 */}
+        <section className="pp-section" id="t11">
+          <div className="pp-section-head"><span className="pp-num">11</span><h2>Limitation of Liability</h2></div>
+          <p>To the maximum extent permitted by applicable law, Bluvfi and its officers, directors, employees, and affiliates shall not be liable for any:</p>
+          <ul>
+            <li>Indirect, incidental, special, consequential, or punitive damages</li>
+            <li>Loss of profits, revenue, data, or goodwill</li>
+            <li>Cost of substitute goods or services</li>
+            <li>Damages arising from unauthorised access to or alteration of your transmissions or data</li>
+            <li>Losses arising from blockchain transactions, including irreversible payments</li>
+          </ul>
+          <p>In no event shall Bluvfi's total liability to you for all claims exceed the greater of (a) the amount you paid to Bluvfi in the 12 months preceding the claim, or (b) USD $100.</p>
+          <p>Some jurisdictions do not allow certain exclusions or limitations of liability, so the above may not fully apply to you.</p>
+        </section>
+
+        {/* 12 */}
+        <section className="pp-section" id="t12">
+          <div className="pp-section-head"><span className="pp-num">12</span><h2>Indemnification</h2></div>
+          <p>You agree to indemnify, defend, and hold harmless Bluvfi and its officers, directors, employees, contractors, and affiliates from and against any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in connection with:</p>
+          <ul>
+            <li>Your use of or access to the Service</li>
+            <li>Your violation of these Terms</li>
+            <li>Your violation of any third-party rights, including intellectual property or privacy rights</li>
+            <li>Any content you submit to or through the Service</li>
+            <li>Your violation of any applicable law or regulation</li>
+          </ul>
+        </section>
+
+        {/* 13 */}
+        <section className="pp-section" id="t13">
+          <div className="pp-section-head"><span className="pp-num">13</span><h2>Privacy</h2></div>
+          <p>Your use of the Service is also governed by our <a href="/privacy" className="pp-link">Privacy Policy</a>, which is incorporated into these Terms by reference. By using the Service, you consent to the collection, use, and disclosure of your information as described in the Privacy Policy.</p>
+        </section>
+
+        {/* 14 */}
+        <section className="pp-section" id="t14">
+          <div className="pp-section-head"><span className="pp-num">14</span><h2>Termination</h2></div>
+          <h3 className="pp-h3">14.1 Termination by You</h3>
+          <p>You may stop using the Service at any time. To request deletion of your account and associated data, contact <a href="mailto:hivepod39@gmail.com" className="pp-link">hivepod39@gmail.com</a>.</p>
+          <h3 className="pp-h3">14.2 Termination by Bluvfi</h3>
+          <p>We may suspend or terminate your access to the Service at any time, with or without notice, for any reason including but not limited to:</p>
+          <ul>
+            <li>Breach of these Terms</li>
+            <li>Suspected fraudulent, abusive, or illegal activity</li>
+            <li>Extended inactivity</li>
+            <li>Discontinuation of the Service</li>
+          </ul>
+          <h3 className="pp-h3">14.3 Effect of Termination</h3>
+          <p>Upon termination, your right to use the Service ceases immediately. Provisions of these Terms that by their nature should survive termination — including Intellectual Property, Risk Disclosure, Disclaimers, Limitation of Liability, and Indemnification — shall survive.</p>
+        </section>
+
+        {/* 15 */}
+        <section className="pp-section" id="t15">
+          <div className="pp-section-head"><span className="pp-num">15</span><h2>Governing Law</h2></div>
+          <p>These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles. Any disputes arising under these Terms shall be resolved through binding arbitration or in a court of competent jurisdiction, as determined by Bluvfi in its sole discretion.</p>
+          <p>Nothing in these Terms limits your rights as a consumer under mandatory consumer protection laws in your jurisdiction.</p>
+        </section>
+
+        {/* 16 */}
+        <section className="pp-section" id="t16">
+          <div className="pp-section-head"><span className="pp-num">16</span><h2>Changes to Terms</h2></div>
+          <p>We reserve the right to update these Terms at any time. We will notify you of material changes by:</p>
+          <ul>
+            <li>Posting the updated Terms on this page with a new "Last Updated" date</li>
+            <li>Sending an email notification to your registered address</li>
+            <li>Displaying a prominent in-app notice</li>
+          </ul>
+          <p>Your continued use of the Service after the effective date of updated Terms constitutes your acceptance of the changes. If you do not agree to the updated Terms, you must stop using the Service.</p>
+        </section>
+
+        {/* 17 */}
+        <section className="pp-section" id="t17">
+          <div className="pp-section-head"><span className="pp-num">17</span><h2>Contact Us</h2></div>
+          <p>For questions about these Terms, to report a violation, or to request account deletion, reach out to us:</p>
+          <div className="pp-contact-grid">
+            {[
+              { label: 'Legal & Terms',      value: 'hivepod39@gmail.com',   href: 'mailto:hivepod39@gmail.com' },
+              { label: 'General Support',    value: 'hivepod39@gmail.com', href: 'mailto:hivepod39@gmail.com' },
+              { label: 'Follow Us on X',     value: '@bluvfi',            href: 'https://x.com/bluvfi' },
+              { label: 'Telegram Community', value: 'Join our Telegram',  href: 'https://t.me/+KXpDSUAnfg44MTg0' },
+            ].map(c => (
+              <div className="pp-contact-item" key={c.label}>
+                <span className="pp-contact-label">{c.label}</span>
+                <a href={c.href} target={c.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" className="pp-link">{c.value}</a>
+              </div>
+            ))}
+          </div>
+        </section>
+
+      </main>
+
+      {/* ── Footer ── */}
+      <footer className="pp-footer">
+        <p>© 2026 Bluvfi. All rights reserved.</p>
+        <div className="pp-footer-links">
+          <a href="/">Home</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms" aria-current="page">Terms of Service</a>
+          <a href="/aml">AML Policy</a>
+          <a href="/cookies">Cookie Policy</a>
+          <a href="https://x.com/bluvfi" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+          <a href="https://t.me/+KXpDSUAnfg44MTg0" target="_blank" rel="noopener noreferrer">Telegram</a>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+// ── AML Policy Page ─────────────────────────────────────────────────────────
+const AMLPolicyPage: React.FC = () => {
+  const tocSections = [
+    { num: 'BG', id: 'a0',  title: 'Background Information' },
+    { num: '01', id: 'a1',  title: 'Main Objectives' },
+    { num: '02', id: 'a2',  title: 'General Principles' },
+    { num: '03', id: 'a3',  title: 'Our Responsibilities' },
+    { num: '04', id: 'a4',  title: 'Risk-Based Approach' },
+    { num: '05', id: 'a5',  title: 'Indicators of Suspicious Activity' },
+    { num: '06', id: 'a6',  title: 'Data Requests & KYC' },
+    { num: '07', id: 'a7',  title: 'Restricted Activities & Clients' },
+    { num: '08', id: 'a8',  title: 'Sanctions' },
+    { num: '09', id: 'a9',  title: 'Non-Serviced Countries' },
+    { num: '10', id: 'a10', title: 'Monitoring for Suspicious Activity' },
+    { num: '11', id: 'a11', title: 'Contact Information' },
+  ]
+
+  const nonServicedCountries = [
+    'Afghanistan', 'Balkans', 'Belarus', 'Bosnia',
+    'Central African Republic (CAR)', 'Crimea', 'Cuba',
+    'Democratic Republic of Congo (DRC)', 'China',
+    'Eritrea', 'Guinea-Bissau', 'Haiti',
+    'Iran', 'Iraq', 'Ivory Coast', 'Lao',
+    'Lebanon', 'Liberia', 'Libya', 'Mali',
+    'Moldova', 'Myanmar (Burma)', 'Nicaragua',
+    'North Korea', 'Pakistan', 'Republic of Guinea',
+    'Russia', 'Serbia/Yugoslavia', 'Somalia',
+    'Sri Lanka', 'South Sudan', 'Sudan', 'Syria',
+    'Trinidad & Tobago', 'Ukraine', 'United States',
+    'Vanuatu', 'Venezuela', 'Yemen', 'Zimbabwe',
+  ]
+
+  return (
+    <div className="pp-page">
+      {/* ── Sticky Nav ── */}
+      <nav className="pp-nav">
+        <div className="pp-nav-inner">
+          <a href="/" className="Bluvfi-brand pp-brand">
+            <img src="/Bluvfiv2.jpg" alt="Bluvfi logo" className="Bluvfi-logo" />
+            <span>Bluvfi</span>
+          </a>
+          <a href="/" className="pp-back">← Back to home</a>
+        </div>
+      </nav>
+
+      {/* ── Hero ── */}
+      <header className="pp-hero">
+        <span className="pp-pill">Legal</span>
+        <h1 className="pp-h1">AML <span className="pp-accent">Policy</span></h1>
+        <p className="pp-meta">
+          <strong>Last updated: August 27, 2026</strong>
+          &nbsp;·&nbsp;Anti-Money Laundering &amp; Counter-Terrorism Financing Policy.
+        </p>
+      </header>
+
+      {/* ── Intro statement ── */}
+      <div className="pp-toc-wrap">
+        <div className="pp-highlight" style={{ marginTop: 0 }}>
+          <p>
+            Bluvfi, operated under Hivepod Digital Solutions, is committed to maintaining effective crime prevention and detection measures to assist law enforcement agencies in combating financial crime. We have adopted a strict set of policies and procedures to fulfil our legal obligations under international anti-money laundering (AML) and anti-terrorism financing (CTF) legislation.
+          </p>
+        </div>
+      </div>
+
+      {/* ── TOC ── */}
+      <div className="pp-toc-wrap" style={{ marginTop: '24px' }}>
+        <div className="pp-toc">
+          <p className="pp-toc-label">Contents</p>
+          <ol className="pp-toc-list">
+            {tocSections.map(s => (
+              <li key={s.id}><a href={`#${s.id}`}>{s.num}. {s.title}</a></li>
+            ))}
+          </ol>
+        </div>
+      </div>
+
+      {/* ── Sections ── */}
+      <main className="pp-content">
+
+        {/* Background */}
+        <section className="pp-section" id="a0">
+          <div className="pp-section-head"><span className="pp-num">BG</span><h2>Background Information</h2></div>
+          <p>Money laundering is a process by which money and property obtained as a result of criminal activity are disguised as coming from a legitimate source. In essence, it is a process in which "dirty money" turns into "clean money" whose criminal origin is difficult to trace.</p>
+          <p>There are three recognised stages in the money laundering process:</p>
+          <div className="pp-card-grid">
+            {[
+              { title: 'Placement', body: 'Involves the placement of proceeds from crime into the financial system.' },
+              { title: 'Layering', body: 'Involves the transformation of criminal proceeds through complex layers of financial transactions to hide their source and ownership.' },
+              { title: 'Integration', body: 'Involves the return of laundered income to the economy to create an appearance of legitimacy.' },
+            ].map(c => (
+              <div className="pp-card" key={c.title}>
+                <strong>{c.title}</strong>
+                <span>{c.body}</span>
+              </div>
+            ))}
+          </div>
+          <p>Predicate offences include tax evasion, drug trafficking, bribery, fraud, forgery, murder, robbery, counterfeiting, securities manipulation, and copyright infringement, among others.</p>
+          <div className="pp-info">
+            <p><strong>Terrorist Financing</strong> occurs when you knowingly collect or provide property — such as funds — directly or indirectly to terrorists. Many techniques used in money laundering are also used in terrorist financing, including concealing the channelling of funds and the use of third parties.</p>
+          </div>
+        </section>
+
+        {/* 01 */}
+        <section className="pp-section" id="a1">
+          <div className="pp-section-head"><span className="pp-num">01</span><h2>Main Objectives</h2></div>
+          <p>Bluvfi's AML programme is designed to ensure that:</p>
+          <ul>
+            <li>Users' identities are satisfactorily verified in accordance with our risk-based approach before Bluvfi does business with them</li>
+            <li>Bluvfi knows its users and understands their reasons for using the Service, both at onboarding and throughout the relationship</li>
+            <li>All team members are trained and aware of both their personal legal obligations and Bluvfi's legal obligations</li>
+            <li>Team members are trained to be vigilant for activities where there are reasonable grounds for suspicion that money laundering or terrorist financing could be taking place, and to report to the Compliance Officer</li>
+            <li>Sufficient records are kept for the required period</li>
+            <li>Appropriate procedures are established, maintained, and implemented to achieve these objectives</li>
+          </ul>
+        </section>
+
+        {/* 02 */}
+        <section className="pp-section" id="a2">
+          <div className="pp-section-head"><span className="pp-num">02</span><h2>General Principles</h2></div>
+
+          <h3 className="pp-h3">Anti-Money Laundering Policy</h3>
+          <p>Bluvfi has implemented policies, procedures, and controls designed to prevent criminals from using our platform to launder the proceeds of crime. These policies and procedures are tailored to the risk posed by individual users and transaction types.</p>
+
+          <h3 className="pp-h3">Customer Due Diligence (CDD)</h3>
+          <p>Bluvfi has established customer due diligence procedures to identify users of its services and, in respect of higher-risk users, the primary beneficial owners and origin of funds. The CDD policy is designed to fulfil the following objectives:</p>
+          <ul>
+            <li>Identification and verification of the applicant for the Service</li>
+            <li>Identification and verification of the beneficial owner, where applicable</li>
+            <li>Identification and verification when the applicant does not act as principal</li>
+            <li>Obtaining information on the purpose and intended nature of the business relationship</li>
+            <li>Conducting ongoing monitoring of the business relationship</li>
+            <li>Establishing the source of wealth and source of funds</li>
+            <li>Setting up a user acceptance policy and ensuring that applicants meet the requirements</li>
+          </ul>
+          <div className="pp-highlight">
+            <p>Bluvfi is strictly prohibited from keeping anonymous accounts or accounts in fictitious names.</p>
+          </div>
+
+          <h3 className="pp-h3">Suspicious Transactions</h3>
+          <p>Unexplained or anomalous transactions or activities suspected to be related to criminal activity must be reported immediately in writing to the Compliance Officer, who will determine whether the suspicion should be escalated to Law Enforcement.</p>
+
+          <h3 className="pp-h3">Training</h3>
+          <p>All personnel are informed of their individual and collective AML responsibilities. Personnel receive training to understand the vulnerabilities of Bluvfi's business and to recognise and report suspicious activities.</p>
+
+          <h3 className="pp-h3">Record-Keeping</h3>
+          <p>Bluvfi keeps records of training completion. We retain all records confirming the identity of our users for at least 7 years after the end of the business relationship, and all internal reports of suspicion made to the Compliance Officer.</p>
+        </section>
+
+        {/* 03 */}
+        <section className="pp-section" id="a3">
+          <div className="pp-section-head"><span className="pp-num">03</span><h2>Our Responsibilities</h2></div>
+          <p>As a cryptocurrency-adjacent financial technology platform, Bluvfi is committed to meeting the following obligations under applicable international law:</p>
+          <ul>
+            <li>Develop and maintain a programme to ensure compliance with reporting, record-keeping, and user identification requirements</li>
+            <li>Comply with user identification rules and maintain specific records for specific transactions</li>
+            <li>Report suspicious transactions, large unusual transactions, and information related to terrorist property to appropriate authorities</li>
+            <li>Cooperate fully with regulatory bodies and law enforcement when required by law</li>
+          </ul>
+        </section>
+
+        {/* 04 */}
+        <section className="pp-section" id="a4">
+          <div className="pp-section-head"><span className="pp-num">04</span><h2>Risk-Based Approach</h2></div>
+          <p>Risk is defined as the likelihood of an event and its consequences. In the context of money laundering and terrorist financing (ML/TF), risk means:</p>
+          <ul>
+            <li><strong>At the national level:</strong> ML/TF threats and vulnerabilities that jeopardise the integrity of the financial system</li>
+            <li><strong>At the platform level:</strong> Threats and vulnerabilities that put Bluvfi at risk of being used to facilitate ML/TF</li>
+          </ul>
+
+          <h3 className="pp-h3">Default Risk Classification</h3>
+          <p>All users default to <strong>low risk</strong>, unless specific risk factors are present. Automatic high-risk characteristics include:</p>
+          <ul>
+            <li>Politically exposed person (PEP)</li>
+            <li>A user where a suspicious transaction or terrorist financing report has been filed</li>
+            <li>A user who is an identified terrorist or on a sanctions list</li>
+            <li>A user for whom we are unable to obtain beneficial ownership information</li>
+            <li>A user from a high-risk country (see Section 9)</li>
+          </ul>
+
+          <h3 className="pp-h3">Client &amp; Transaction Risk Factors</h3>
+          <ul>
+            <li>Politically exposed person, head of an international organisation, or close associate thereof</li>
+            <li>Unknown or unclear source of funds</li>
+            <li>Large transaction orders to/from high-risk foreign jurisdictions</li>
+            <li>Third-party involvement without reasonable justification</li>
+            <li>High-risk occupations (e.g., cash-intensive businesses, offshore business, online gambling)</li>
+            <li>Unusually complex business structure or transaction patterns</li>
+            <li>Non face-to-face user identification without justifiable reason</li>
+          </ul>
+
+          <h3 className="pp-h3">Geographic Risk Factors</h3>
+          <ul>
+            <li>User resides in a known high-crime area</li>
+            <li>User has offshore business activities in high-risk jurisdictions</li>
+            <li>User connections to countries with weak AML frameworks</li>
+          </ul>
+
+          <h3 className="pp-h3">Other Suspicious Transaction Indicators</h3>
+          <ul>
+            <li>Volume, timing, or complexity of transactions inconsistent with the user's personal or business activity</li>
+            <li>Value of deposits or transfers inconsistent with stated occupation or source of funds</li>
+            <li>Presence of any suspicious indicators outlined in Section 5</li>
+          </ul>
+        </section>
+
+        {/* 05 */}
+        <section className="pp-section" id="a5">
+          <div className="pp-section-head"><span className="pp-num">05</span><h2>Indicators of Suspicious Activity</h2></div>
+          <p>The following are examples of general and industry-specific indicators that may give reasonable grounds to suspect money laundering or terrorist financing. The presence of one or more factors does not automatically require a report, but it does indicate that a more in-depth examination is required.</p>
+
+          <h3 className="pp-h3">General Indicators</h3>
+          <ul>
+            <li>User admits to or makes statements about involvement in criminal activities</li>
+            <li>User refuses or tries to avoid providing required information, or provides information that is misleading, vague, or difficult to verify</li>
+            <li>User produces seemingly false or altered documentation</li>
+            <li>User appears to have accounts with several financial institutions for no apparent reason</li>
+            <li>User repeatedly uses an address but frequently changes the name involved</li>
+            <li>User shows uncommon curiosity about internal controls and monitoring systems</li>
+            <li>User presents confusing or inconsistent details about transactions</li>
+            <li>User makes inquiries indicating a desire to avoid regulatory reporting</li>
+            <li>User is involved in unusual activity inconsistent with their profile</li>
+            <li>User appears unusually familiar with money laundering or terrorist financing techniques</li>
+            <li>User refuses to produce valid identification documents</li>
+            <li>User frequently accesses or transacts from high-risk countries</li>
+          </ul>
+
+          <h3 className="pp-h3">Crypto-Specific Indicators</h3>
+          <ul>
+            <li>User requests USDC exchanges at rates that significantly exceed standard rates</li>
+            <li>User wants to pay transaction fees that greatly exceed posted fees</li>
+            <li>User exchanges large volumes of cryptocurrency without clear business justification</li>
+            <li>User knows little about recipient wallet addresses and is reluctant to disclose details</li>
+            <li>User enters into transactions with counterparties in locations unusual for their profile</li>
+            <li>User instructs that funds be handled by a third party on behalf of the payee</li>
+            <li>User makes large USDC purchases inconsistent with known financial activity</li>
+            <li>User attempts to use the AI assistant to circumvent transaction monitoring or confirmations</li>
+          </ul>
+        </section>
+
+        {/* 06 */}
+        <section className="pp-section" id="a6">
+          <div className="pp-section-head"><span className="pp-num">06</span><h2>Data Requests &amp; KYC</h2></div>
+          <p>To mitigate the risks associated with money laundering and terrorist financing, Bluvfi strictly does not accept or send payments to unidentified third parties. Each user may only send and receive payments through their own accounts, including cryptocurrency wallets linked through Privy.</p>
+          <p>In accordance with our Know Your Customer (KYC) policy, authorised personnel may carry out user verification. In such cases, the user may be required to provide:</p>
+          <ul>
+            <li>Information about the services for which funds were received</li>
+            <li>Documentation confirming the receipt and withdrawal of funds</li>
+            <li>Source of wealth and source of funds documentation</li>
+            <li>Government-issued identification or proof of address</li>
+            <li>Any additional information reasonably requested by Bluvfi's Compliance team</li>
+          </ul>
+          <div className="pp-highlight">
+            <p>Bluvfi reserves the right to refuse to process a transaction at any stage if it is suspected to involve money laundering or other criminal activity, without prior notice to the user.</p>
+          </div>
+        </section>
+
+        {/* 07 */}
+        <section className="pp-section" id="a7">
+          <div className="pp-section-head"><span className="pp-num">07</span><h2>Restricted Activities &amp; Clients</h2></div>
+          <p>To control ML/TF risk, Bluvfi does not provide services and will refuse or close accounts for users with the following characteristics:</p>
+
+          <h3 className="pp-h3">Private Individuals</h3>
+          <ul>
+            <li>Negative information indicating possible relation to proceeds of crime, money laundering, or terrorism</li>
+            <li>Funds previously frozen or arrested in connection with suspected criminal activity</li>
+            <li>Attempting to avoid provision of information or hide economic activity</li>
+            <li>Involvement in trafficking of arms and ammunition</li>
+            <li>Unlicensed foreign currency exchange or other unlicensed investment services</li>
+            <li>Organisation of escort services or distribution of illegal content</li>
+            <li>Cash collection services or unlicensed debt recovery services</li>
+            <li>Drug distribution and controlled substances</li>
+            <li>Pyramid schemes and multi-level marketing</li>
+            <li>Pawnshop services or illegal telemarketing</li>
+          </ul>
+
+          <h3 className="pp-h3">Legal Entities</h3>
+          <ul>
+            <li>Attempting to avoid provision of information or hide economic activity</li>
+            <li>Negative information indicating possible relation to proceeds of crime or terrorism</li>
+            <li>Funds previously frozen or arrested in connection with suspected criminal activity</li>
+            <li>Unlicensed reinsurance services with lack of proper supervision</li>
+            <li>Investment services without proper licensing</li>
+            <li>Recognised shell companies with no clear economic purpose</li>
+            <li>Unlicensed gambling services</li>
+            <li>Unclear reason for establishment with vague economic objectives</li>
+            <li>Transactions that are complex, unusually large, or unclear in legal and economic objective</li>
+          </ul>
+
+          <h3 className="pp-h3">Enhanced Due Diligence (EDD)</h3>
+          <p>In accordance with internal AML/CFT procedures, Bluvfi classifies users into two risk categories: <strong>low-risk</strong> and <strong>high-risk</strong>. For high-risk users, Enhanced Due Diligence is carried out. A high-risk user is someone:</p>
+          <ul>
+            <li>Who is a politically exposed person, a family member, or a close associate of one</li>
+            <li>With whom financial obligations or claims exceed $10,000 USD</li>
+          </ul>
+        </section>
+
+        {/* 08 */}
+        <section className="pp-section" id="a8">
+          <div className="pp-section-head"><span className="pp-num">08</span><h2>Sanctions</h2></div>
+          <p>Bluvfi is prohibited from transacting with individuals, companies, and countries that are on prescribed Sanctions lists. Bluvfi screens against the relevant sanctions lists in the jurisdictions in which it operates.</p>
+          <p>Bluvfi has no AML Risk Appetite for establishing or maintaining a relationship with any natural person or legal entity designated on any of the below lists, or where otherwise prohibited by applicable law or regulation:</p>
+          <ul>
+            <li>Sanction lists administered by the <strong>United States Office of Foreign Assets Control (OFAC)</strong></li>
+            <li>The <strong>United Nations Security Council Sanctions List (UN)</strong></li>
+            <li>The <strong>Consolidated List of European Union Financial Sanctions (EU)</strong></li>
+            <li>The <strong>List of Specially Designated Nationals and Blocked Persons</strong></li>
+            <li>Any other applicable national or international sanctions lists</li>
+          </ul>
+          <div className="pp-info">
+            <p>Bluvfi pays particular attention to entities from countries on the list of non-cooperative countries and territories drawn up by the <strong>Financial Action Task Force (FATF)</strong> and to monetary operations performed by or on behalf of them.</p>
+          </div>
+        </section>
+
+        {/* 09 */}
+        <section className="pp-section" id="a9">
+          <div className="pp-section-head"><span className="pp-num">09</span><h2>Non-Serviced Countries</h2></div>
+          <p>Bluvfi does not open accounts and does not provide services to users from the following countries and jurisdictions:</p>
+          <div className="pp-card-grid">
+            {nonServicedCountries.map(c => (
+              <div className="pp-card" key={c} style={{ padding: '10px 14px' }}>
+                <span style={{ color: 'rgba(238,252,245,0.85)', fontSize: '0.88rem' }}>{c}</span>
+              </div>
+            ))}
+          </div>
+          <div className="pp-highlight">
+            <p><strong>Note:</strong> Bluvfi does not on-board US persons or entities at this time. We adopt the list of high-risk countries as released by local and foreign regulatory authorities from time to time, and this list is subject to change without notice.</p>
+          </div>
+        </section>
+
+        {/* 10 */}
+        <section className="pp-section" id="a10">
+          <div className="pp-section-head"><span className="pp-num">10</span><h2>Monitoring for Suspicious Activity</h2></div>
+          <p>Bluvfi's AML policy includes user and beneficial owner due diligence, ongoing transaction monitoring, and AML reporting policies. All USDC transactions processed through Circle Gateway and recorded on Base Sepolia are subject to ongoing monitoring.</p>
+          <p>At various points in time, Bluvfi may request information regarding transactions carried out through a user's account and the parties to the respective payment.</p>
+          <div className="pp-highlight">
+            <p>If a user does not respond sufficiently or within a timely manner to an information request, Bluvfi reserves the right to restrict, suspend, or reject any respective payments — and to close the account — subject to the requirements of applicable AML laws and regulations.</p>
+          </div>
+          <p>Blockchain transactions are immutable and permanently recorded on public ledgers. Bluvfi cooperates with law enforcement agencies and regulatory authorities to provide on-chain transaction data where legally required.</p>
+        </section>
+
+        {/* 11 */}
+        <section className="pp-section" id="a11">
+          <div className="pp-section-head"><span className="pp-num">11</span><h2>Contact Information</h2></div>
+          <p>If you have questions about our AML Policy, need to report suspicious activity, or wish to cooperate with a compliance inquiry, please contact our Compliance team:</p>
+          <div className="pp-contact-grid">
+            {[
+              { label: 'Compliance Officer', value: 'hivepod39@gmail.com',  href: 'mailto:hivepod39@gmail.com' },
+              { label: 'General Support',    value: 'hivepod39@gmail.com',  href: 'mailto:hivepod39@gmail.com' },
+              { label: 'Follow Us on X',     value: '@bluvfi',              href: 'https://x.com/bluvfi' },
+              { label: 'Telegram Community', value: 'Join our Telegram',    href: 'https://t.me/+KXpDSUAnfg44MTg0' },
+            ].map(c => (
+              <div className="pp-contact-item" key={c.label}>
+                <span className="pp-contact-label">{c.label}</span>
+                <a href={c.href} target={c.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" className="pp-link">{c.value}</a>
+              </div>
+            ))}
+          </div>
+          <p style={{ marginTop: '20px', color: 'rgba(238,252,245,0.55)', fontSize: '0.88rem' }}>
+            <strong style={{ color: 'rgba(238,252,245,0.75)' }}>Operated by:</strong> Hivepod Digital Solutions &nbsp;·&nbsp; <strong style={{ color: 'rgba(238,252,245,0.75)' }}>Effective:</strong> August 27, 2026
+          </p>
+        </section>
+
+      </main>
+
+      {/* ── Footer ── */}
+      <footer className="pp-footer">
+        <p>© 2026 Bluvfi. All rights reserved.</p>
+        <div className="pp-footer-links">
+          <a href="/">Home</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/aml" aria-current="page">AML Policy</a>
+          <a href="/cookies">Cookie Policy</a>
+          <a href="https://x.com/bluvfi" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+          <a href="https://t.me/+KXpDSUAnfg44MTg0" target="_blank" rel="noopener noreferrer">Telegram</a>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+// ── Cookie Policy Page ───────────────────────────────────────────────────────
+const CookiePolicyPage: React.FC = () => {
+  const cookieTypes = [
+    {
+      type: 'Essential Cookies',
+      purpose: 'Required for the website and app to function. Includes session tokens, wallet connection state, and security cookies.',
+      duration: 'Session / Persistent',
+    },
+    {
+      type: 'Performance Cookies',
+      purpose: 'Help us understand how visitors interact with Bluvfi — which features are used, load times, and error rates.',
+      duration: 'Up to 12 months',
+    },
+    {
+      type: 'Functionality Cookies',
+      purpose: 'Remember your preferences such as language, theme, and previously connected wallet provider.',
+      duration: 'Up to 12 months',
+    },
+    {
+      type: 'Analytics Cookies',
+      purpose: 'Aggregate, anonymised data on traffic and usage patterns to help us improve the Service.',
+      duration: 'Up to 24 months',
+    },
+    {
+      type: 'Session Cookies',
+      purpose: 'Temporary cookies that keep you authenticated during a single browsing session.',
+      duration: 'Expire on browser close',
+    },
+    {
+      type: 'Persistent Cookies',
+      purpose: 'Stored between sessions to preserve login state and settings across visits.',
+      duration: 'Until expiry or deletion',
+    },
+    {
+      type: 'First-Party Cookies',
+      purpose: 'Set directly by bluvfi.app to power core features.',
+      duration: 'Varies',
+    },
+    {
+      type: 'Third-Party Cookies',
+      purpose: 'Set by trusted third-party services we use (e.g., Privy for wallet auth, Circle for payments).',
+      duration: 'Varies',
+    },
+  ]
+
+  return (
+    <div className="pp-page">
+      {/* ── Sticky Nav ── */}
+      <nav className="pp-nav">
+        <div className="pp-nav-inner">
+          <a href="/" className="Bluvfi-brand pp-brand">
+            <img src="/Bluvfiv2.jpg" alt="Bluvfi logo" className="Bluvfi-logo" />
+            <span>Bluvfi</span>
+          </a>
+          <a href="/" className="pp-back">← Back to home</a>
+        </div>
+      </nav>
+
+      {/* ── Hero ── */}
+      <header className="pp-hero">
+        <span className="pp-pill">Legal</span>
+        <h1 className="pp-h1">Cookie <span className="pp-accent">Policy</span></h1>
+        <p className="pp-meta">
+          <strong>Last updated: August 27, 2026</strong>
+          &nbsp;·&nbsp;How Bluvfi uses cookies and similar tracking technologies.
+        </p>
+      </header>
+
+      {/* ── TOC ── */}
+      <div className="pp-toc-wrap">
+        <div className="pp-toc">
+          <p className="pp-toc-label">Contents</p>
+          <ol className="pp-toc-list">
+            {[
+              { id: 'c1', title: 'What Are Cookies?' },
+              { id: 'c2', title: 'How We Use Cookies' },
+              { id: 'c3', title: 'Types of Cookies We Use' },
+              { id: 'c4', title: 'Managing Cookies' },
+              { id: 'c5', title: 'Policy Updates' },
+              { id: 'c6', title: 'Contact Us' },
+            ].map((s, i) => (
+              <li key={s.id}><a href={`#${s.id}`}>0{i + 1}. {s.title}</a></li>
+            ))}
+          </ol>
+        </div>
+      </div>
+
+      {/* ── Sections ── */}
+      <main className="pp-content">
+
+        {/* 01 */}
+        <section className="pp-section" id="c1">
+          <div className="pp-section-head"><span className="pp-num">01</span><h2>What Are Cookies?</h2></div>
+          <p>Cookies are small text files that are placed on your computer, smartphone, or other device when you visit Bluvfi. They allow us to recognise your device and remember certain information about your visit — such as your wallet connection preferences, feature settings, and security tokens.</p>
+          <p>Similar technologies such as local storage, session storage, and pixel tags may also be used in the same way as cookies. References to "cookies" in this policy include these technologies unless stated otherwise.</p>
+          <div className="pp-info">
+            <p>Cookies do not contain personally identifiable information on their own. We only link cookie data to information you have provided us when you create an account or connect a wallet.</p>
+          </div>
+        </section>
+
+        {/* 02 */}
+        <section className="pp-section" id="c2">
+          <div className="pp-section-head"><span className="pp-num">02</span><h2>How We Use Cookies</h2></div>
+          <p>Bluvfi uses cookies for several purposes to make our platform work well and to improve your experience:</p>
+          <div className="pp-card-grid">
+            {[
+              {
+                title: '🔐 Essential',
+                body: 'Necessary for the Service to function. Without these cookies, core features like wallet connection, session authentication, and transaction signing cannot operate.',
+              },
+              {
+                title: '📊 Performance',
+                body: 'Help us understand how users interact with the Service — which pages load slowly, where errors occur, and how features are used — so we can improve reliability.',
+              },
+              {
+                title: '⚙️ Functionality',
+                body: 'Remember choices you make — such as dark/light mode, preferred wallet provider, or language — to provide a more personalised experience across sessions.',
+              },
+              {
+                title: '📈 Analytics',
+                body: 'Aggregate, anonymised data on traffic patterns and feature usage. This helps us make informed product decisions without identifying individual users.',
+              },
+            ].map(c => (
+              <div className="pp-card" key={c.title}>
+                <strong>{c.title}</strong>
+                <span>{c.body}</span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* 03 */}
+        <section className="pp-section" id="c3">
+          <div className="pp-section-head"><span className="pp-num">03</span><h2>Types of Cookies We Use</h2></div>
+          <p>The table below describes the categories of cookies placed on your device when you use Bluvfi:</p>
+          <div style={{ overflowX: 'auto', marginTop: '16px' }}>
+            <table style={{
+              width: '100%',
+              borderCollapse: 'collapse',
+              fontSize: '0.9rem',
+              color: 'rgba(238,252,245,0.85)',
+            }}>
+              <thead>
+                <tr style={{ borderBottom: '1px solid rgba(36,216,149,0.25)' }}>
+                  {['Cookie Type', 'Purpose', 'Duration'].map(h => (
+                    <th key={h} style={{
+                      textAlign: 'left',
+                      padding: '10px 14px',
+                      color: '#24d895',
+                      fontWeight: 600,
+                      whiteSpace: 'nowrap',
+                    }}>{h}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {cookieTypes.map((row, i) => (
+                  <tr key={row.type} style={{
+                    borderBottom: '1px solid rgba(36,216,149,0.08)',
+                    background: i % 2 === 0 ? 'rgba(36,216,149,0.03)' : 'transparent',
+                  }}>
+                    <td style={{ padding: '12px 14px', fontWeight: 600, whiteSpace: 'nowrap', color: 'rgba(238,252,245,0.95)' }}>{row.type}</td>
+                    <td style={{ padding: '12px 14px', lineHeight: 1.5 }}>{row.purpose}</td>
+                    <td style={{ padding: '12px 14px', whiteSpace: 'nowrap', color: 'rgba(238,252,245,0.65)' }}>{row.duration}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* 04 */}
+        <section className="pp-section" id="c4">
+          <div className="pp-section-head"><span className="pp-num">04</span><h2>Managing Cookies</h2></div>
+          <p>Most web browsers allow you to control cookies through their settings. You can typically:</p>
+          <ul>
+            <li>View what cookies are stored on your device and delete them individually</li>
+            <li>Block third-party cookies</li>
+            <li>Block cookies from particular sites</li>
+            <li>Block all cookies from being set</li>
+            <li>Delete all cookies when you close your browser</li>
+          </ul>
+          <div className="pp-highlight">
+            <p><strong>Important:</strong> If you disable or delete essential cookies, parts of Bluvfi may not work correctly. In particular, wallet authentication (via Privy) and USDC payment sessions (via Circle Gateway) rely on secure session cookies to function. Disabling them will require you to re-authenticate on each visit.</p>
+          </div>
+          <p>You can manage cookies in your browser settings. Below are links for the most common browsers:</p>
+          <div className="pp-card-grid">
+            {[
+              { name: 'Google Chrome', url: 'https://support.google.com/chrome/answer/95647' },
+              { name: 'Mozilla Firefox', url: 'https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer' },
+              { name: 'Safari', url: 'https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac' },
+              { name: 'Microsoft Edge', url: 'https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09' },
+            ].map(b => (
+              <div className="pp-card" key={b.name} style={{ padding: '12px 16px' }}>
+                <strong>{b.name}</strong>
+                <a href={b.url} target="_blank" rel="noopener noreferrer" className="pp-link" style={{ fontSize: '0.82rem' }}>Cookie settings guide →</a>
+              </div>
+            ))}
+          </div>
+          <p style={{ marginTop: '16px' }}>You may also opt out of analytics tracking by adjusting your browser's "Do Not Track" setting, where supported.</p>
+        </section>
+
+        {/* 05 */}
+        <section className="pp-section" id="c5">
+          <div className="pp-section-head"><span className="pp-num">05</span><h2>Policy Updates</h2></div>
+          <p>We may update this Cookie Policy from time to time as our technology, legal obligations, or the cookies we use change. Any updates will be posted on this page with a revised "Last updated" date at the top.</p>
+          <p>We encourage you to review this page periodically. Where changes are material — for example, if we begin using a new category of cookies — we will notify you via the app or email before the change takes effect.</p>
+          <div className="pp-info">
+            <p>Continued use of Bluvfi after a Cookie Policy update constitutes your acceptance of the revised policy, consistent with our <a href="/terms" className="pp-link">Terms of Service</a>.</p>
+          </div>
+        </section>
+
+        {/* 06 */}
+        <section className="pp-section" id="c6">
+          <div className="pp-section-head"><span className="pp-num">06</span><h2>Contact Us</h2></div>
+          <p>If you have any questions about this Cookie Policy or how we use cookies on the Bluvfi platform, please contact us:</p>
+          <div className="pp-contact-grid">
+            {[
+              { label: 'Email',              value: 'hivepod39@gmail.com',   href: 'mailto:hivepod39@gmail.com' },
+              { label: 'X / Twitter',        value: '@bluvfi',               href: 'https://x.com/bluvfi' },
+              { label: 'Telegram Community', value: 'Join our Telegram',     href: 'https://t.me/+KXpDSUAnfg44MTg0' },
+            ].map(c => (
+              <div className="pp-contact-item" key={c.label}>
+                <span className="pp-contact-label">{c.label}</span>
+                <a href={c.href} target={c.href.startsWith('http') ? '_blank' : undefined} rel="noopener noreferrer" className="pp-link">{c.value}</a>
+              </div>
+            ))}
+          </div>
+          <p style={{ marginTop: '20px', color: 'rgba(238,252,245,0.55)', fontSize: '0.88rem' }}>
+            <strong style={{ color: 'rgba(238,252,245,0.75)' }}>Operated by:</strong> Hivepod Digital Solutions &nbsp;·&nbsp; <strong style={{ color: 'rgba(238,252,245,0.75)' }}>Effective:</strong> August 27, 2026
+          </p>
+        </section>
+
+      </main>
+
+      {/* ── Footer ── */}
+      <footer className="pp-footer">
+        <p>© 2026 Bluvfi. All rights reserved.</p>
+        <div className="pp-footer-links">
+          <a href="/">Home</a>
+          <a href="/privacy">Privacy Policy</a>
+          <a href="/terms">Terms of Service</a>
+          <a href="/aml">AML Policy</a>
+          <a href="/cookies" aria-current="page">Cookie Policy</a>
+          <a href="https://x.com/bluvfi" target="_blank" rel="noopener noreferrer">X / Twitter</a>
+          <a href="https://t.me/+KXpDSUAnfg44MTg0" target="_blank" rel="noopener noreferrer">Telegram</a>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+// ── Router (no extra dep — just pathname) ────────────────────────────────────
+// NOTE: Each page component is its own branch so React's Rules of Hooks
+// are satisfied in each component individually.
+export default function App({ thirdwebClient }: AppProps) {
+  const path = window.location.pathname
+  if (path === '/privacy') return <PrivacyPolicyPage />
+  if (path === '/terms')   return <TermsOfServicePage />
+  if (path === '/aml')     return <AMLPolicyPage />
+  if (path === '/cookies') return <CookiePolicyPage />
+  return <AppDApp thirdwebClient={thirdwebClient} />
+}
+
 const BluvfiLandingPage: React.FC = () => {
   const workflowSteps = [
     ['Sign up with email or social', 'Privy creates an embedded EOA wallet with no seed phrase or browser extension required.'],
@@ -1235,6 +2589,10 @@ const BluvfiLandingPage: React.FC = () => {
             >
               Telegram
             </a>
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/terms">Terms of Service</a>
+            <a href="/aml">AML Policy</a>
+            <a href="/cookies">Cookie Policy</a>
           </div>
           <p>Bluvfi is an AI financial assistant product built under Hivepod Digital Solutions(the Company).</p>
         </footer>
@@ -1357,7 +2715,7 @@ const EnhancedAssetPreview: React.FC<{
   )
 }
 
-export default function App({ thirdwebClient }: AppProps) {
+function AppDApp({ thirdwebClient }: AppProps) {
   const account = useActiveAccount()
   const { notifySuccess, notifyError, notifyWarning, notifyInfo } =
     useNotificationHelpers()
@@ -3933,26 +5291,23 @@ export default function App({ thirdwebClient }: AppProps) {
             </div>
             <div className="footer-links">
               <a
-                href="https://github.com/Afoxcute/Bluvfi"
+                href="https://x.com/bluvfi"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                GitHub
+                X / Twitter
               </a>
               <a
-                href="https://payai.network"
+                href="https://t.me/+KXpDSUAnfg44MTg0"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                PayAI
+                Telegram
               </a>
-              <a
-                href="https://reown.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Reown
-              </a>
+              <a href="/privacy">Privacy Policy</a>
+              <a href="/terms">Terms of Service</a>
+              <a href="/aml">AML Policy</a>
+              <a href="/cookies">Cookie Policy</a>
             </div>
             <p>Open source. Built so AI can work for you, safely.</p>
           </footer>
