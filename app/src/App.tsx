@@ -951,7 +951,7 @@ const PrivacyPolicyPage: React.FC = () => {
               { title: 'Device & Browser', body: 'IP address, browser type, OS, device identifiers, and mobile network info.' },
               { title: 'Usage Data', body: 'Pages viewed, features used, time on page, links clicked, and AI prompts entered.' },
               { title: 'Location Data', body: 'General geographic location inferred from IP address.' },
-              { title: 'Transaction Data', body: 'USDC amounts, wallet addresses, timestamps, Base Sepolia network, and Circle Gateway records.' },
+              { title: 'Transaction Data', body: 'USDC amounts, wallet addresses, timestamps, supported mainnet networks, and Circle Gateway records.' },
               { title: 'Voice Data', body: 'Audio transcribed by OpenAI Whisper for voice-command features. Audio is not stored beyond transcription.' },
               { title: 'Cookies & Tracking', body: 'Information collected via cookies and similar technologies (see Section 9).' },
             ].map(c => (
@@ -1042,7 +1042,7 @@ const PrivacyPolicyPage: React.FC = () => {
           <h3 className="pp-h3">5.4 With Your Consent</h3>
           <p>We may share your information for purposes not described here only with your explicit prior consent.</p>
           <h3 className="pp-h3">5.5 Blockchain Transactions</h3>
-          <p>All USDC transactions processed through Circle Gateway on Base Sepolia are visible on the public blockchain. This includes wallet addresses and transaction amounts. This data is immutable and cannot be erased once confirmed on-chain.</p>
+          <p>All USDC transactions processed through Circle Gateway across our supported mainnet chains are visible on the public blockchain. This includes wallet addresses and transaction amounts. This data is immutable and cannot be erased once confirmed on-chain.</p>
         </section>
 
         {/* 06 */}
@@ -1169,7 +1169,7 @@ const PrivacyPolicyPage: React.FC = () => {
             <h2>Blockchain Transparency</h2>
           </div>
           <div className="pp-info">
-            <p>Bluvfi processes payments on <strong>Base Sepolia</strong> (and mainnet chains as applicable). All on-chain transactions — including wallet addresses and USDC transfer amounts — are permanently recorded on a public blockchain and are visible to anyone worldwide. This data cannot be modified or deleted once confirmed. By using Bluvfi's payment features, you accept this inherent transparency.</p>
+            <p>Bluvfi is multichain and processes payments across supported mainnet networks. All on-chain transactions — including wallet addresses and USDC transfer amounts — are permanently recorded on a public blockchain and are visible to anyone worldwide. This data cannot be modified or deleted once confirmed. By using Bluvfi's payment features, you accept this inherent transparency.</p>
           </div>
           <p>We do not publish any off-chain personal information (such as your name or email) alongside your wallet address. However, if you publicly associate your identity with a wallet address elsewhere, those records may be linked by third parties.</p>
         </section>
@@ -1312,7 +1312,7 @@ const TermsOfServicePage: React.FC = () => {
             <li>Manage an embedded cryptocurrency wallet provided by Privy</li>
           </ul>
           <div className="pp-info">
-            <p>Bluvfi is currently in <strong>demo/beta</strong>. Features, limits, and supported assets may change. Payments on Base Sepolia testnet are for demonstration purposes; real-money transactions on mainnet are subject to additional terms.</p>
+            <p>Bluvfi is currently in <strong>demo/beta</strong>. Features, limits, and supported assets may change. Real-money transactions on mainnet are subject to additional terms.</p>
           </div>
           <p>Bluvfi does not act as a bank, broker-dealer, investment adviser, or money transmitter. We are a technology platform that facilitates actions you explicitly confirm.</p>
         </section>
@@ -1373,7 +1373,7 @@ const TermsOfServicePage: React.FC = () => {
         <section className="pp-section" id="t6">
           <div className="pp-section-head"><span className="pp-num">06</span><h2>Payments &amp; Transactions</h2></div>
           <h3 className="pp-h3">6.1 Payment Infrastructure</h3>
-          <p>All payments are processed using <strong>Circle Arc AppKit</strong> on Base Sepolia (testnet) or applicable mainnet chains. Transactions use USDC as the payment currency and are settled via <strong>Circle Gateway x402 nanopayments</strong>. Gas fees are sponsored — you only need USDC.</p>
+          <p>All payments are processed using <strong>Circle Arc AppKit</strong> across our supported mainnet chains. Bluvfi is chain-agnostic — transactions use USDC as the payment currency and are settled via <strong>Circle Gateway x402 nanopayments</strong>. Gas fees are sponsored — you only need USDC.</p>
           <h3 className="pp-h3">6.2 Transaction Finality</h3>
           <div className="pp-highlight">
             <p><strong>Blockchain transactions are irreversible.</strong> Once a payment is confirmed on-chain, it cannot be cancelled, reversed, or refunded by Bluvfi. You are solely responsible for verifying all transaction details before confirming any action.</p>
@@ -1381,7 +1381,7 @@ const TermsOfServicePage: React.FC = () => {
           <h3 className="pp-h3">6.3 User Confirmation</h3>
           <p>Every payment — whether initiated via the UI or through the AI assistant — requires your explicit confirmation before execution. Bluvfi will never execute a payment without presenting you with a confirmation step first.</p>
           <h3 className="pp-h3">6.4 Supported Assets</h3>
-          <p>Bluvfi currently supports USDC on Base Sepolia (testnet). Supported assets, chains, and networks may change as the platform evolves. We are not responsible for losses arising from unsupported asset transfers.</p>
+          <p>Bluvfi currently supports USDC on Base mainnet. Supported assets, chains, and networks may change as the platform evolves. We are not responsible for losses arising from unsupported asset transfers.</p>
           <h3 className="pp-h3">6.5 Fees</h3>
           <p>Bluvfi may charge platform fees on certain transactions. Any applicable fees will be disclosed at the time of the transaction. We reserve the right to introduce or modify fees with notice to users.</p>
           <h3 className="pp-h3">6.6 Third-Party Payment Providers</h3>
@@ -1895,7 +1895,7 @@ const AMLPolicyPage: React.FC = () => {
         {/* 10 */}
         <section className="pp-section" id="a10">
           <div className="pp-section-head"><span className="pp-num">10</span><h2>Monitoring for Suspicious Activity</h2></div>
-          <p>Bluvfi's AML policy includes user and beneficial owner due diligence, ongoing transaction monitoring, and AML reporting policies. All USDC transactions processed through Circle Gateway and recorded on Base Sepolia are subject to ongoing monitoring.</p>
+          <p>Bluvfi's AML policy includes user and beneficial owner due diligence, ongoing transaction monitoring, and AML reporting policies. All USDC transactions processed through Circle Gateway across our supported mainnet chains are subject to ongoing monitoring.</p>
           <p>At various points in time, Bluvfi may request information regarding transactions carried out through a user's account and the parties to the respective payment.</p>
           <div className="pp-highlight">
             <p>If a user does not respond sufficiently or within a timely manner to an information request, Bluvfi reserves the right to restrict, suspend, or reject any respective payments — and to close the account — subject to the requirements of applicable AML laws and regulations.</p>
@@ -2219,10 +2219,10 @@ const BluvfiLandingPage: React.FC = () => {
   const features = [
     ['AI agent', 'GPT 4o mini can list bills, queue payments, buy investments, check Gateway balance, deposit, withdraw, and pay x402 URLs.'],
     ['Voice input', 'OpenAI Whisper transcribes spoken requests into the same payment ready chat commands.'],
-    ['Gasless payments', 'arcKit.send() sponsors gas through Circle infrastructure. Users only need USDC on Base Sepolia.'],
-    ['Embedded wallet', 'Privy useWallets() gives Arc AppKit the user wallet directly, without browser wallet discovery for payments.'],
-    ['Add Funds', 'Send from a browser wallet or bridge USDC from eight source testnets into the agent wallet.'],
-    ['Unified state', 'Dashboard screens and chat confirm cards share localStorage, and Postgres history.'],
+    ['Gasless payments', 'Sending money has a tiny extra fee (like a stamp on a letter). Bluvfi pays that stamp for you, so you only need your own coins to send.'],
+    ['Embedded wallet', "When you want to pay, the app already knows your piggy bank. You don't have to go find it yourself."],
+    ['Add Funds', 'Send from a browser wallet or bridge USDC from eight source mainnets into the agent wallet.'],
+    ['Unified state', 'The app remembers everything you do, like a notebook that never forgets, so your dashboard and your chat always show the same stuff.'],
   ]
 
   const integrations = [
@@ -2237,7 +2237,7 @@ const BluvfiLandingPage: React.FC = () => {
   const setupItems = [
     ['Framework', 'Next.js 15, React 19, TypeScript, Tailwind CSS v4, PWA ready, deployed on Vercel.'],
     ['AI', 'Vercel AI SDK v6 with OpenAI GPT 4o mini for chat and OpenAI Whisper for voice transcription.'],
-    ['Wallets and chain', 'Privy embedded EOA wallets, wagmi v2, viem, Arc AppKit, and Base Sepolia chain ID 84532.'],
+    ['Wallets and chain', 'Privy embedded EOA wallets, wagmi v2, viem, Arc AppKit — chain-agnostic, works across all supported mainnets.'],
     ['Data', 'React context plus localStorage for UI state, Neon Postgres and Drizzle ORM for payment history.'],
     ['Environment', 'Privy, Alchemy, Neon, OpenAI, Circle buyer private key, seller address, and app URL variables.'],
   ]
@@ -2461,9 +2461,9 @@ const BluvfiLandingPage: React.FC = () => {
             <h2>Arc AppKit moves USDC. Circle Gateway settles nanopayments.</h2>
             <p>
               Payments use Privy's embedded wallet provider with
-              createViemAdapterFromProvider, then arcKit.send() on Base Sepolia.
-              Funding supports browser wallet sends and bridges from eight
-              source testnets.
+              arcKit.send() across supported mainnet chains.
+              Bluvfi is chain-agnostic — funding supports browser wallet sends
+              and bridges from multiple source mainnets.
             </p>
           </div>
           <div className="integration-grid">

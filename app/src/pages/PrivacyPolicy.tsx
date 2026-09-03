@@ -315,7 +315,7 @@ const PrivacyPolicy: React.FC = () => {
             <h3>5.4 With Your Consent</h3>
             <p>We may share your information for purposes not described here only with your explicit prior consent.</p>
             <h3>5.5 Blockchain Transactions</h3>
-            <p>USDC transactions processed through Circle Gateway and recorded on Base Sepolia are visible on the public blockchain. Wallet addresses and amounts are immutable and cannot be erased once confirmed on-chain.</p>
+            <p>USDC transactions processed through Circle Gateway across our supported mainnet chains are visible on the public blockchain. Wallet addresses and amounts are immutable and cannot be erased once confirmed on-chain.</p>
           </section>
 
           {/* 6 */}
@@ -432,7 +432,7 @@ const PrivacyPolicy: React.FC = () => {
               <h2>Blockchain Transparency</h2>
             </div>
             <div className="pp-info">
-              <p>Bluvfi processes payments on <strong>Base Sepolia</strong>. All on-chain transactions — including wallet addresses and USDC transfer amounts — are permanently recorded on a public blockchain and are visible to anyone worldwide. This data cannot be modified or deleted once confirmed. By using Bluvfi's payment features, you accept this inherent transparency.</p>
+              <p>Bluvfi is multichain and processes payments across supported mainnet networks. All on-chain transactions — including wallet addresses and USDC transfer amounts — are permanently recorded on a public blockchain and are visible to anyone worldwide. This data cannot be modified or deleted once confirmed. By using Bluvfi's payment features, you accept this inherent transparency.</p>
             </div>
             <p>We do not publish any off-chain personal information (such as your name or email) alongside your wallet address.</p>
           </section>
