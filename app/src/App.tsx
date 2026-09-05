@@ -1104,7 +1104,7 @@ const PrivacyPolicyPage: React.FC = () => {
           <h3 className="pp-h3">8.2 GDPR Rights (EEA Residents)</h3>
           <p>If you are in the EEA, you also have the right to lodge a complaint with a supervisory authority in your member state.</p>
           <h3 className="pp-h3">8.3 Exercising Your Rights</h3>
-          <p>To exercise any of your rights, contact us at <a href="mailto:hivepod39@gmail.com" className="pp-link">hivepod39@gmail.com</a>. We will respond within 30 days (or as required by applicable law).</p>
+          <p>To exercise any of your rights, contact us at <a href="mailto:hivepod@bluvfi.xyz" className="pp-link">hivepod@bluvfi.xyz</a>. We will respond within 30 days (or as required by applicable law).</p>
         </section>
 
         {/* 09 */}
@@ -1144,7 +1144,7 @@ const PrivacyPolicyPage: React.FC = () => {
             <h2>Children's Privacy</h2>
           </div>
           <p>The Service is not intended for individuals under the age of 18 (or the applicable age of majority in your jurisdiction). We do not knowingly collect personal information from children.</p>
-          <p>If we become aware that we have inadvertently collected data from a child without verifiable parental consent, we will promptly delete that information. Please contact <a href="mailto:hivepod39@gmail.com" className="pp-link">hivepod39@gmail.com</a> if you believe this has occurred.</p>
+          <p>If we become aware that we have inadvertently collected data from a child without verifiable parental consent, we will promptly delete that information. Please contact <a href="mailto:hivepod@bluvfi.xyz" className="pp-link">hivepod@bluvfi.xyz</a> if you believe this has occurred.</p>
         </section>
 
         {/* 12 */}
@@ -1198,8 +1198,8 @@ const PrivacyPolicyPage: React.FC = () => {
           <p>If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please reach out:</p>
           <div className="pp-contact-grid">
             {[
-              { label: 'Privacy Requests', value: 'hivepod39@gmail.com', href: 'mailto:hivepod39@gmail.com' },
-              { label: 'General Support', value: 'hivepod39@gmail.com', href: 'mailto:hivepod39@gmail.com' },
+              { label: 'Privacy Requests', value: 'hivepod@bluvfi.xyz', href: 'mailto:hivepod@bluvfi.xyz' },
+              { label: 'General Support', value: 'hivepod@bluvfi.xyz', href: 'mailto:hivepod@bluvfi.xyz' },
               { label: 'Follow Us on X', value: '@bluvfi', href: 'https://x.com/bluvfi' },
               { label: 'Telegram Community', value: 'Join our Telegram', href: 'https://t.me/+KXpDSUAnfg44MTg0' },
             ].map(c => (
@@ -1340,7 +1340,7 @@ const TermsOfServicePage: React.FC = () => {
           <h3 className="pp-h3">4.3 Account Responsibility</h3>
           <ul>
             <li>You are responsible for all activity that occurs under your account</li>
-            <li>You must notify us immediately of any unauthorized access at <a href="mailto:hivepod39@gmail.com" className="pp-link">hivepod39@gmail.com</a></li>
+            <li>You must notify us immediately of any unauthorized access at <a href="mailto:hivepod@bluvfi.xyz" className="pp-link">hivepod@bluvfi.xyz</a></li>
             <li>You may not share your account with or transfer it to any other person</li>
             <li>You may not create multiple accounts to circumvent any limitation or restriction</li>
           </ul>
@@ -1493,7 +1493,7 @@ const TermsOfServicePage: React.FC = () => {
         <section className="pp-section" id="t14">
           <div className="pp-section-head"><span className="pp-num">14</span><h2>Termination</h2></div>
           <h3 className="pp-h3">14.1 Termination by You</h3>
-          <p>You may stop using the Service at any time. To request deletion of your account and associated data, contact <a href="mailto:hivepod39@gmail.com" className="pp-link">hivepod39@gmail.com</a>.</p>
+          <p>You may stop using the Service at any time. To request deletion of your account and associated data, contact <a href="mailto:hivepod@bluvfi.xyz" className="pp-link">hivepod@bluvfi.xyz</a>.</p>
           <h3 className="pp-h3">14.2 Termination by Bluvfi</h3>
           <p>We may suspend or terminate your access to the Service at any time, with or without notice, for any reason including but not limited to:</p>
           <ul>
@@ -1531,8 +1531,8 @@ const TermsOfServicePage: React.FC = () => {
           <p>For questions about these Terms, to report a violation, or to request account deletion, reach out to us:</p>
           <div className="pp-contact-grid">
             {[
-              { label: 'Legal & Terms',      value: 'hivepod39@gmail.com',   href: 'mailto:hivepod39@gmail.com' },
-              { label: 'General Support',    value: 'hivepod39@gmail.com', href: 'mailto:hivepod39@gmail.com' },
+              { label: 'Legal & Terms',      value: 'hivepod@bluvfi.xyz',   href: 'mailto:hivepod@bluvfi.xyz' },
+              { label: 'General Support',    value: 'hivepod@bluvfi.xyz', href: 'mailto:hivepod@bluvfi.xyz' },
               { label: 'Follow Us on X',     value: '@bluvfi',            href: 'https://x.com/bluvfi' },
               { label: 'Telegram Community', value: 'Join our Telegram',  href: 'https://t.me/+KXpDSUAnfg44MTg0' },
             ].map(c => (
@@ -1581,18 +1581,12 @@ const AMLPolicyPage: React.FC = () => {
   ]
 
   const nonServicedCountries = [
-    'Afghanistan', 'Balkans', 'Belarus', 'Bosnia',
-    'Central African Republic (CAR)', 'Crimea', 'Cuba',
-    'Democratic Republic of Congo (DRC)', 'China',
-    'Eritrea', 'Guinea-Bissau', 'Haiti',
-    'Iran', 'Iraq', 'Ivory Coast', 'Lao',
-    'Lebanon', 'Liberia', 'Libya', 'Mali',
-    'Moldova', 'Myanmar (Burma)', 'Nicaragua',
-    'North Korea', 'Pakistan', 'Republic of Guinea',
-    'Russia', 'Serbia/Yugoslavia', 'Somalia',
-    'Sri Lanka', 'South Sudan', 'Sudan', 'Syria',
-    'Trinidad & Tobago', 'Ukraine', 'United States',
-    'Vanuatu', 'Venezuela', 'Yemen', 'Zimbabwe',
+    'Afghanistan', 'Belarus', 'Cuba',
+    'Iran', 'Iraq', 'Libya',
+    'Myanmar (Burma)', 'North Korea', 'Russia',
+    'Somalia', 'South Sudan', 'Sudan', 'Syria',
+    'Venezuela', 'Yemen',
+    'Crimea (Region)', 'Donbas Regions (DNR/LNR)',
   ]
 
   return (
@@ -1805,7 +1799,7 @@ const AMLPolicyPage: React.FC = () => {
         {/* 06 */}
         <section className="pp-section" id="a6">
           <div className="pp-section-head"><span className="pp-num">06</span><h2>Data Requests &amp; KYC</h2></div>
-          <p>To mitigate the risks associated with money laundering and terrorist financing, Bluvfi strictly does not accept or send payments to unidentified third parties. Each user may only send and receive payments through their own accounts, including cryptocurrency wallets linked through Privy.</p>
+          <p>To mitigate the risks associated with money laundering and terrorist financing, Bluvfi requires that payments initiated through the platform correspond to legitimate, identifiable purposes — such as subscriptions, utility bills, merchant payments, and investment purchases. Bluvfi is designed to let users pay real-world services (e.g. Netflix, Spotify, utilities, stocks) using USDC through their linked wallet. Payments to merchants and service providers are permitted and are the core purpose of the platform. However, Bluvfi does not facilitate anonymous peer-to-peer transfers with no identifiable purpose, and reserves the right to review or restrict transactions that show signs of money laundering or terrorist financing.</p>
           <p>In accordance with our Know Your Customer (KYC) policy, authorised personnel may carry out user verification. In such cases, the user may be required to provide:</p>
           <ul>
             <li>Information about the services for which funds were received</li>
@@ -1888,7 +1882,7 @@ const AMLPolicyPage: React.FC = () => {
             ))}
           </div>
           <div className="pp-highlight">
-            <p><strong>Note:</strong> Bluvfi does not on-board US persons or entities at this time. We adopt the list of high-risk countries as released by local and foreign regulatory authorities from time to time, and this list is subject to change without notice.</p>
+            <p><strong>Note:</strong> This list reflects countries under comprehensive sanctions as of <strong>August 2026</strong>, per <strong>OFAC</strong> (U.S. Office of Foreign Assets Control), the <strong>UN Security Council Sanctions List</strong>, and the <strong>EU Consolidated Financial Sanctions List</strong>. It does not include FATF grey-list countries that are not under full sanctions. Crimea and the Donbas regions (DNR/LNR) are sanctioned territories — the rest of Ukraine is not restricted. This list is reviewed regularly and is subject to change as sanctions regimes are updated.</p>
           </div>
         </section>
 
@@ -1909,8 +1903,8 @@ const AMLPolicyPage: React.FC = () => {
           <p>If you have questions about our AML Policy, need to report suspicious activity, or wish to cooperate with a compliance inquiry, please contact our Compliance team:</p>
           <div className="pp-contact-grid">
             {[
-              { label: 'Compliance Officer', value: 'hivepod39@gmail.com',  href: 'mailto:hivepod39@gmail.com' },
-              { label: 'General Support',    value: 'hivepod39@gmail.com',  href: 'mailto:hivepod39@gmail.com' },
+              { label: 'Compliance Officer', value: 'hivepod@bluvfi.xyz',  href: 'mailto:hivepod@bluvfi.xyz' },
+              { label: 'General Support',    value: 'hivepod@bluvfi.xyz',  href: 'mailto:hivepod@bluvfi.xyz' },
               { label: 'Follow Us on X',     value: '@bluvfi',              href: 'https://x.com/bluvfi' },
               { label: 'Telegram Community', value: 'Join our Telegram',    href: 'https://t.me/+KXpDSUAnfg44MTg0' },
             ].map(c => (
@@ -2162,7 +2156,7 @@ const CookiePolicyPage: React.FC = () => {
           <p>If you have any questions about this Cookie Policy or how we use cookies on the Bluvfi platform, please contact us:</p>
           <div className="pp-contact-grid">
             {[
-              { label: 'Email',              value: 'hivepod39@gmail.com',   href: 'mailto:hivepod39@gmail.com' },
+              { label: 'Email',              value: 'hivepod@bluvfi.xyz',   href: 'mailto:hivepod@bluvfi.xyz' },
               { label: 'X / Twitter',        value: '@bluvfi',               href: 'https://x.com/bluvfi' },
               { label: 'Telegram Community', value: 'Join our Telegram',     href: 'https://t.me/+KXpDSUAnfg44MTg0' },
             ].map(c => (

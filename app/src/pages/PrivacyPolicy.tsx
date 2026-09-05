@@ -374,7 +374,7 @@ const PrivacyPolicy: React.FC = () => {
             <h3>8.2 GDPR Rights (EEA Residents)</h3>
             <p>If you are in the EEA, you have additional rights under GDPR, including the right to lodge a complaint with a supervisory authority in your member state.</p>
             <h3>8.3 Exercising Your Rights</h3>
-            <p>To exercise any of your rights, contact us at <a href="mailto:hivepod39@gmail.com">hivepod39@gmail.com</a>. We will respond within 30 days.</p>
+            <p>To exercise any of your rights, contact us at <a href="mailto:hivepod@bluvfi.xyz">hivepod@bluvfi.xyz</a>. We will respond within 30 days.</p>
           </section>
 
           {/* 9 */}
@@ -407,7 +407,7 @@ const PrivacyPolicy: React.FC = () => {
               <span className="pp-num">11</span>
               <h2>Children's Privacy</h2>
             </div>
-            <p>The Service is not intended for individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have collected data from a child, please contact us at <a href="mailto:hivepod39@gmail.com">hivepod39@gmail.com</a> and we will promptly delete it.</p>
+            <p>The Service is not intended for individuals under the age of 18. We do not knowingly collect personal information from children. If you believe we have collected data from a child, please contact us at <a href="mailto:hivepod@bluvfi.xyz">hivepod@bluvfi.xyz</a> and we will promptly delete it.</p>
           </section>
 
           {/* 12 */}
@@ -462,11 +462,11 @@ const PrivacyPolicy: React.FC = () => {
             <div className="pp-contact-grid">
               <div className="pp-contact-item">
                 <div className="pp-contact-label">Privacy Requests</div>
-                <a href="mailto:hivepod39@gmail.com">hivepod39@gmail.com</a>
+                <a href="mailto:hivepod@bluvfi.xyz">hivepod@bluvfi.xyz</a>
               </div>
               <div className="pp-contact-item">
                 <div className="pp-contact-label">General Support</div>
-                <a href="mailto:hivepod39@gmail.com">hivepod39@gmail.com</a>
+                <a href="mailto:hivepod@bluvfi.xyz">hivepod@bluvfi.xyz</a>
               </div>
               <div className="pp-contact-item">
                 <div className="pp-contact-label">X / Twitter</div>
