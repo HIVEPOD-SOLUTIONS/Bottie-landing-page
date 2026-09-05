@@ -892,7 +892,7 @@ const PrivacyPolicyPage: React.FC = () => {
         <span className="pp-pill">Legal</span>
         <h1 className="pp-h1">Privacy <span className="pp-accent">Policy</span></h1>
         <p className="pp-meta">
-          <strong>Last updated: August 27, 2026</strong>
+          <strong>Last updated: September 5, 2026</strong>
           &nbsp;·&nbsp;Effective for all users of Bluvfi services.
         </p>
       </header>
@@ -1270,7 +1270,7 @@ const TermsOfServicePage: React.FC = () => {
         <span className="pp-pill">Legal</span>
         <h1 className="pp-h1">Terms of <span className="pp-accent">Service</span></h1>
         <p className="pp-meta">
-          <strong>Last updated: August 27, 2026</strong>
+          <strong>Last updated: September 5, 2026</strong>
           &nbsp;·&nbsp;Please read these terms carefully before using Bluvfi.
         </p>
       </header>
@@ -1607,7 +1607,7 @@ const AMLPolicyPage: React.FC = () => {
         <span className="pp-pill">Legal</span>
         <h1 className="pp-h1">AML <span className="pp-accent">Policy</span></h1>
         <p className="pp-meta">
-          <strong>Last updated: August 27, 2026</strong>
+          <strong>Last updated: September 5, 2026</strong>
           &nbsp;·&nbsp;Anti-Money Laundering &amp; Counter-Terrorism Financing Policy.
         </p>
       </header>
@@ -1882,7 +1882,7 @@ const AMLPolicyPage: React.FC = () => {
             ))}
           </div>
           <div className="pp-highlight">
-            <p><strong>Note:</strong> This list reflects countries under comprehensive sanctions as of <strong>August 2026</strong>, per <strong>OFAC</strong> (U.S. Office of Foreign Assets Control), the <strong>UN Security Council Sanctions List</strong>, and the <strong>EU Consolidated Financial Sanctions List</strong>. It does not include FATF grey-list countries that are not under full sanctions. Crimea and the Donbas regions (DNR/LNR) are sanctioned territories — the rest of Ukraine is not restricted. This list is reviewed regularly and is subject to change as sanctions regimes are updated.</p>
+            <p><strong>Note:</strong> This list reflects countries under comprehensive sanctions as of <strong>September 5, 2026</strong>, per <strong>OFAC</strong> (U.S. Office of Foreign Assets Control), the <strong>UN Security Council Sanctions List</strong>, and the <strong>EU Consolidated Financial Sanctions List</strong>. It does not include FATF grey-list countries that are not under full sanctions. Crimea and the Donbas regions (DNR/LNR) are sanctioned territories — the rest of Ukraine is not restricted. This list is reviewed regularly and is subject to change as sanctions regimes are updated.</p>
           </div>
         </section>
 
@@ -1915,7 +1915,7 @@ const AMLPolicyPage: React.FC = () => {
             ))}
           </div>
           <p style={{ marginTop: '20px', color: 'rgba(238,252,245,0.55)', fontSize: '0.88rem' }}>
-            <strong style={{ color: 'rgba(238,252,245,0.75)' }}>Operated by:</strong> Hivepod Digital Solutions &nbsp;·&nbsp; <strong style={{ color: 'rgba(238,252,245,0.75)' }}>Effective:</strong> August 27, 2026
+            <strong style={{ color: 'rgba(238,252,245,0.75)' }}>Operated by:</strong> Hivepod Digital Solutions &nbsp;·&nbsp; <strong style={{ color: 'rgba(238,252,245,0.75)' }}>Effective:</strong> September 5, 2026
           </p>
         </section>
 
@@ -2001,7 +2001,7 @@ const CookiePolicyPage: React.FC = () => {
         <span className="pp-pill">Legal</span>
         <h1 className="pp-h1">Cookie <span className="pp-accent">Policy</span></h1>
         <p className="pp-meta">
-          <strong>Last updated: August 27, 2026</strong>
+          <strong>Last updated: September 5, 2026</strong>
           &nbsp;·&nbsp;How Bluvfi uses cookies and similar tracking technologies.
         </p>
       </header>
@@ -2167,7 +2167,7 @@ const CookiePolicyPage: React.FC = () => {
             ))}
           </div>
           <p style={{ marginTop: '20px', color: 'rgba(238,252,245,0.55)', fontSize: '0.88rem' }}>
-            <strong style={{ color: 'rgba(238,252,245,0.75)' }}>Operated by:</strong> Hivepod Digital Solutions &nbsp;·&nbsp; <strong style={{ color: 'rgba(238,252,245,0.75)' }}>Effective:</strong> August 27, 2026
+            <strong style={{ color: 'rgba(238,252,245,0.75)' }}>Operated by:</strong> Hivepod Digital Solutions &nbsp;·&nbsp; <strong style={{ color: 'rgba(238,252,245,0.75)' }}>Effective:</strong> September 5, 2026
           </p>
         </section>
 

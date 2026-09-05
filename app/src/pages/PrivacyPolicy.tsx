@@ -156,7 +156,7 @@ const PrivacyPolicy: React.FC = () => {
           <div className="pp-pill">Legal</div>
           <h1>Privacy <span>Policy</span></h1>
           <p className="pp-hero-meta">
-            <strong>Last updated: August 27, 2026</strong> &nbsp;·&nbsp; Effective for all users of Bluvfi services.
+            <strong>Last updated: September 5, 2026</strong> &nbsp;·&nbsp; Effective for all users of Bluvfi services.
           </p>
         </header>
 
