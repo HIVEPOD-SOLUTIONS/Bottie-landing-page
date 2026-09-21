@@ -2236,6 +2236,88 @@ const BluvfiLandingPage: React.FC = () => {
     ['Environment', 'Privy, Alchemy, Neon, OpenAI, Circle buyer private key, seller address, and app URL variables.'],
   ]
 
+  const partners = [
+    { name: 'Privy', tag: 'Auth', logo: '/partners/privy.png', mark: true, copy: 'Email and passkey sign in with embedded EVM and Solana wallets.' },
+    { name: 'Arc', tag: 'Payments', logo: '/partners/arc.svg', copy: 'Arc AppKit powers the USDC wallet, cross chain bridging, and x402 nanopayments.' },
+    { name: 'Circle', tag: 'Payments', logo: '/partners/circle.svg', copy: 'USDC and Circle Gateway settle every payment.' },
+    { name: 'Bitrefill', tag: 'Gift cards and bills', logo: '/partners/bitrefill.svg', mark: true, copy: 'Gift cards, eSIMs, and mobile top ups paid in USDC.' },
+    { name: 'Credible Finance', tag: 'Banking', logo: '/partners/credible-finance.svg', copy: 'On ramp, off ramp, collections, and remittance.' },
+    { name: 'XRPL', tag: 'XRP Ledger', logo: '/partners/xrpl.svg', copy: 'XRP wallets and swaps on the XRP Ledger.' },
+    { name: 'xStocks', tag: 'Real world assets', logo: '/partners/xstocks.svg', mark: true, copy: 'Tokenized stocks on Solana.' },
+    { name: 'NEAR Intents', tag: 'XRP Ledger', logo: '/partners/near-intents.png', mark: true, copy: 'Cross chain swap routing for XRP.' },
+  ]
+
+  const partnerGroups = [
+    {
+      title: 'AI and language models',
+      items: [
+        { name: 'OpenAI', logo: '/partners/openai.png', copy: 'Primary AI chat.' },
+        { name: 'Google Gemini', logo: '/partners/gemini.svg', copy: 'Activity narration, weekly insights, and voice transcription.' },
+        { name: 'Qwen', logo: '/partners/qwen.png', copy: 'Alibaba DashScope alternative LLM with a model fallback chain.' },
+      ],
+    },
+    {
+      title: 'Blockchain infrastructure',
+      items: [
+        { name: 'Alchemy', logo: '/partners/alchemy.svg', copy: 'RPC nodes for Base and Solana.' },
+        { name: 'Helius', logo: '/partners/helius.png', copy: 'Solana mainnet RPC for Flash Trade.' },
+        { name: 'QuickNode', logo: '/partners/quicknode.png', copy: 'Solana mainnet RPC for Flash Trade.' },
+        { name: 'MagicBlock', logo: '/partners/magicblock.svg', wide: true, dark: true, copy: 'Solana ephemeral rollup for Flash Trade perpetuals.' },
+      ],
+    },
+    {
+      title: 'Payments',
+      items: [
+        { name: 'x402 Protocol', logo: '/partners/x402.svg', wide: true, copy: 'HTTP 402 micropayment standard on EVM.' },
+        { name: 'Solana Pay', logo: '/partners/solana-pay.svg', copy: 'Solana Pay Kit and MPP for Solana micropayments.' },
+        { name: 'SpherePay', logo: '/partners/spherepay.svg', wide: true, copy: 'Payment infrastructure API.' },
+        { name: 'Fuze Finance', logo: '/partners/fuze.svg', wide: true, dark: true, copy: 'Crypto and fiat global finance.' },
+      ],
+    },
+    {
+      title: 'DeFi and trading',
+      items: [
+        { name: 'Flash Trade', logo: '/partners/flash-trade.webp', wide: true, dark: true, copy: 'Solana perpetuals trading.' },
+        { name: 'Velvet Capital', logo: '/partners/velvet.svg', copy: 'DeFi index vaults on Base.' },
+        { name: 'dYdX v4', logo: '/partners/dydx.png', copy: 'Perpetuals DEX, read only indexer.' },
+        { name: '0x Protocol', logo: '/partners/0x.png', copy: 'DEX aggregator for EVM swap quotes.' },
+        { name: 'Doma Protocol', logo: '/partners/doma.svg', copy: 'DeFi REST and GraphQL.' },
+        { name: 'Yo Protocol', logo: '/partners/yo.png', copy: 'Yield vaults on Solana.' },
+      ],
+    },
+    {
+      title: 'Real world assets, XRP, and banking',
+      items: [
+        { name: 'GRAIL by Oro', logo: '/partners/oro.png', copy: 'Gold trading on Solana.' },
+        { name: 'Bluvfi XRPL Service', logo: '/Bluvfiv2.jpg', copy: 'Internal microservice for XRP wallets and swaps.' },
+        { name: 'Ripple Payments ODL', logo: '/partners/ripple.png', copy: 'Cross border payments via RippleNet, in development.' },
+      ],
+    },
+    {
+      title: 'Compute, entertainment, and data',
+      items: [
+        { name: 'Nosana', logo: '/partners/nosana.svg', copy: 'Decentralized GPU cloud on Solana.' },
+        { name: 'Roaster', logo: '/partners/roaster.svg', copy: 'AI rap battle platform with Solana wagering.' },
+        { name: 'CoinMarketCap', logo: '/partners/coinmarketcap.png', copy: 'Live crypto price ticker.' },
+        { name: 'Google AdMob', logo: '/partners/admob.png', copy: 'Interstitial and rewarded ads on Android.' },
+        { name: 'Neon', logo: '/partners/neon.png', copy: 'Serverless PostgreSQL via Drizzle ORM.' },
+      ],
+    },
+    {
+      title: 'Developer platform',
+      items: [
+        { name: 'Capacitor', logo: '/partners/capacitor.png', copy: 'Native Android wrapper.' },
+        { name: 'Serwist', logo: '/partners/serwist.png', wide: true, dark: true, copy: 'PWA service worker.' },
+        { name: 'Model Context Protocol', logo: '/partners/mcp.svg', copy: "Connects to Bitrefill's MCP endpoint." },
+        { name: 'Wagmi', logo: '/partners/wagmi.svg', wide: true, copy: 'EVM wallet connection.' },
+        { name: 'viem', logo: '/partners/viem.svg', wide: true, copy: 'EVM transaction building.' },
+        { name: 'AWS Amplify', logo: '/partners/amplify.png', copy: 'CI/CD and web hosting.' },
+        { name: 'Vercel', logo: '/partners/vercel.svg', wide: true, copy: 'Deployment and weekly cron jobs.' },
+        { name: 'Upstash', logo: '/partners/upstash.png', copy: 'Redis anti replay store for Solana MPP payments.' },
+      ],
+    },
+  ]
+
   const securityLayers = [
     ['Encryption at rest', 'Data Encryption', 'Sensitive account, payment, and activity records are protected with modern encryption practices designed for resilient data storage.'],
     ['Sensitive channels', 'End to End Encryption', 'Private communications and wallet related flows are designed to reduce exposure while requests move through the Bluvfi experience.'],
@@ -2259,6 +2341,7 @@ const BluvfiLandingPage: React.FC = () => {
           <span>Bluvfi</span>
         </div>
         <nav className="Bluvfi-links" aria-label="Primary">
+          <a href="#partners">Partners</a>
           <a href="#how-it-works">How it works</a>
           <a href="#features">Features</a>
           <a href="#security">Security</a>
@@ -2334,6 +2417,58 @@ const BluvfiLandingPage: React.FC = () => {
               <span>History</span>
               <strong>Nanopay settlement succeeded</strong>
             </div>
+          </div>
+        </section>
+
+        <section id="partners" className="Bluvfi-section">
+          <div className="section-intro">
+            <p className="Bluvfi-kicker">Partner integrations</p>
+            <h2>Built on the best names in wallets, payments, and on chain finance.</h2>
+          </div>
+          <div className="partner-grid">
+            {partners.map((partner) => (
+              <article className="partner-card" key={partner.name}>
+                <div className="partner-logo">
+                  <img
+                    src={partner.logo}
+                    alt={`${partner.name} logo`}
+                    className={partner.mark ? 'is-mark' : undefined}
+                    loading="lazy"
+                  />
+                </div>
+                <span>{partner.tag}</span>
+                <h3>{partner.name}</h3>
+                <p>{partner.copy}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="partner-stack">
+            <div className="section-intro">
+              <p className="Bluvfi-kicker">The full stack</p>
+              <h2>Everything else that powers Bluvfi.</h2>
+            </div>
+            {partnerGroups.map((group) => (
+              <div className="partner-group" key={group.title}>
+                <h3>{group.title}</h3>
+                <div className="partner-mini-grid">
+                  {group.items.map((item) => (
+                    <article className="partner-mini" key={item.name}>
+                      <div className={item.dark ? 'partner-mini-logo is-dark' : 'partner-mini-logo'}>
+                        <img
+                          src={item.logo}
+                          alt={`${item.name} logo`}
+                          className={item.wide ? 'is-wide' : undefined}
+                          loading="lazy"
+                        />
+                      </div>
+                      <h4>{item.name}</h4>
+                      <p>{item.copy}</p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </section>
 
