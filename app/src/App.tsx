@@ -2241,7 +2241,7 @@ const BluvfiLandingPage: React.FC = () => {
     { name: 'Arc', tag: 'Payments', logo: '/partners/arc.svg', copy: 'Arc AppKit powers the USDC wallet, cross chain bridging, and x402 nanopayments.' },
     { name: 'Circle', tag: 'Payments', logo: '/partners/circle.svg', copy: 'USDC and Circle Gateway settle every payment.' },
     { name: 'Bitrefill', tag: 'Gift cards and bills', logo: '/partners/bitrefill.svg', mark: true, copy: 'Gift cards, eSIMs, and mobile top ups paid in USDC.' },
-    { name: 'Credible Finance', tag: 'Banking', logo: '/partners/credible-finance.svg', copy: 'On ramp, off ramp, collections, and remittance.' },
+    // { name: 'Credible Finance', tag: 'Banking', logo: '/partners/credible-finance.svg', copy: 'On ramp, off ramp, collections, and remittance.' },
     { name: 'XRPL', tag: 'XRP Ledger', logo: '/partners/xrpl.svg', copy: 'XRP wallets and swaps on the XRP Ledger.' },
     { name: 'xStocks', tag: 'Real world assets', logo: '/partners/xstocks.svg', mark: true, copy: 'Tokenized stocks on Solana.' },
     { name: 'NEAR Intents', tag: 'XRP Ledger', logo: '/partners/near-intents.png', mark: true, copy: 'Cross chain swap routing for XRP.' },
