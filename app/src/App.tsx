@@ -1314,7 +1314,7 @@ const TermsOfServicePage: React.FC = () => {
           <div className="pp-info">
             <p>Bluvfi is currently in <strong>demo/beta</strong>. Features, limits, and supported assets may change. Real-money transactions on mainnet are subject to additional terms.</p>
           </div>
-          <p>Bluvfi does not act as a bank, broker-dealer, investment adviser, or money transmitter. We are a technology platform that facilitates actions you explicitly confirm. Regulated activities are performed by licensed third-party providers. See our <a href="/aml#a12" className="pp-link">AML Policy</a> for licensing, custody, and fund flow details.</p>
+          <p>Bluvfi does not act as a bank, broker-dealer, investment adviser, or money transmitter. We are a technology platform that facilitates actions you explicitly confirm. Regulated activities are performed by third-party providers. See our <a href="/aml#a12" className="pp-link">AML Policy</a> for licensing, custody, and fund flow details.</p>
         </section>
 
         {/* 03 */}
@@ -1906,37 +1906,39 @@ const AMLPolicyPage: React.FC = () => {
           <p>Hivepod Digital Solutions Limited (RC 9663037), the operator of Bluvfi, is a registered Nigerian company and holds a <strong>DIFC (Dubai) AI &amp; Web 3.0 License</strong>, together with its partnership agreement registration.</p>
           <p>Bluvfi is a technology and software platform. It does not itself carry out regulated money transmission, fiat on/off-ramp, bill payment, brokerage, or custody activities. Each of those activities is performed by a licensed third-party provider under that provider's own licence and regulatory obligations:</p>
           <ul>
-            <li><strong>Bill payments</strong> and <strong>fiat on/off-ramp</strong> are performed by licensed payment and ramp providers</li>
-            <li><strong>Investments</strong> are executed and held through our partners <strong>Backpack</strong> and <strong>GetEquity</strong></li>
+            <li><strong>Bill payments</strong> (utilities, cable, internet, subscriptions, gift cards) are fulfilled by <strong>Bitrefill</strong></li>
+            <li><strong>Fiat on-ramp and off-ramp</strong> are performed by <strong>Credible</strong> over UPI fiat rails</li>
+            <li><strong>Listed stocks and ETFs</strong> are traded through <strong>Backpack</strong>, paid in USDC, and <strong>private-market and pre-IPO investments</strong> through <strong>GetEquity</strong>, where the user holds a KYC-approved GetEquity account</li>
             <li><strong>Wallets</strong> are provided by Privy (non-custodial) and <strong>USDC settlement</strong> by Circle</li>
           </ul>
-          <p>Users of those services are also subject to the KYC and AML requirements of the relevant provider.</p>
+          <p>The DIFC licence covers technology activities only (it does not permit brokerage, payment processing, or operating an exchange), and Bluvfi does not rely on it for any financial activity. Users of the providers above are also subject to each provider's own KYC and AML requirements.</p>
         </section>
 
         {/* 12 */}
         <section className="pp-section" id="a13">
           <div className="pp-section-head"><span className="pp-num">12</span><h2>Custody &amp; End-to-End Fund Flow</h2></div>
           <div className="pp-highlight">
-            <p>Hivepod Digital Solutions does not hold, pool, or have custody of user funds. User funds are held either in the user's own non-custodial wallet or by the licensed provider performing the specific activity.</p>
+            <p>Hivepod Digital Solutions does not hold, pool, or have custody of user funds. User funds are held either in the user's own non-custodial wallet or by the provider performing the specific activity (Bitrefill, Credible, Backpack or GetEquity).</p>
           </div>
           <h3 className="pp-h3">Funding</h3>
           <ol>
             <li>The user signs up and completes KYC. Privy creates a non-custodial embedded wallet that only the user controls.</li>
-            <li>The user adds USDC to the wallet, either by sending it from another wallet or by buying it through a licensed fiat on-ramp provider, which carries out its own KYC and AML checks.</li>
+            <li>The user adds USDC to the wallet, either by sending it from another wallet or by buying it through the Credible on-ramp, which carries out its own KYC and AML checks.</li>
           </ol>
           <h3 className="pp-h3">Paying bills and subscriptions</h3>
           <ol>
             <li>The user asks the AI assistant to pay a bill, and the assistant queues the request. Nothing executes until the user explicitly confirms.</li>
-            <li>On confirmation, USDC moves from the user's wallet to the licensed bill-payment provider, settled via Circle Gateway x402.</li>
-            <li>The provider converts and settles in local fiat currency to the biller (utility, cable, internet, streaming) and returns a confirmation.</li>
+            <li>On confirmation, USDC moves from the user's wallet to Bitrefill, settled via Circle Gateway x402.</li>
+            <li>Bitrefill fulfils the payment or voucher with the biller (utility, cable, internet, streaming) and returns a confirmation.</li>
           </ol>
           <h3 className="pp-h3">Investing</h3>
           <ol>
             <li>The user confirms an investment order in the app.</li>
-            <li>The order is executed with our licensed partners, Backpack and GetEquity, and the purchased assets are held by them in the user's name or on the user's behalf under their custody arrangements.</li>
+            <li>Stock and ETF orders are placed on Backpack and paid in USDC. Private-market investments are made through the user's own KYC-approved GetEquity account.</li>
+            <li>The purchased assets are held by Backpack or GetEquity under their own custody arrangements and licences, never by Hivepod.</li>
           </ol>
           <h3 className="pp-h3">Withdrawals</h3>
-          <p>Users can send USDC from their wallet to a wallet they own, or off-ramp to fiat through a licensed provider, which pays out to a bank account in the user's own name. Third-party payouts are not supported.</p>
+          <p>Users can send USDC from their wallet to a wallet they own, or off-ramp to fiat through Credible, which pays out to a bank account in the user's own name. Third-party payouts are not supported.</p>
           <p>Every step above is logged and is subject to monitoring under Section 10.</p>
         </section>
 
