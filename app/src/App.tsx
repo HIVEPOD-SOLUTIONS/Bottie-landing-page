@@ -1904,6 +1904,19 @@ const AMLPolicyPage: React.FC = () => {
         <section className="pp-section" id="a12">
           <div className="pp-section-head"><span className="pp-num">11</span><h2>Licensing &amp; Regulatory Status</h2></div>
           <p>Hivepod Digital Solutions Limited (RC 9663037), the operator of Bluvfi, is a registered Nigerian company and holds a <strong>DIFC (Dubai) AI &amp; Web 3.0 License</strong>, together with its partnership agreement registration.</p>
+          <div className="pp-contact-grid">
+            {[
+              { label: 'Legal name', value: 'Hivepod Digital Solutions Limited' },
+              { label: 'Registration no.', value: 'RC 9663037 (CAC, Nigeria)' },
+              { label: 'Incorporated', value: '7 July 2026, private company limited by shares' },
+              { label: 'Registered office', value: 'JGX8+V73, 29 Orji Lambo Lasunwo, First Gate opp. LASPOTECH, Lagos, Lagos State, Nigeria' },
+            ].map(c => (
+              <div className="pp-contact-item" key={c.label}>
+                <span className="pp-contact-label">{c.label}</span>
+                <span>{c.value}</span>
+              </div>
+            ))}
+          </div>
           <p>Bluvfi is a technology and software platform. It does not itself carry out regulated money transmission, fiat on/off-ramp, bill payment, brokerage, or custody activities. Each of those activities is performed by a licensed third-party provider under that provider's own licence and regulatory obligations:</p>
           <ul>
             <li><strong>Bill payments</strong> (utilities, cable, internet, subscriptions, gift cards) are fulfilled by <strong>Bitrefill</strong>, a licensed provider</li>
@@ -1952,7 +1965,7 @@ const AMLPolicyPage: React.FC = () => {
             <li>Filing suspicious activity reports with the competent authorities and handling law-enforcement requests</li>
             <li>Overseeing sanctions screening, training, and record-keeping</li>
           </ul>
-          <p>The Compliance Officer reports directly to the company's directors, who remain accountable for compliance. This policy is approved by Taiwo Lateef Aderemi, Co-Founder and Chief Information Officer (CIO).</p>
+          <p>The Compliance Officer reports directly to the company's directors, <strong>Afolabi Ifeoluwa Michael</strong> and <strong>Taiwo Lateef Aderemi</strong>, who remain accountable for compliance. This policy is approved by Taiwo Lateef Aderemi, Co-Founder and Chief Information Officer (CIO).</p>
         </section>
 
         {/* 14 */}
