@@ -1314,7 +1314,7 @@ const TermsOfServicePage: React.FC = () => {
           <div className="pp-info">
             <p>Bluvfi is currently in <strong>demo/beta</strong>. Features, limits, and supported assets may change. Real-money transactions on mainnet are subject to additional terms.</p>
           </div>
-          <p>Bluvfi does not act as a bank, broker-dealer, investment adviser, or money transmitter. We are a technology platform that facilitates actions you explicitly confirm.</p>
+          <p>Bluvfi does not act as a bank, broker-dealer, investment adviser, or money transmitter. We are a technology platform that facilitates actions you explicitly confirm. Regulated activities are performed by licensed third-party providers. See our <a href="/aml#a12" className="pp-link">AML Policy</a> for licensing, custody, and fund flow details.</p>
         </section>
 
         {/* 03 */}
@@ -1577,7 +1577,10 @@ const AMLPolicyPage: React.FC = () => {
     { num: '08', id: 'a8',  title: 'Sanctions' },
     { num: '09', id: 'a9',  title: 'Non-Serviced Countries' },
     { num: '10', id: 'a10', title: 'Monitoring for Suspicious Activity' },
-    { num: '11', id: 'a11', title: 'Contact Information' },
+    { num: '11', id: 'a12', title: 'Licensing & Regulatory Status' },
+    { num: '12', id: 'a13', title: 'Custody & End-to-End Fund Flow' },
+    { num: '13', id: 'a14', title: 'Compliance Officer & Reporting' },
+    { num: '14', id: 'a11', title: 'Contact Information' },
   ]
 
   const nonServicedCountries = [
@@ -1898,8 +1901,61 @@ const AMLPolicyPage: React.FC = () => {
         </section>
 
         {/* 11 */}
+        <section className="pp-section" id="a12">
+          <div className="pp-section-head"><span className="pp-num">11</span><h2>Licensing &amp; Regulatory Status</h2></div>
+          <p>Hivepod Digital Solutions Limited (RC 9663037), the operator of Bluvfi, is a registered Nigerian company and holds a <strong>DIFC (Dubai) AI &amp; Web 3.0 License</strong>, together with its partnership agreement registration.</p>
+          <p>Bluvfi is a technology and software platform. It does not itself carry out regulated money transmission, fiat on/off-ramp, bill payment, brokerage, or custody activities. Each of those activities is performed by a licensed third-party provider under that provider's own licence and regulatory obligations:</p>
+          <ul>
+            <li><strong>Bill payments</strong> and <strong>fiat on/off-ramp</strong> are performed by licensed payment and ramp providers</li>
+            <li><strong>Investments</strong> are executed and held through our partners <strong>Backpack</strong> and <strong>GetEquity</strong></li>
+            <li><strong>Wallets</strong> are provided by Privy (non-custodial) and <strong>USDC settlement</strong> by Circle</li>
+          </ul>
+          <p>Users of those services are also subject to the KYC and AML requirements of the relevant provider.</p>
+        </section>
+
+        {/* 12 */}
+        <section className="pp-section" id="a13">
+          <div className="pp-section-head"><span className="pp-num">12</span><h2>Custody &amp; End-to-End Fund Flow</h2></div>
+          <div className="pp-highlight">
+            <p>Hivepod Digital Solutions does not hold, pool, or have custody of user funds. User funds are held either in the user's own non-custodial wallet or by the licensed provider performing the specific activity.</p>
+          </div>
+          <h3 className="pp-h3">Funding</h3>
+          <ol>
+            <li>The user signs up and completes KYC. Privy creates a non-custodial embedded wallet that only the user controls.</li>
+            <li>The user adds USDC to the wallet, either by sending it from another wallet or by buying it through a licensed fiat on-ramp provider, which carries out its own KYC and AML checks.</li>
+          </ol>
+          <h3 className="pp-h3">Paying bills and subscriptions</h3>
+          <ol>
+            <li>The user asks the AI assistant to pay a bill, and the assistant queues the request. Nothing executes until the user explicitly confirms.</li>
+            <li>On confirmation, USDC moves from the user's wallet to the licensed bill-payment provider, settled via Circle Gateway x402.</li>
+            <li>The provider converts and settles in local fiat currency to the biller (utility, cable, internet, streaming) and returns a confirmation.</li>
+          </ol>
+          <h3 className="pp-h3">Investing</h3>
+          <ol>
+            <li>The user confirms an investment order in the app.</li>
+            <li>The order is executed with our licensed partners, Backpack and GetEquity, and the purchased assets are held by them in the user's name or on the user's behalf under their custody arrangements.</li>
+          </ol>
+          <h3 className="pp-h3">Withdrawals</h3>
+          <p>Users can send USDC from their wallet to a wallet they own, or off-ramp to fiat through a licensed provider, which pays out to a bank account in the user's own name. Third-party payouts are not supported.</p>
+          <p>Every step above is logged and is subject to monitoring under Section 10.</p>
+        </section>
+
+        {/* 13 */}
+        <section className="pp-section" id="a14">
+          <div className="pp-section-head"><span className="pp-num">13</span><h2>Compliance Officer &amp; Reporting</h2></div>
+          <p>Bluvfi's AML Compliance Officer is the company's external legal counsel, who is responsible for:</p>
+          <ul>
+            <li>Maintaining and reviewing this AML policy and the risk assessment at least annually</li>
+            <li>Receiving internal reports of suspicious activity and deciding whether to escalate</li>
+            <li>Filing suspicious activity reports with the competent authorities and handling law-enforcement requests</li>
+            <li>Overseeing sanctions screening, training, and record-keeping</li>
+          </ul>
+          <p>The Compliance Officer reports directly to the company's directors, who remain accountable for compliance.</p>
+        </section>
+
+        {/* 14 */}
         <section className="pp-section" id="a11">
-          <div className="pp-section-head"><span className="pp-num">11</span><h2>Contact Information</h2></div>
+          <div className="pp-section-head"><span className="pp-num">14</span><h2>Contact Information</h2></div>
           <p>If you have questions about our AML Policy, need to report suspicious activity, or wish to cooperate with a compliance inquiry, please contact our Compliance team:</p>
           <div className="pp-contact-grid">
             {[
