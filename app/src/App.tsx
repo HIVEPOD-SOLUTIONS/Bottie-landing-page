@@ -1314,7 +1314,7 @@ const TermsOfServicePage: React.FC = () => {
           <div className="pp-info">
             <p>Bluvfi is currently in <strong>demo/beta</strong>. Features, limits, and supported assets may change. Real-money transactions on mainnet are subject to additional terms.</p>
           </div>
-          <p>Bluvfi does not act as a bank, broker-dealer, investment adviser, or money transmitter. We are a technology platform that facilitates actions you explicitly confirm. Regulated activities are performed by third-party providers. See our <a href="/aml#a12" className="pp-link">AML Policy</a> for licensing, custody, and fund flow details.</p>
+          <p>Bluvfi does not act as a bank, broker-dealer, investment adviser, or money transmitter. We are a technology platform that facilitates actions you explicitly confirm. Regulated activities are performed by licensed third-party providers. See our <a href="/aml#a12" className="pp-link">AML Policy</a> for licensing, custody, and fund flow details.</p>
         </section>
 
         {/* 03 */}
@@ -1906,9 +1906,9 @@ const AMLPolicyPage: React.FC = () => {
           <p>Hivepod Digital Solutions Limited (RC 9663037), the operator of Bluvfi, is a registered Nigerian company and holds a <strong>DIFC (Dubai) AI &amp; Web 3.0 License</strong>, together with its partnership agreement registration.</p>
           <p>Bluvfi is a technology and software platform. It does not itself carry out regulated money transmission, fiat on/off-ramp, bill payment, brokerage, or custody activities. Each of those activities is performed by a licensed third-party provider under that provider's own licence and regulatory obligations:</p>
           <ul>
-            <li><strong>Bill payments</strong> (utilities, cable, internet, subscriptions, gift cards) are fulfilled by <strong>Bitrefill</strong></li>
-            <li><strong>Fiat on-ramp and off-ramp</strong> are performed by <strong>Credible</strong> over UPI fiat rails</li>
-            <li><strong>Listed stocks and ETFs</strong> are traded through <strong>Backpack</strong>, paid in USDC, and <strong>private-market and pre-IPO investments</strong> through <strong>GetEquity</strong>, where the user holds a KYC-approved GetEquity account</li>
+            <li><strong>Bill payments</strong> (utilities, cable, internet, subscriptions, gift cards) are fulfilled by <strong>Bitrefill</strong>, a licensed provider</li>
+            <li><strong>Fiat on-ramp and off-ramp</strong> are performed by <strong>Credible</strong>, a licensed provider, over UPI fiat rails</li>
+            <li><strong>Listed stocks and ETFs</strong> are traded through <strong>Backpack</strong>, a licensed provider, paid in USDC, and <strong>private-market and pre-IPO investments</strong> through <strong>GetEquity</strong>, a licensed provider, where the user holds a KYC-approved GetEquity account</li>
             <li><strong>Wallets</strong> are provided by Privy (non-custodial) and <strong>USDC settlement</strong> by Circle</li>
           </ul>
           <p>The DIFC licence covers technology activities only (it does not permit brokerage, payment processing, or operating an exchange), and Bluvfi does not rely on it for any financial activity. Users of the providers above are also subject to each provider's own KYC and AML requirements.</p>
@@ -1923,7 +1923,7 @@ const AMLPolicyPage: React.FC = () => {
           <h3 className="pp-h3">Funding</h3>
           <ol>
             <li>The user signs up and completes KYC. Privy creates a non-custodial embedded wallet that only the user controls.</li>
-            <li>The user adds USDC to the wallet, either by sending it from another wallet or by buying it through the Credible on-ramp, which carries out its own KYC and AML checks.</li>
+            <li>The user adds USDC to the wallet, either by sending it from another wallet or by buying it through the licensed Credible on-ramp, which carries out its own KYC and AML checks.</li>
           </ol>
           <h3 className="pp-h3">Paying bills and subscriptions</h3>
           <ol>
@@ -1952,7 +1952,7 @@ const AMLPolicyPage: React.FC = () => {
             <li>Filing suspicious activity reports with the competent authorities and handling law-enforcement requests</li>
             <li>Overseeing sanctions screening, training, and record-keeping</li>
           </ul>
-          <p>The Compliance Officer reports directly to the company's directors, who remain accountable for compliance.</p>
+          <p>The Compliance Officer reports directly to the company's directors, who remain accountable for compliance. This policy is approved by Taiwo Lateef Aderemi, Co-Founder and Chief Information Officer (CIO).</p>
         </section>
 
         {/* 14 */}
