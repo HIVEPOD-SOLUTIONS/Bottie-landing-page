@@ -1575,7 +1575,7 @@ const AMLPolicyPage: React.FC = () => {
     { num: '06', id: 'a6',  title: 'Data Requests & KYC' },
     { num: '07', id: 'a7',  title: 'Restricted Activities & Clients' },
     { num: '08', id: 'a8',  title: 'Sanctions' },
-    { num: '09', id: 'a9',  title: 'Non-Serviced Countries' },
+    { num: '09', id: 'a9',  title: 'Target Markets & Non-Serviced Countries' },
     { num: '10', id: 'a10', title: 'Monitoring for Suspicious Activity' },
     { num: '11', id: 'a12', title: 'Licensing & Regulatory Status' },
     { num: '12', id: 'a13', title: 'Custody & End-to-End Fund Flow' },
@@ -1875,8 +1875,17 @@ const AMLPolicyPage: React.FC = () => {
 
         {/* 09 */}
         <section className="pp-section" id="a9">
-          <div className="pp-section-head"><span className="pp-num">09</span><h2>Non-Serviced Countries</h2></div>
-          <p>Bluvfi does not open accounts and does not provide services to users from the following countries and jurisdictions:</p>
+          <div className="pp-section-head"><span className="pp-num">09</span><h2>Target Markets &amp; Non-Serviced Countries</h2></div>
+          <p>Bluvfi intends to serve users in the following regions, subject to the restrictions below and to the requirements of each provider:</p>
+          <ul>
+            <li><strong>Asia</strong>, including Malaysia</li>
+            <li><strong>Africa</strong></li>
+            <li><strong>North America</strong>, including the United States</li>
+            <li><strong>United Kingdom</strong></li>
+            <li><strong>Spain</strong></li>
+          </ul>
+          <p>Availability of individual features, such as investments, may vary by country depending on the rules and onboarding requirements of the relevant provider.</p>
+          <p>The target markets above do not include the following countries and jurisdictions, which are excluded even where they fall within a target region. Bluvfi does not open accounts and does not provide services to users from them:</p>
           <div className="pp-card-grid">
             {nonServicedCountries.map(c => (
               <div className="pp-card" key={c} style={{ padding: '10px 14px' }}>
