@@ -1958,7 +1958,7 @@ const AMLPolicyPage: React.FC = () => {
         {/* 13 */}
         <section className="pp-section" id="a14">
           <div className="pp-section-head"><span className="pp-num">13</span><h2>Compliance Officer &amp; Reporting</h2></div>
-          <p>Bluvfi's AML Compliance Officer is the company's external legal counsel, who is responsible for:</p>
+          <p>Bluvfi's AML Compliance Officer is <strong>Barrister Basheer Muhammed Uthman</strong>, the company's external legal counsel, who is responsible for:</p>
           <ul>
             <li>Maintaining and reviewing this AML policy and the risk assessment at least annually</li>
             <li>Receiving internal reports of suspicious activity and deciding whether to escalate</li>
